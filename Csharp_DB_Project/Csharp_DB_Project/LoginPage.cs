@@ -48,9 +48,17 @@ namespace Csharp_DB_Project
         {
         }
 
-        private void txt_passwd_TextChanged(object sender, EventArgs e)
-        {
 
+        
+
+        private void pswdclick(object sender, MouseEventArgs e)
+        {
+            txt_passwd.Clear();
+        }
+
+        private void unameclick(object sender, MouseEventArgs e)
+        {
+            txt_uname.Clear();
         }
     }
 }

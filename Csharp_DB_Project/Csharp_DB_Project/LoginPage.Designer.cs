@@ -77,6 +77,7 @@
             this.txt_uname.TabIndex = 9;
             this.txt_uname.Text = "username";
             this.txt_uname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_uname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.unameclick);
             // 
             // txt_passwd
             // 
@@ -92,6 +93,7 @@
             this.txt_passwd.TabIndex = 10;
             this.txt_passwd.Text = "type your password";
             this.txt_passwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_passwd.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pswdclick);
             // 
             // label3
             // 
