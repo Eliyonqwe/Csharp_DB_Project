@@ -120,6 +120,7 @@
             this.btn_login.BackColor = System.Drawing.Color.Orange;
             this.btn_login.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.test;
             this.btn_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_login.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.Image = global::Csharp_DB_Project.Properties.Resources.test;
