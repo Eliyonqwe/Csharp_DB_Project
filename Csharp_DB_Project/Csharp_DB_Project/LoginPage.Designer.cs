@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_uname = new System.Windows.Forms.TextBox();
+            this.txt_passwd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_login = new System.Windows.Forms.Button();
@@ -39,7 +39,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pic_usericon = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,7 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_usericon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,33 +64,35 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Log-in Page";
             // 
-            // textBox1
+            // txt_uname
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Silver;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(564, 241);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(341, 29);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.Text = "username";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_uname.BackColor = System.Drawing.Color.Silver;
+            this.txt_uname.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_uname.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txt_uname.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_uname.Location = new System.Drawing.Point(564, 241);
+            this.txt_uname.Multiline = true;
+            this.txt_uname.Name = "txt_uname";
+            this.txt_uname.Size = new System.Drawing.Size(341, 29);
+            this.txt_uname.TabIndex = 9;
+            this.txt_uname.Text = "username";
+            this.txt_uname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // txt_passwd
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Silver;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.textBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.Location = new System.Drawing.Point(564, 317);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(341, 29);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "type your password";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_passwd.BackColor = System.Drawing.Color.Silver;
+            this.txt_passwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_passwd.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txt_passwd.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txt_passwd.Location = new System.Drawing.Point(564, 317);
+            this.txt_passwd.Multiline = true;
+            this.txt_passwd.Name = "txt_passwd";
+            this.txt_passwd.PasswordChar = '*';
+            this.txt_passwd.Size = new System.Drawing.Size(341, 29);
+            this.txt_passwd.TabIndex = 10;
+            this.txt_passwd.Text = "Type Your Password";
+            this.txt_passwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_passwd.TextChanged += new System.EventHandler(this.txt_passwd_TextChanged);
             // 
             // label3
             // 
@@ -182,15 +184,15 @@
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox3
+            // pic_usericon
             // 
-            this.pictureBox3.Image = global::Csharp_DB_Project.Properties.Resources.fantom1;
-            this.pictureBox3.Location = new System.Drawing.Point(698, 64);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(82, 79);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.pic_usericon.Image = global::Csharp_DB_Project.Properties.Resources.fantom1;
+            this.pic_usericon.Location = new System.Drawing.Point(698, 64);
+            this.pic_usericon.Name = "pic_usericon";
+            this.pic_usericon.Size = new System.Drawing.Size(82, 79);
+            this.pic_usericon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_usericon.TabIndex = 3;
+            this.pic_usericon.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -229,19 +231,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(942, 591);
+            this.ClientSize = new System.Drawing.Size(950, 600);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_passwd);
+            this.Controls.Add(this.txt_uname);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pic_usericon);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -255,7 +257,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_usericon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -267,12 +269,12 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pic_usericon;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_uname;
+        private System.Windows.Forms.TextBox txt_passwd;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;

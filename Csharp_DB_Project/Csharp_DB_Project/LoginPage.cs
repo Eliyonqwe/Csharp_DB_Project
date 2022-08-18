@@ -37,11 +37,21 @@ namespace Csharp_DB_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if(txt_uname.Text == "0" || txt_passwd.Text == "0")
+            {
+                Page p = new Page(txt_uname.Text);
+                this.Hide();
+                p.Show();
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
+        }
+
+        private void txt_passwd_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

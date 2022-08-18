@@ -9,3 +9,4 @@ C:\Users\hp\source\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Deb
 C:\Users\hp\source\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.exe
 C:\Users\hp\source\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.pdb
 C:\Users\hp\source\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.LoginPage.resources
+C:\Users\hp\source\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.Page.resources
