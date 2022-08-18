@@ -15,7 +15,6 @@ namespace Csharp_DB_Project
         public LoginPage()
         {
             InitializeComponent();
-
             btn_login.FlatAppearance.BorderColor = Color.Orange;
         }
 
