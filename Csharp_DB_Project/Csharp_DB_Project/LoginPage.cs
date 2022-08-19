@@ -44,10 +44,6 @@ namespace Csharp_DB_Project
             }
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-        }
-
 
         
 
@@ -59,6 +55,13 @@ namespace Csharp_DB_Project
         private void unameclick(object sender, MouseEventArgs e)
         {
             txt_uname.Clear();
+        }
+
+        private void Register_Click(object sender, EventArgs e)
+        {
+            RegisterPage r = new RegisterPage();
+            this.Hide();
+            r.Show();
         }
     }
 }

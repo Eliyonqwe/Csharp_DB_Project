@@ -116,7 +116,7 @@
             this.label4.Size = new System.Drawing.Size(125, 21);
             this.label4.TabIndex = 16;
             this.label4.Text = "Register Here";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Click += new System.EventHandler(this.Register_Click);
             // 
             // btn_login
             // 
