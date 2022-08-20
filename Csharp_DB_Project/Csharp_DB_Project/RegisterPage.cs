@@ -22,7 +22,26 @@ namespace Csharp_DB_Project
 
         private void RegisterPage_Load(object sender, EventArgs e)
         {
+            /* 
+             * when register button is clicked, the program should check weather the entered   
+                values are valid or not. 
+             * we should also use errorprovider tool to tell user that the entered value aren't valid.
+             * and when the user enters the correct information we should clear all textboxes.
             
+            
+        */
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            LoginPage l = new LoginPage();
+            this.Hide();
+            l.Show();
+        }
+
+        private void pw_click(object sender, EventArgs e)
+        {
+            txt_phoneno.Clear();
         }
     }
 }

@@ -210,7 +210,9 @@
             this.txt_phoneno.Name = "txt_phoneno";
             this.txt_phoneno.Size = new System.Drawing.Size(341, 29);
             this.txt_phoneno.TabIndex = 31;
+            this.txt_phoneno.Text = "09xxxxxxxx";
             this.txt_phoneno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_phoneno.Click += new System.EventHandler(this.pw_click);
             // 
             // pictureBox10
             // 
@@ -328,6 +330,7 @@
             this.btn_back.TabIndex = 40;
             this.btn_back.Text = "Back to Signin ";
             this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // pictureBox8
             // 

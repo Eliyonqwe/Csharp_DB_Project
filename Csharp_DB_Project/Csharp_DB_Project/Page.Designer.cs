@@ -36,6 +36,7 @@
             // 
             this.lbl_user.AutoSize = true;
             this.lbl_user.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_user.ForeColor = System.Drawing.Color.DarkOrange;
             this.lbl_user.Location = new System.Drawing.Point(12, 9);
             this.lbl_user.Name = "lbl_user";
             this.lbl_user.Size = new System.Drawing.Size(62, 21);
