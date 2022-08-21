@@ -33,3 +33,5 @@ C:\Users\hp\Source\Repos\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\o
 C:\Users\hp\Source\Repos\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.pdb
 C:\Users\hp\source\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.Page.resources
 C:\Users\hp\source\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.RegisterPage.resources
+C:\Users\hp\source\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.TournamentPage.resources
+C:\Users\hp\source\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.TeamPage.resources
