@@ -41,6 +41,7 @@ namespace Csharp_DB_Project
                     {
                         string tName = result.GetString(1);
                         SelectTournament.Items.Add(tName);
+                        SelectTournament.Items.Add("___________________________________");
                     }
                 }
 

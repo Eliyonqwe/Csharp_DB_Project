@@ -40,11 +40,13 @@
             // SelectTournament
             // 
             this.SelectTournament.BackColor = System.Drawing.Color.RosyBrown;
+            this.SelectTournament.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectTournament.FormattingEnabled = true;
-            this.SelectTournament.ItemHeight = 16;
+            this.SelectTournament.ItemHeight = 37;
             this.SelectTournament.Location = new System.Drawing.Point(12, 12);
             this.SelectTournament.Name = "SelectTournament";
-            this.SelectTournament.Size = new System.Drawing.Size(332, 628);
+            this.SelectTournament.ScrollAlwaysVisible = true;
+            this.SelectTournament.Size = new System.Drawing.Size(332, 596);
             this.SelectTournament.TabIndex = 35;
             this.SelectTournament.SelectedIndexChanged += new System.EventHandler(this.SelectTournament_SelectedIndexChanged);
             // 

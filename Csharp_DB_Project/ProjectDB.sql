@@ -34,10 +34,7 @@ Create table team(
 
 drop table team
 select *from team
-
-insert into team values('Alpha Males',1004)
-insert into team values('Alpha Males')
-insert into team values('Alpha Males')
+truncate table team
 
 update team set teamName = 'tate'
 
