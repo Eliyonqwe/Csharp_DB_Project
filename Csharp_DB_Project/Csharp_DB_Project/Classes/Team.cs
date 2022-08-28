@@ -13,9 +13,9 @@ namespace Csharp_DB_Project.Classes
         public String teamName;
         public String tournamentID;
 
-        public void Save(Team x)
+        public Boolean Save()
         {
-            t.Add(x);
+            t.Add(this);
             try
             {
                 String conString = @"Data Source=DESKTOP-49EQ2RG;Initial Catalog=ProjectDB;Integrated Security=True";
@@ -30,11 +30,11 @@ namespace Csharp_DB_Project.Classes
                     cmd.ExecuteNonQuery();
                     
                 }
-              //  return true;
+               return true;
             }
             catch (Exception)
             {
-              //  return false;
+               return false;
             }
 
 

@@ -85,20 +85,26 @@ namespace Csharp_DB_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-             
-            Team team = new Team();
-            team.teamName = textBox5.Text;
-            team.tournamentID = id.ToString();
-            team.Save(team);
-            /*
-            if (b)
-                MessageBox.Show("Connected Succesfully!");
+            if (SelectTournament.SelectedIndex == -1)
+            {
+                MessageBox.Show("Error: Tournament not selected!\nPlease select a tournament First");
+            }
+            
             else
-                MessageBox.Show("Unable to connect!");
-            */
-            dataGridView1.DataSource = Team.t;
-           // dataGridView1.Columns[0].Visible = false;
+            {
+                Team team = new Team();
+                team.teamName = textBox5.Text;
+                team.tournamentID = id.ToString();
+                Boolean b = team.Save();
 
+                if (b)
+                    MessageBox.Show("Connected Succesfully!");
+                else
+                    MessageBox.Show("Unable to connect!");
+
+                dataGridView1.DataSource = Team.t;
+                // dataGridView1.Columns[0].Visible = false;
+            }
 
 
         }

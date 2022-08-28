@@ -39,6 +39,7 @@
             // 
             // SelectTournament
             // 
+            this.SelectTournament.BackColor = System.Drawing.Color.RosyBrown;
             this.SelectTournament.FormattingEnabled = true;
             this.SelectTournament.ItemHeight = 16;
             this.SelectTournament.Location = new System.Drawing.Point(12, 12);
@@ -87,7 +88,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(847, 37);
+            this.dataGridView1.Location = new System.Drawing.Point(868, 37);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -98,7 +99,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1254, 719);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1301, 719);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
