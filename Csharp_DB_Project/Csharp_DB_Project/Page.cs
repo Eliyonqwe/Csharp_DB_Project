@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
+//Data Source=DESKTOP-49EQ2RG;Initial Catalog=ProjectDB;Integrated Security=True
 namespace Csharp_DB_Project
 {
     public partial class Page : Form

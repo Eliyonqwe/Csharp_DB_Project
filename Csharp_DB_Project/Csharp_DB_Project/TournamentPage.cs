@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using Csharp_DB_Project.Classes;
 
 namespace Csharp_DB_Project
@@ -42,11 +43,31 @@ namespace Csharp_DB_Project
             else
                 t.gender = radioButton6.Text;
 
-            t.Save();
+            Boolean conStatus = t.Save();
+
+            if (conStatus)
+                MessageBox.Show("Connected Succesfully!");
+            else
+                MessageBox.Show("Unable to connect!");
+
+            Tournament.t.Clear();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = Tournament.GetAllTournament();
+
             
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            this.Hide();
+            f.Show();
         }
     }
 }

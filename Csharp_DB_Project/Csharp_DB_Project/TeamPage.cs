@@ -50,9 +50,9 @@ namespace Csharp_DB_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count < 11)
+            /*if (dataGridView1.Rows.Count < 11)
                 MessageBox.Show("11 is the minimum amount of players required");
-            else
+            else*/
 
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Csharp_DB_Project
 {
@@ -16,7 +17,7 @@ namespace Csharp_DB_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TeamPage());
+            Application.Run(new TournamentPage());
         }
     }
 }
