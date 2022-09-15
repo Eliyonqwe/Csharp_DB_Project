@@ -4,7 +4,11 @@ use ProjectDB
 
 create table Tournaments(
 	TournamentID int PRIMARy key identity(1000,1),
-	TournamentName varchar(30)
+	TournamentName varchar(30),
+	Type varchar(30),
+	Location varchar(30),
+	MaxTeams int,
+	NumberOfTeams int
 );
 
 create table TournamentEnteries(
@@ -105,7 +109,6 @@ set @id =(select TeamID from Teams where TeamName=@TeamNameToBeDeleted )
 end
 
 exec DeleteTeam_sp 'mutd'
-
 
 
 
