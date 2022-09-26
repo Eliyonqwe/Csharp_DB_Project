@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Csharp_DB_Project
 {
@@ -36,12 +38,41 @@ namespace Csharp_DB_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txt_uname.Text == "0" || txt_passwd.Text == "0")
+            try
             {
-                Page p = new Page(txt_uname.Text);
-                this.Hide();
-                p.Show();
+                String conString = @"Data Source=DESKTOP-49EQ2RG;Initial Catalog=Project;Integrated Security=True";
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "select *from users where username=@username and password=@password";
+                    SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                    cmd.Parameters.AddWithValue("@username", txt_uname.Text);
+                    cmd.Parameters.AddWithValue("@password", txt_passwd.Text);
+                    var result = cmd.ExecuteScalar();// returns 
+
+                    if(result == null) // there is no row with the entered username and password
+                    {
+                        MessageBox.Show("Invalid Credentials!");
+                     //   txt_uname.Text = "Enter Username";
+                       // txt_passwd.Text = "************";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login Succesfull!");
+                        HomePage p = new HomePage(txt_uname.Text);
+                        this.Hide();
+                        p.Show();
+                    }
+
+                }
+
             }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+
         }
 
 
@@ -63,5 +94,7 @@ namespace Csharp_DB_Project
             this.Hide();
             r.Show();
         }
+
+   
     }
 }

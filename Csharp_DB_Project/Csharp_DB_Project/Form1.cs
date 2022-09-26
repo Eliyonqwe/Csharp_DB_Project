@@ -70,17 +70,50 @@ namespace Csharp_DB_Project
                         int tID = Convert.ToInt32(result[0]);
                         string tName = result.GetString(1);
 
-                       id = tID;
-                       
-                        
-
+                        id = tID;
                     }
                 }
-             }
+                
+        
+           }
+            catch
+            {
+               return;
+            }
+
+            try
+            {
+                String conString = @"Data Source=DESKTOP-49EQ2RG;Initial Catalog=ProjectDB;Integrated Security=True";
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    
+                   // MessageBox.Show(Convert.ToString(id));
+                    string sqlQuery = "select *from team where tournamentID='" + id + "'";
+                    SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                    var result = cmd.ExecuteReader(); // returns row affected, executescalar for single element(preferebally a row)    
+                    Team team = new Team();
+                    while (result.Read())
+                    {
+                        team.teamID = Convert.ToInt32(result[0]);
+                        team.teamName = result.GetString(1);
+                        Team.t.Add(team);
+                        MessageBox.Show(team.teamName);
+                        dataGridView1.DataSource = null;
+                        dataGridView1.DataSource = Team.t;
+                    }
+                }
+
+
+            }
             catch
             {
                 return;
             }
+
+
+
         }
         
 

@@ -10,6 +10,7 @@ namespace Csharp_DB_Project.Classes
     internal class Team
     {
         public static List<Team> t = new List<Team>();
+        public int teamID;
         public String teamName;
         public String tournamentID;
 
@@ -30,7 +31,7 @@ namespace Csharp_DB_Project.Classes
                     cmd.ExecuteNonQuery();
                     
                 }
-               return true;
+                return true;
             }
             catch (Exception)
             {
