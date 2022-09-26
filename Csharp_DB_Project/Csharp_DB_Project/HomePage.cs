@@ -56,7 +56,13 @@ namespace Csharp_DB_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int len = lb_welcome.Text.Length;
+            String x = lb_welcome.Text;
+            string user = x.Substring(14, len-14); // removes welcome back from "Welcome back 'username'"
 
+            HomePage h = new HomePage(user);
+            this.Hide();
+            h.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -65,6 +71,11 @@ namespace Csharp_DB_Project
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
