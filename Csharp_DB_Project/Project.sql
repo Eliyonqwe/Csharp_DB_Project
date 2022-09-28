@@ -50,4 +50,3 @@ select *from users
 select *from stockListing
 select *from offer
 select *from orders
-select *from users where username= 'eliyonzm' and password='qwerty';

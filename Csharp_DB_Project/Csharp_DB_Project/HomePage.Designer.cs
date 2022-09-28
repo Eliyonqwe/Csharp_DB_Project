@@ -230,6 +230,7 @@
             this.Controls.Add(this.lb_welcome);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "HomePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.flowLayoutPanel1.ResumeLayout(false);

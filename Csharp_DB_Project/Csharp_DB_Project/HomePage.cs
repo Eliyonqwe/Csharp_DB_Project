@@ -58,7 +58,7 @@ namespace Csharp_DB_Project
         {
             int len = lb_welcome.Text.Length;
             String x = lb_welcome.Text;
-            string user = x.Substring(14, len-14); // removes welcome back from "Welcome back 'username'"
+            string user = x.Substring(13, len-13); // removes welcome back from "Welcome back 'username'"
 
             HomePage h = new HomePage(user);
             this.Hide();

@@ -95,6 +95,9 @@ namespace Csharp_DB_Project
             r.Show();
         }
 
-   
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

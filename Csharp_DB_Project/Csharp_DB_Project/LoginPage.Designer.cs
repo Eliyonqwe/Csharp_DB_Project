@@ -214,9 +214,10 @@
             this.label1.Image = global::Csharp_DB_Project.Properties.Resources.orangepattern1;
             this.label1.Location = new System.Drawing.Point(221, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 40);
+            this.label1.Size = new System.Drawing.Size(170, 40);
             this.label1.TabIndex = 1;
-            this.label1.Text = "The Score";
+            this.label1.Text = "The Stock";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
