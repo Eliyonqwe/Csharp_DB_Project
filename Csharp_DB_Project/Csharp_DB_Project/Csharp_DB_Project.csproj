@@ -201,6 +201,8 @@
   <ItemGroup>
     <None Include="pics\1000_F_96517407_L7uJrR5xOIxHuJ7IQsfLkOFCbwkryefA %281%29.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="pics\Screenshot %2814%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

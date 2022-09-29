@@ -28,6 +28,7 @@ namespace Csharp_DB_Project.Classes
                 {
                     string sqlQuery = "exec registerUser @fname, @lname, @uname, @pswd, @phone, @balance";
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                    
                     cmd.Parameters.AddWithValue("@fname", this.firstName);
                     cmd.Parameters.AddWithValue("@lname", this.lastName);
                     cmd.Parameters.AddWithValue("@uname", this.username);

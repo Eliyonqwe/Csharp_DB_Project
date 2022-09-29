@@ -22,9 +22,10 @@ create table stockListing(
 	companyID int FOREIGN KEY References Company(companyID),
 	userID int FOREIGN KEY References Users(userID),
 	amount money NOT NULL,
+	status varchar(30) default 'Pending',
 
 );
-
+alter table stocklisting drop column status
 create table company(
 	companyID int primary key identity(1,1),
 	companyType varchar(30) NOT NULL,
@@ -36,6 +37,7 @@ create table offer(
 	userID int FOREIGN KEY References Users(userID),
 	stockID int FOREIGN KEY References stockListing(stockID),
 	offerAmount money NOT NULL,
+	offerStatus varchar(30) default 'pending'
 );
 
 create table orders(
@@ -50,3 +52,11 @@ select *from users
 select *from stockListing
 select *from offer
 select *from orders
+
+alter procedure registerUser
+@fname varchar(max), @lname varchar(max), @uname varchar(max), @passwd varchar(max), @phoneno varchar(max), @balance money
+as
+begin
+	insert into users values(@name,@lname,@uname,@passwd, @phoneno, @balance)
+end
+

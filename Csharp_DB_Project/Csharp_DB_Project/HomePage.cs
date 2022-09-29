@@ -13,6 +13,8 @@ namespace Csharp_DB_Project
 {
     public partial class HomePage : Form
     {
+        bool sidebarExpand;
+        bool myListingCollapsed;
         public HomePage(String user)
         {
             InitializeComponent();
@@ -64,7 +66,31 @@ namespace Csharp_DB_Project
             this.Hide();
             h.Show();
         }
-
+        private void sidebarTimer_Tick(object sender, EventArgs e)
+        {
+            if (sidebarExpand)
+            {
+                sidebarContainer.Width -= 10;
+                if(sidebarContainer.Width == sidebarContainer.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    sidebarTImer.Stop();
+                }
+            }
+            else
+            {
+                sidebarContainer.Width += 10;
+                if(sidebarContainer.Width == sidebarContainer.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    sidebarTImer.Stop();
+                }
+            }
+        }
+        private void menuButton_Click(object sender, EventArgs e)
+        {
+            sidebarTImer.Start();
+        }
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -78,6 +104,41 @@ namespace Csharp_DB_Project
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        
+
+        private void myListingContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void myListingTImer_Tick(object sender, EventArgs e)
+        {
+            if (myListingCollapsed)
+            {
+                myListingContainer.Height -= 10;
+                if(myListingContainer.Height == myListingContainer.MinimumSize.Height)
+                {
+                    myListingCollapsed = false;
+                    myListingTImer.Stop();
+                }
+            }
+            else
+            {
+                myListingContainer.Height += 10;
+                if(myListingContainer.Height == myListingContainer.MaximumSize.Height)
+                {
+                    myListingCollapsed = true;
+                    myListingTImer.Stop();
+                }
+            }
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            myListingTImer.Start();
         }
     }
 }

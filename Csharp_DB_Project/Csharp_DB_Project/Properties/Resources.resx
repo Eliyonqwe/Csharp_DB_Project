@@ -121,6 +121,9 @@
   <data name="fantom1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\fantom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="this-is-a-graphic-reation-of-a-pad-lock-username-and-password-icon-115534595184fsadfncq6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\this-is-a-graphic-reation-of-a-pad-lock-username-and-password-icon-115534595184fsadfncq6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="png-transparent-orange-button-blue-orange-button-blue-text-rectangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\png-transparent-orange-button-blue-orange-button-blue-text-rectangle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,14 +166,17 @@
   <data name="360_F_234593935_quRUrCKIZRGTOvIK4LGiyRxKScHQyeEe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\360_F_234593935_quRUrCKIZRGTOvIK4LGiyRxKScHQyeEe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1000_F_96517407_L7uJrR5xOIxHuJ7IQsfLkOFCbwkryefA (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\1000_F_96517407_L7uJrR5xOIxHuJ7IQsfLkOFCbwkryefA (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Untitled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\Untitled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="orangepattern" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\orangepattern.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="this-is-a-graphic-reation-of-a-pad-lock-username-and-password-icon-115534595184fsadfncq6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pics\this-is-a-graphic-reation-of-a-pad-lock-username-and-password-icon-115534595184fsadfncq6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="orangepattern1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\orangepattern.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="this-is-a-graphic-reation-of-a-pad-lock-username-and-password-icon-115534595184fsadfncq61" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\this-is-a-graphic-reation-of-a-pad-lock-username-and-password-icon-115534595184fsadfncq6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,9 +196,6 @@
   <data name="loginicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\loginicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="orangepattern1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pics\orangepattern.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fantom2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\fantom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,7 +208,7 @@
   <data name="rounded" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\rounded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1000_F_96517407_L7uJrR5xOIxHuJ7IQsfLkOFCbwkryefA (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pics\1000_F_96517407_L7uJrR5xOIxHuJ7IQsfLkOFCbwkryefA (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Screenshot (14)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\Screenshot (14).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
