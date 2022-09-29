@@ -15,10 +15,13 @@ namespace Csharp_DB_Project
     {
         bool sidebarExpand;
         bool myListingCollapsed;
+        bool myProfileCollapsed;
+        String username = "";
         public HomePage(String user)
         {
             InitializeComponent();
-            lb_welcome.Text = "Welcome back " + user;
+            username = user;    
+            lb_Welcome.Text = "Welcome back " + user;
         }
 
         void filltab()
@@ -51,15 +54,10 @@ namespace Csharp_DB_Project
             }
 
         }
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            int len = lb_welcome.Text.Length;
-            String x = lb_welcome.Text;
+            int len = lb_Welcome.Text.Length;
+            String x = lb_Welcome.Text;
             string user = x.Substring(13, len-13); // removes welcome back from "Welcome back 'username'"
 
             HomePage h = new HomePage(user);
@@ -91,19 +89,10 @@ namespace Csharp_DB_Project
         {
             sidebarTImer.Start();
         }
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void button3_Click(object sender, EventArgs e)
         {
-
+            myProfileTimer.Start();
         }
 
         
@@ -139,6 +128,85 @@ namespace Csharp_DB_Project
         private void button6_Click(object sender, EventArgs e)
         {
             myListingTImer.Start();
+        }
+
+        private void myProfileTimer_Tick(object sender, EventArgs e)
+        {
+            if (myProfileCollapsed)
+            {
+                myProfileContainer.Height -= 10;
+                if (myProfileContainer.Height == myProfileContainer.MinimumSize.Height)
+                {
+                    myProfileCollapsed = false;
+                    myProfileTimer.Stop();
+                }
+            }
+            else
+            {
+                myProfileContainer.Height += 10;
+                if (myProfileContainer.Height == myProfileContainer.MaximumSize.Height)
+                {
+                    myProfileCollapsed = true;
+                    myProfileTimer.Stop();
+                }
+            }
+
+
+        }
+
+        private void btn_editProfile_Click(object sender, EventArgs e)
+        {
+            ProfilePage p = new ProfilePage(username);
+            this.Hide();
+            p.Show();
+              
+        }
+
+        private void btn_balance_Click(object sender, EventArgs e)
+        {
+            addBalance b = new addBalance(username);
+            this.Hide();
+            b.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

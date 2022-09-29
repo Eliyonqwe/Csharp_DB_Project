@@ -46,17 +46,43 @@ create table orders(
 	stockID int FOREIGN KEY References stockListing(stockID),
 	orderAmount money NOT NULL, 
 );
-
+	
 select *from admin
 select *from users
 select *from stockListing
 select *from offer
 select *from orders
 
-alter procedure registerUser
-@fname varchar(max), @lname varchar(max), @uname varchar(max), @passwd varchar(max), @phoneno varchar(max), @balance money
+----------------------------------------------------------------------------------------------------------------------------------
+create procedure registerUser
+@fname varchar(30), @lname varchar(30), @uname varchar(30), @passwd varchar(30), @phoneno varchar(30), @balance money
 as
-begin
-	insert into users values(@name,@lname,@uname,@passwd, @phoneno, @balance)
-end
+	insert into users values(@fname,@lname,@uname,@passwd, @phoneno, @balance)
 
+----------------------------------------------------------------------------------------------------------------------------------
+create proc viewUser
+@username varchar(30)
+as
+	select *from users where username = @username
+
+----------------------------------------------------------------------------------------------------------------------------------
+create proc updateUser
+@id int, @fname varchar(30),@lname varchar(30),@uname varchar(30),@password varchar(30),@phone varchar(15)
+as
+	update users set firstName = @fname, lastName = @lname, username = @uname, password = @password, phoneNumber = @phone where userID = @id
+
+----------------------------------------------------------------------------------------------------------------------------------
+create proc updateBalance
+@uname varchar(30), @balance money
+as
+	update users set balance = @balance where username = @uname
+
+----------------------------------------------------------------------------------------------------------------------------------
+create proc deleteUser
+@id int
+as
+	delete from users where userId = @id
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+select *from users
