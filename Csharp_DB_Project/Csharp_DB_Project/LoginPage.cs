@@ -17,7 +17,7 @@ namespace Csharp_DB_Project
         public LoginPage()
         {
             InitializeComponent();
-            btn_login.FlatAppearance.BorderColor = Color.White;
+            btn_login.FlatAppearance.BorderColor = Color.Orange;
         }
 
 
@@ -99,18 +99,5 @@ namespace Csharp_DB_Project
         {
 
         }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            if (txt_passwd.PasswordChar == '*')
-            {
-                txt_passwd.PasswordChar = '\0';
-                //pictureBox3.BackgroundImage =
-            }
-            else
-            {
-                txt_passwd.PasswordChar = '*';
-            }
-                    }
     }
 }

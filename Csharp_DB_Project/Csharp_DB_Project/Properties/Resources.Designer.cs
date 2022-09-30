@@ -63,26 +63,6 @@ namespace Csharp_DB_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1000_F_238139168_W61DfgMLyPvOnj2D6kZrlDYYJ0xhJTVf {
-            get {
-                object obj = ResourceManager.GetObject("1000_F_238139168_W61DfgMLyPvOnj2D6kZrlDYYJ0xhJTVf", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _1000_F_250203850_9wRgU2e8lNiyCKbqvQRiucRvnmsNJKTJ_modified {
-            get {
-                object obj = ResourceManager.GetObject("1000_F_250203850_9wRgU2e8lNiyCKbqvQRiucRvnmsNJKTJ-modified", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _1000_F_96517407_L7uJrR5xOIxHuJ7IQsfLkOFCbwkryefA__1_ {
             get {
                 object obj = ResourceManager.GetObject("1000_F_96517407_L7uJrR5xOIxHuJ7IQsfLkOFCbwkryefA (1)", resourceCulture);
@@ -133,50 +113,9 @@ namespace Csharp_DB_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _4830332_200 {
-            get {
-                object obj = ResourceManager.GetObject("4830332-200", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bar_chart_concept_vector_linear_icon_isolated_transparent_bac_background_transparency_outline_style_130088985 {
-            get {
-                object obj = ResourceManager.GetObject("bar-chart-concept-vector-linear-icon-isolated-transparent-bac-background-transpar" +
-                        "ency-outline-style-130088985", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Blue_abstract_elements_with_black_background_vector {
-            get {
-                object obj = ResourceManager.GetObject("Blue-abstract-elements-with-black-background-vector", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Eo_circle_orange_blank_svg {
             get {
                 object obj = ResourceManager.GetObject("Eo_circle_orange_blank.svg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap f {
-            get {
-                object obj = ResourceManager.GetObject("f", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -207,16 +146,6 @@ namespace Csharp_DB_Project.Properties {
         internal static System.Drawing.Bitmap fantom2 {
             get {
                 object obj = ResourceManager.GetObject("fantom2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap gettyimages_1341437653_170667a {
-            get {
-                object obj = ResourceManager.GetObject("gettyimages-1341437653-170667a", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -417,16 +346,6 @@ namespace Csharp_DB_Project.Properties {
         internal static System.Drawing.Bitmap Screenshot__16_ {
             get {
                 object obj = ResourceManager.GetObject("Screenshot (16)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Screenshot__18_ {
-            get {
-                object obj = ResourceManager.GetObject("Screenshot (18)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
