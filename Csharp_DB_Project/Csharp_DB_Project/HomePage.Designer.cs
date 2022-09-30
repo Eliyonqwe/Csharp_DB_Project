@@ -54,13 +54,13 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.btn_myListing = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_addListing = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.sidebarContainer.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,9 +74,9 @@
             this.myListingContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebarTImer
@@ -320,14 +320,13 @@
             this.myListingContainer.Controls.Add(this.pictureBox4);
             this.myListingContainer.Controls.Add(this.button7);
             this.myListingContainer.Controls.Add(this.btn_myListing);
-            this.myListingContainer.Controls.Add(this.button3);
+            this.myListingContainer.Controls.Add(this.btn_addListing);
             this.myListingContainer.Location = new System.Drawing.Point(3, 361);
             this.myListingContainer.MaximumSize = new System.Drawing.Size(264, 245);
             this.myListingContainer.MinimumSize = new System.Drawing.Size(264, 68);
             this.myListingContainer.Name = "myListingContainer";
             this.myListingContainer.Size = new System.Drawing.Size(264, 68);
             this.myListingContainer.TabIndex = 56;
-            this.myListingContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.myListingContainer_Paint);
             // 
             // button8
             // 
@@ -389,21 +388,22 @@
             this.btn_myListing.UseVisualStyleBackColor = false;
             this.btn_myListing.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button3
+            // btn_addListing
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(15, 67);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(246, 54);
-            this.button3.TabIndex = 54;
-            this.button3.Text = "          - Add Listing";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_addListing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_addListing.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_addListing.BackgroundImage")));
+            this.btn_addListing.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_addListing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addListing.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_addListing.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_addListing.Location = new System.Drawing.Point(15, 67);
+            this.btn_addListing.Name = "btn_addListing";
+            this.btn_addListing.Size = new System.Drawing.Size(246, 54);
+            this.btn_addListing.TabIndex = 54;
+            this.btn_addListing.Text = "          - Add Listing";
+            this.btn_addListing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_addListing.UseVisualStyleBackColor = false;
+            this.btn_addListing.Click += new System.EventHandler(this.btn_addListing_Click);
             // 
             // panel5
             // 
@@ -414,43 +414,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(264, 68);
             this.panel5.TabIndex = 55;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__14_;
-            this.pictureBox7.Location = new System.Drawing.Point(23, 16);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 53;
-            this.pictureBox7.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(9, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 54);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "           About";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.Controls.Add(this.pictureBox7);
-            this.panel6.Controls.Add(this.button1);
-            this.panel6.Location = new System.Drawing.Point(3, 509);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(264, 68);
-            this.panel6.TabIndex = 56;
             // 
             // pictureBox3
             // 
@@ -478,6 +441,43 @@
             this.button5.Text = "           My Offers";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.Controls.Add(this.pictureBox7);
+            this.panel6.Controls.Add(this.button1);
+            this.panel6.Location = new System.Drawing.Point(3, 509);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(264, 68);
+            this.panel6.TabIndex = 56;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__14_;
+            this.pictureBox7.Location = new System.Drawing.Point(23, 16);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(33, 33);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 53;
+            this.pictureBox7.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(9, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(246, 54);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "           About";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
@@ -514,9 +514,9 @@
             this.myListingContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,7 +545,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel myListingContainer;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_addListing;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel5;

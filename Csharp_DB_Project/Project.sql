@@ -16,21 +16,24 @@ create table users(
 	phoneNumber varchar(15),
 	balance money default 0
 );
+create table company(
+	companyID int primary key identity(1,1),
+	companyName varchar(30) NOT NULL,
+	companyType varchar(30) NOT NULL,
+);
+
 
 create table stockListing(
 	stockID int primary key identity(1,1),
 	companyID int FOREIGN KEY References Company(companyID),
 	userID int FOREIGN KEY References Users(userID),
 	amount money NOT NULL,
+	price money NOT NULL,
 	status varchar(30) default 'Pending',
-
 );
-alter table stocklisting drop column status
-create table company(
-	companyID int primary key identity(1,1),
-	companyType varchar(30) NOT NULL,
+ 
 
-);
+--insert into company values('Bank', 'Zemen Bank');
 
 create table offer(
 	offerID int primary key identity(1,1),
@@ -50,9 +53,18 @@ create table orders(
 select *from admin
 select *from users
 select *from stockListing
+select *from company
 select *from offer
 select *from orders
 
+drop table admin
+drop table offer
+drop table orders
+drop table stockListing
+drop table users
+drop table company
+select firstName + ' ' + lastName as fullname, companyName, amount, price , c.companyID from USERS u join stockListing s on u.userId = s.userId join  company c on s.CompanyID = c.CompanyID
+select *from company
 ----------------------------------------------------------------------------------------------------------------------------------
 create procedure registerUser
 @fname varchar(30), @lname varchar(30), @uname varchar(30), @passwd varchar(30), @phoneno varchar(30), @balance money
@@ -85,4 +97,26 @@ as
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-select *from users
+alter proc addCompany
+@name varchar(30), @type varchar(30), @companyID int OUTPUT
+as
+begin
+	insert into company values(@name,@type)
+	set @companyID = SCOPE_IDENTITY()
+end
+
+alter proc addListing
+@compID int, @userID int, @amount money,@price money
+as
+begin
+	insert into stockListing values(@compID, @userID, @amount,@price, 'pending')
+end
+	
+create function fetchID(@username varchar(30))
+returns int
+as
+begin
+	return (select userid from users where username = @username)
+end
+
+select dbo.fetchID('eliyonzm')

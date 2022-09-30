@@ -24,37 +24,7 @@ namespace Csharp_DB_Project
             lb_Welcome.Text = "Welcome back " + user;
         }
 
-        void filltab()
-        {
-            int count = 0;
-            try
-            {
-                String conString = @"Data Source=DESKTOP-49EQ2RG;Initial Catalog=ProjectDB;Integrated Security=True";
-                SqlConnection con = new SqlConnection(conString);
-                con.Open();
-                if (con.State == System.Data.ConnectionState.Open)
-                {
-                    string sqlQuery = "select *from tournament";
-                    SqlCommand cmd = new SqlCommand(sqlQuery, con);
-                    var result = cmd.ExecuteReader(); // returns row affected, executescalar for single element(preferebally a row)    
-                    while (result.Read())
-                    {
-                        string tName = result.GetString(1);
-                        count++;
-                        //SelectTournament.Items.Add(tName);
-                    }
-                    
-                }   
-
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show(e.Message);
-                return;
-            }
-
-        }
-        private void button2_Click(object sender, EventArgs e)
+         private void button2_Click(object sender, EventArgs e)
         {
             int len = lb_Welcome.Text.Length;
             String x = lb_Welcome.Text;
@@ -93,13 +63,6 @@ namespace Csharp_DB_Project
         private void button3_Click(object sender, EventArgs e)
         {
             myProfileTimer.Start();
-        }
-
-        
-
-        private void myListingContainer_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void myListingTImer_Tick(object sender, EventArgs e)
@@ -169,44 +132,14 @@ namespace Csharp_DB_Project
             b.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+      
+        private void btn_addListing_Click(object sender, EventArgs e)
         {
-
+            addListing l = new addListing(username);
+            this.Hide();
+            l.Show();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }

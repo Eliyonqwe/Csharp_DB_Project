@@ -57,13 +57,8 @@ D:\Documents\Csharp_DB_Project-main\Csharp_DB_Project\Csharp_DB_Project\obj\Debu
 D:\Documents\Csharp_DB_Project-main\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.Form3.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.csproj.AssemblyReference.cache
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.csproj.SuggestedBindingRedirects.cache
-D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.Form1.resources
-D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.Form2.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.HomePage.resources
-D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.TeamPage.resources
-D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.TournamentPage.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.LoginPage.resources
-D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.Page.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.Properties.Resources.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.RegisterPage.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.csproj.GenerateResource.cache
@@ -75,3 +70,4 @@ D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\Csh
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\Csharp_DB_Project.pdb
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.ProfilePage.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.addBalance.resources
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.addListing.resources

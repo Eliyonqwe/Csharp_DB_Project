@@ -23,7 +23,7 @@ namespace Csharp_DB_Project
             String status = u.viewUser(user);
             if (status == "0")
             {
-                txt_id.Text = u.userid;
+                txt_id.Text = u.userid.ToString();
                 txt_fname.Text = u.firstName;
                 txt_lname.Text = u.lastName;
                 txt_uname.Text = u.username;

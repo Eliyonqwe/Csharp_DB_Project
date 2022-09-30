@@ -13,7 +13,7 @@ namespace Csharp_DB_Project.Classes
     internal class User
     {
         public static List<User> t = new List<User>();
-        public string userid { get; set; }
+        public int userid { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string username { get; set; }
@@ -24,8 +24,8 @@ namespace Csharp_DB_Project.Classes
         public String Save()
         {
             try
-            {   
-                sqlConnection s = new sqlConnection();
+            {
+                sqlClass s = new sqlClass();
                 System.Data.SqlClient.SqlConnection con = s.connect();
 
                 if (con.State == System.Data.ConnectionState.Open)
@@ -51,7 +51,7 @@ namespace Csharp_DB_Project.Classes
         {
             try
             {
-                sqlConnection s = new sqlConnection();
+                sqlClass s = new sqlClass();
                 System.Data.SqlClient.SqlConnection con = s.connect();
 
                 if (con.State == System.Data.ConnectionState.Open)
@@ -62,7 +62,7 @@ namespace Csharp_DB_Project.Classes
                     SqlDataReader result = cmd.ExecuteReader();
                     while (result.Read())
                     {
-                        this.userid = result[0].ToString();
+                        this.userid = Convert.ToInt32(result[0]);
                         this.firstName = result[1].ToString();
                         this.lastName =  result[2].ToString();
                         this.username = result[3].ToString();   
@@ -83,7 +83,7 @@ namespace Csharp_DB_Project.Classes
         {
             try
             {
-                sqlConnection s = new sqlConnection();
+                sqlClass s = new sqlClass();
                 System.Data.SqlClient.SqlConnection con = s.connect();
 
                 if (con.State == System.Data.ConnectionState.Open)
@@ -110,7 +110,7 @@ namespace Csharp_DB_Project.Classes
         {
             try
             {
-                sqlConnection s = new sqlConnection();
+                sqlClass s = new sqlClass();
                 System.Data.SqlClient.SqlConnection con = s.connect();
 
                 if (con.State == System.Data.ConnectionState.Open)
@@ -133,7 +133,7 @@ namespace Csharp_DB_Project.Classes
         {
             try
             {
-                sqlConnection s = new sqlConnection();
+                sqlClass s = new sqlClass();
                 System.Data.SqlClient.SqlConnection con = s.connect();
 
                 if (con.State == System.Data.ConnectionState.Open)
@@ -153,7 +153,27 @@ namespace Csharp_DB_Project.Classes
 
 
         }
+        public String FetchID()
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
 
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "select dbo.FetchID(@username)";
+                    SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                    cmd.Parameters.Add("@username", SqlDbType.VarChar).Value= this.username;
+                    this.userid = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
     }
 }
 
