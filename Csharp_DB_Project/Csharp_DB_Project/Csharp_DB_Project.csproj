@@ -192,5 +192,29 @@
   <ItemGroup>
     <None Include="pics\Screenshot %2816%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gettyimages-1341437653-170667a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-chart-concept-vector-linear-icon-isolated-transparent-bac-background-transparency-outline-style-130088985.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1000_F_238139168_W61DfgMLyPvOnj2D6kZrlDYYJ0xhJTVf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\1000_F_250203850_9wRgU2e8lNiyCKbqvQRiucRvnmsNJKTJ-modified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue-abstract-elements-with-black-background-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\Screenshot %2818%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\4830332-200.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
