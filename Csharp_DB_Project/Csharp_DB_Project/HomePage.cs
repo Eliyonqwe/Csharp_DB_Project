@@ -139,7 +139,5 @@ namespace Csharp_DB_Project
             this.Hide();
             l.Show();
         }
-
-    
     }
 }
