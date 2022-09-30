@@ -216,5 +216,29 @@
   <ItemGroup>
     <None Include="pics\4830332-200.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6685.image_2599AB36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-burak-the-weekender-187041.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessmen-working-strategic-planning.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wepik-photo-mode-202291-296.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
