@@ -46,7 +46,7 @@
             // 
             // txt_companyType
             // 
-            this.txt_companyType.Location = new System.Drawing.Point(293, 250);
+            this.txt_companyType.Location = new System.Drawing.Point(679, 226);
             this.txt_companyType.Multiline = true;
             this.txt_companyType.Name = "txt_companyType";
             this.txt_companyType.Size = new System.Drawing.Size(233, 28);
@@ -55,8 +55,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(110, 300);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(496, 276);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 28);
             this.label1.TabIndex = 89;
@@ -64,8 +66,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Csharp_DB_Project.Properties.Resources.fantom;
-            this.pictureBox1.Location = new System.Drawing.Point(261, 36);
+            this.pictureBox1.Image = global::Csharp_DB_Project.Properties.Resources.f;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 203);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(101, 101);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -74,7 +76,7 @@
             // 
             // txt_amount
             // 
-            this.txt_amount.Location = new System.Drawing.Point(293, 300);
+            this.txt_amount.Location = new System.Drawing.Point(679, 276);
             this.txt_amount.Multiline = true;
             this.txt_amount.Name = "txt_amount";
             this.txt_amount.Size = new System.Drawing.Size(233, 28);
@@ -82,7 +84,7 @@
             // 
             // txt_companyName
             // 
-            this.txt_companyName.Location = new System.Drawing.Point(293, 200);
+            this.txt_companyName.Location = new System.Drawing.Point(679, 176);
             this.txt_companyName.Multiline = true;
             this.txt_companyName.Name = "txt_companyName";
             this.txt_companyName.Size = new System.Drawing.Size(233, 28);
@@ -91,8 +93,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(110, 250);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(496, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 28);
             this.label4.TabIndex = 77;
@@ -101,8 +105,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(110, 200);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(496, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(162, 28);
             this.label3.TabIndex = 75;
@@ -111,8 +117,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(110, 350);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(496, 326);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 28);
             this.label2.TabIndex = 91;
@@ -120,7 +128,7 @@
             // 
             // txt_price
             // 
-            this.txt_price.Location = new System.Drawing.Point(293, 350);
+            this.txt_price.Location = new System.Drawing.Point(679, 326);
             this.txt_price.Multiline = true;
             this.txt_price.Name = "txt_price";
             this.txt_price.Size = new System.Drawing.Size(233, 28);
@@ -163,7 +171,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 546);
+            this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.My_project__4_;
+            this.ClientSize = new System.Drawing.Size(996, 523);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_add);
@@ -176,7 +185,9 @@
             this.Controls.Add(this.txt_companyName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addListing";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addListing";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -20,15 +20,16 @@ namespace Csharp_DB_Project
         public HomePage(String user)
         {
             InitializeComponent();
-            username = user;    
-            lb_Welcome.Text = "Welcome back " + user;
+            username = user;
+            lb_welcome.Text += user;
+           
         }
 
          private void button2_Click(object sender, EventArgs e)
         {
-            int len = lb_Welcome.Text.Length;
-            String x = lb_Welcome.Text;
-            string user = x.Substring(13, len-13); // removes welcome back from "Welcome back 'username'"
+            int len = lb_welcome.Text.Length;
+            String x = lb_welcome.Text;
+            string user = x.Substring(13, len - 13); // removes welcome back from "Welcome back 'username'"
 
             HomePage h = new HomePage(user);
             this.Hide();
@@ -138,6 +139,76 @@ namespace Csharp_DB_Project
             addListing l = new addListing(username);
             this.Hide();
             l.Show();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Home_MouseHover(object sender, EventArgs e)
+        {
+             btn_Home.ForeColor=Color.DarkRed;
+        }
+
+        private void btn_Home_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Home.ForeColor = Color.Transparent;
+        }
+
+        private void btn_Profile_MouseHover(object sender, EventArgs e)
+        {
+            btn_Profile.ForeColor = Color.DarkRed;
+        }
+
+        private void btn_Profile_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Profile.ForeColor = Color.Transparent;
+        }
+
+        private void btn_viewAllListing_MouseHover(object sender, EventArgs e)
+        {
+            btn_viewAllListing.ForeColor = Color.DarkRed;
+        }
+
+        private void btn_viewAllListing_MouseLeave(object sender, EventArgs e)
+        {
+            btn_viewAllListing.ForeColor = Color.Transparent;
+        }
+
+        private void btn_myListing_MouseHover(object sender, EventArgs e)
+        {
+           btn_myListing.ForeColor = Color.DarkRed;
+        }
+
+        private void btn_myListing_MouseLeave(object sender, EventArgs e)
+        {
+            btn_myListing.ForeColor = Color.Transparent;
+        }
+
+        private void button5_MouseHover(object sender, EventArgs e)
+        {
+            button5.ForeColor = Color.DarkRed;
+        }
+
+        private void button5_MouseLeave(object sender, EventArgs e)
+        {
+            button5.ForeColor = Color.Transparent;
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            button1.ForeColor = Color.DarkRed;
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            button1.ForeColor = Color.Transparent;
         }
     }
 }

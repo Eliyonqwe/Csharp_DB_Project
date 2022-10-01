@@ -22,7 +22,6 @@ create table company(
 	companyType varchar(30) NOT NULL,
 );
 
-
 create table stockListing(
 	stockID int primary key identity(1,1),
 	companyID int FOREIGN KEY References Company(companyID),
@@ -32,7 +31,6 @@ create table stockListing(
 	status varchar(30) default 'Pending',
 );
  
-
 --insert into company values('Bank', 'Zemen Bank');
 
 create table offer(
@@ -97,11 +95,11 @@ as
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-alter proc addCompany
+create proc addCompany
 @name varchar(30), @type varchar(30), @companyID int OUTPUT
 as
 begin
-	insert into company values(@name,@type)
+	insert into company(companyName,companyType) values(@name,@type)
 	set @companyID = SCOPE_IDENTITY()
 end
 
@@ -109,14 +107,14 @@ alter proc addListing
 @compID int, @userID int, @amount money,@price money
 as
 begin
-	insert into stockListing values(@compID, @userID, @amount,@price, 'pending')
+	insert into stockListing(companyID,userID,amount,price,status) values(@compID, @userID, @amount,@price, 'pending')
 end
 	
-create function fetchID(@username varchar(30))
+alter function fetchID(@username varchar(30))
 returns int
 as
 begin
-	return (select userid from users where username = @username)
+	return (select userID from users where username = @username)
 end
 
-select dbo.fetchID('eliyonzm')
+select dbo.fetchID('ld')
