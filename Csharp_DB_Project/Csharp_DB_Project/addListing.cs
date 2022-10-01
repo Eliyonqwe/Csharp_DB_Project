@@ -76,14 +76,5 @@ namespace Csharp_DB_Project
             h.Show();
         }
 
-        private void addListing_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

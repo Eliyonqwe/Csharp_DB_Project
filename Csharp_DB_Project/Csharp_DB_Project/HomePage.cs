@@ -139,15 +139,5 @@ namespace Csharp_DB_Project
             this.Hide();
             l.Show();
         }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_viewAllListing_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -257,7 +257,6 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 55;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // btn_Profile
             // 
@@ -312,7 +311,6 @@
             this.btn_viewAllListing.Text = "           View All Listings";
             this.btn_viewAllListing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_viewAllListing.UseVisualStyleBackColor = false;
-            this.btn_viewAllListing.Click += new System.EventHandler(this.btn_viewAllListing_Click);
             // 
             // myListingContainer
             // 
