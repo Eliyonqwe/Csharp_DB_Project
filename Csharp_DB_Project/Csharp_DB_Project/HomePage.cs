@@ -139,5 +139,12 @@ namespace Csharp_DB_Project
             this.Hide();
             l.Show();
         }
+
+        private void btn_editListing_Click(object sender, EventArgs e)
+        {
+            editListing el = new editListing(username);
+            this.Hide();
+            el.Show();
+        }
     }
 }

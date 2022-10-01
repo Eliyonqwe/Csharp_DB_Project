@@ -11,6 +11,7 @@ namespace Csharp_DB_Project.Classes
 {
     internal class Company
     {
+        
         public int companyID { get; set; }
         public String companyName { get; set; }
         public String companyType { get; set; }

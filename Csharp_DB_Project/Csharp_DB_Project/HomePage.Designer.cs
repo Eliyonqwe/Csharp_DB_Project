@@ -50,7 +50,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btn_viewAllListing = new System.Windows.Forms.Button();
             this.myListingContainer = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn_editListing = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.btn_myListing = new System.Windows.Forms.Button();
@@ -316,7 +316,7 @@
             // 
             this.myListingContainer.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.myListingContainer.BackgroundImage = global::Csharp_DB_Project.Properties.Resources._1000_F_96517407_L7uJrR5xOIxHuJ7IQsfLkOFCbwkryefA__1_;
-            this.myListingContainer.Controls.Add(this.button8);
+            this.myListingContainer.Controls.Add(this.btn_editListing);
             this.myListingContainer.Controls.Add(this.pictureBox4);
             this.myListingContainer.Controls.Add(this.button7);
             this.myListingContainer.Controls.Add(this.btn_myListing);
@@ -328,21 +328,22 @@
             this.myListingContainer.Size = new System.Drawing.Size(264, 68);
             this.myListingContainer.TabIndex = 56;
             // 
-            // button8
+            // btn_editListing
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.button8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button8.Location = new System.Drawing.Point(15, 129);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(246, 54);
-            this.button8.TabIndex = 56;
-            this.button8.Text = "          - Edit my Listings";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = false;
+            this.btn_editListing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_editListing.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editListing.BackgroundImage")));
+            this.btn_editListing.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_editListing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editListing.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_editListing.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_editListing.Location = new System.Drawing.Point(15, 129);
+            this.btn_editListing.Name = "btn_editListing";
+            this.btn_editListing.Size = new System.Drawing.Size(246, 54);
+            this.btn_editListing.TabIndex = 56;
+            this.btn_editListing.Text = "          - Edit my Listings";
+            this.btn_editListing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_editListing.UseVisualStyleBackColor = false;
+            this.btn_editListing.Click += new System.EventHandler(this.btn_editListing_Click);
             // 
             // pictureBox4
             // 
@@ -546,7 +547,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel myListingContainer;
         private System.Windows.Forms.Button btn_addListing;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn_editListing;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;

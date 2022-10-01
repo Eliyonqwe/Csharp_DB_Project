@@ -62,6 +62,12 @@
     <Compile Include="Classes\sqlClass.cs" />
     <Compile Include="Classes\stockListing.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="editListing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editListing.Designer.cs">
+      <DependentUpon>editListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addListing.resx">
       <DependentUpon>addListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editListing.resx">
+      <DependentUpon>editListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
