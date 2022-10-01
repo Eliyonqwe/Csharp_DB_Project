@@ -33,6 +33,7 @@
             this.btn_minus = new System.Windows.Forms.PictureBox();
             this.btn_plus = new System.Windows.Forms.PictureBox();
             this.btn_update = new System.Windows.Forms.Button();
+            this.btn_HomePage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_plus)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +84,7 @@
             this.btn_update.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_update.Location = new System.Drawing.Point(417, 238);
+            this.btn_update.Location = new System.Drawing.Point(314, 233);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(141, 60);
             this.btn_update.TabIndex = 71;
@@ -91,11 +92,25 @@
             this.btn_update.UseVisualStyleBackColor = false;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
+            // btn_HomePage
+            // 
+            this.btn_HomePage.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_HomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HomePage.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_HomePage.Location = new System.Drawing.Point(527, 233);
+            this.btn_HomePage.Name = "btn_HomePage";
+            this.btn_HomePage.Size = new System.Drawing.Size(141, 60);
+            this.btn_HomePage.TabIndex = 72;
+            this.btn_HomePage.Text = "Back to homepage";
+            this.btn_HomePage.UseVisualStyleBackColor = false;
+            this.btn_HomePage.Click += new System.EventHandler(this.btn_HomePage_Click);
+            // 
             // addBalance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 536);
+            this.Controls.Add(this.btn_HomePage);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_minus);
             this.Controls.Add(this.btn_plus);
@@ -117,5 +132,6 @@
         private System.Windows.Forms.PictureBox btn_plus;
         private System.Windows.Forms.PictureBox btn_minus;
         private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_HomePage;
     }
 }

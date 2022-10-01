@@ -129,7 +129,7 @@
             this.label1.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(12, 608);
+            this.label1.Location = new System.Drawing.Point(14, 608);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 40);
             this.label1.TabIndex = 1;
@@ -160,9 +160,9 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Csharp_DB_Project.Properties.Resources.f;
-            this.pictureBox9.Location = new System.Drawing.Point(687, -49);
+            this.pictureBox9.Location = new System.Drawing.Point(685, -49);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(179, 218);
+            this.pictureBox9.Size = new System.Drawing.Size(173, 218);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 17;
             this.pictureBox9.TabStop = false;
@@ -239,7 +239,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Csharp_DB_Project.Properties.Resources.bar_chart_concept_vector_linear_icon_isolated_transparent_bac_background_transparency_outline_style_130088985;
-            this.pictureBox2.Location = new System.Drawing.Point(61, 559);
+            this.pictureBox2.Location = new System.Drawing.Point(63, 559);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(54, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
