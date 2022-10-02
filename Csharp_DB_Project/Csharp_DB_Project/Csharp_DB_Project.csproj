@@ -74,17 +74,17 @@
     <Compile Include="HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProfilePage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProfilePage.Designer.cs">
-      <DependentUpon>ProfilePage.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfilePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfilePage.Designer.cs">
+      <DependentUpon>ProfilePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,11 +106,11 @@
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProfilePage.resx">
-      <DependentUpon>ProfilePage.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilePage.resx">
+      <DependentUpon>ProfilePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -224,6 +224,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="pics\4830332-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wepik-photo-mode-202291-152451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backt1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1 %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1 %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1 %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1 %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1 %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1 %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1 %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project-1 %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\My project %284%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

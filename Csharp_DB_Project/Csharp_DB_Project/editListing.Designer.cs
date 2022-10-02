@@ -32,17 +32,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_companyType = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_amount = new System.Windows.Forms.TextBox();
             this.txt_companyName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_homepage = new System.Windows.Forms.Button();
+            this.btn_load = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_update = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_price
@@ -81,16 +81,6 @@
             this.label1.TabIndex = 98;
             this.label1.Text = "Amount(birr)";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Csharp_DB_Project.Properties.Resources.fantom;
-            this.pictureBox1.Location = new System.Drawing.Point(340, 74);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 101);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 97;
-            this.pictureBox1.TabStop = false;
-            // 
             // txt_amount
             // 
             this.txt_amount.Location = new System.Drawing.Point(217, 341);
@@ -127,17 +117,18 @@
             this.label3.TabIndex = 93;
             this.label3.Text = "Company Name";
             // 
-            // btn_homepage
+            // btn_load
             // 
-            this.btn_homepage.BackColor = System.Drawing.Color.YellowGreen;
-            this.btn_homepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_homepage.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_homepage.Location = new System.Drawing.Point(418, 451);
-            this.btn_homepage.Name = "btn_homepage";
-            this.btn_homepage.Size = new System.Drawing.Size(141, 60);
-            this.btn_homepage.TabIndex = 104;
-            this.btn_homepage.Text = "Back to Home page";
-            this.btn_homepage.UseVisualStyleBackColor = false;
+            this.btn_load.BackColor = System.Drawing.Color.YellowGreen;
+            this.btn_load.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_load.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_load.Location = new System.Drawing.Point(418, 451);
+            this.btn_load.Name = "btn_load";
+            this.btn_load.Size = new System.Drawing.Size(141, 60);
+            this.btn_load.TabIndex = 104;
+            this.btn_load.Text = "load/refresh";
+            this.btn_load.UseVisualStyleBackColor = false;
+            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
             // 
             // btn_delete
             // 
@@ -150,6 +141,7 @@
             this.btn_delete.TabIndex = 103;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_update
             // 
@@ -162,6 +154,7 @@
             this.btn_update.TabIndex = 102;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = false;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // dataGridView1
             // 
@@ -172,6 +165,18 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(590, 400);
             this.dataGridView1.TabIndex = 105;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Csharp_DB_Project.Properties.Resources.fantom;
+            this.pictureBox1.Location = new System.Drawing.Point(340, 74);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 97;
+            this.pictureBox1.TabStop = false;
             // 
             // editListing
             // 
@@ -179,7 +184,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1239, 554);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btn_homepage);
+            this.Controls.Add(this.btn_load);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.txt_price);
@@ -193,8 +198,8 @@
             this.Controls.Add(this.label3);
             this.Name = "editListing";
             this.Text = "editListing";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,7 +216,7 @@
         private System.Windows.Forms.TextBox txt_companyName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_homepage;
+        private System.Windows.Forms.Button btn_load;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.DataGridView dataGridView1;

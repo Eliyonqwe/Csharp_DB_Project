@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Deployment.Application;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Csharp_DB_Project.Classes;
+using System;
 using System.Windows.Forms;
-using Csharp_DB_Project.Classes;
 
 namespace Csharp_DB_Project
 {
@@ -23,15 +15,15 @@ namespace Csharp_DB_Project
             this.username = username;
             User u = new User();
             u.username = username;
-           
+
             String status = u.FetchID();
             if (status == "0")
             {
                 userID = u.userid;
-            } 
+            }
             else
                 MessageBox.Show(status);
-            
+
 
         }
 
@@ -41,23 +33,23 @@ namespace Csharp_DB_Project
             c.companyName = txt_companyName.Text;
             c.companyType = txt_companyType.Text;
             String companyStatus = c.addCompany();
-            
+
 
             stockListing s = new stockListing();
             s.companyID = Convert.ToInt32(c.companyID);
             s.userID = userID;
             s.amount = Convert.ToDouble(txt_amount.Text);
             s.price = Convert.ToDouble(txt_price.Text);
-           
+
             String stockStatus = s.addListing();
 
-            if(companyStatus == "0" && stockStatus == "0")
+            if (companyStatus == "0" && stockStatus == "0")
             {
                 MessageBox.Show("Listing has been added");
             }
             else
             {
-                MessageBox.Show(companyStatus + '\n' + stockStatus+  '\n' + '\n' + s.companyID.ToString());
+                MessageBox.Show(companyStatus + '\n' + stockStatus + '\n' + '\n' + s.companyID.ToString());
             }
         }
 

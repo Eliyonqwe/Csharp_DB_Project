@@ -1,12 +1,5 @@
 ﻿using Csharp_DB_Project.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Csharp_DB_Project
@@ -39,9 +32,9 @@ namespace Csharp_DB_Project
 
         private void btn_delete_click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure you want to delete your account?","Delete Account", MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to delete your account?", "Delete Account", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                
+
                 String status = u.deleteUser(Convert.ToInt32(txt_id.Text));
 
 
@@ -56,7 +49,7 @@ namespace Csharp_DB_Project
                     MessageBox.Show(status);
 
             }
-            
+
 
 
         }
@@ -68,15 +61,15 @@ namespace Csharp_DB_Project
         }
         private void btn_update_Click(object sender, EventArgs e)
         {
-            if(changeIndicator == 0)
+            if (changeIndicator == 0)
             {
                 MessageBox.Show("Nothing has been altered/changed!");
             }
             else
             {
-      
-                String status= u.updateUser(Convert.ToInt32(txt_id.Text), txt_fname.Text, txt_lname.Text, txt_uname.Text, txt_password.Text, txt_phone.Text);
-                
+
+                String status = u.updateUser(Convert.ToInt32(txt_id.Text), txt_fname.Text, txt_lname.Text, txt_uname.Text, txt_password.Text, txt_phone.Text);
+
                 if (status == "0")
                 {
                     MessageBox.Show("Change has been recorded!");
@@ -84,7 +77,7 @@ namespace Csharp_DB_Project
                 }
                 else
                     MessageBox.Show(status);
-                
+
             }
         }
 

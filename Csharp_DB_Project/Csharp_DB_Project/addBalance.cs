@@ -1,14 +1,6 @@
 ﻿using Csharp_DB_Project.Classes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Csharp_DB_Project
 {
@@ -72,10 +64,10 @@ namespace Csharp_DB_Project
 
             double balance = Convert.ToDouble(txt_balance.Text);
             balance -= 10000;
-            if(balance < 0)
+            if (balance < 0)
             {
                 balance += 10000;
-                MessageBox.Show("Your balance cant be negative!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Your balance cant be negative!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
                 txt_balance.Text = balance.ToString();

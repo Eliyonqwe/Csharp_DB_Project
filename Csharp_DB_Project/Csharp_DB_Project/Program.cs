@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Csharp_DB_Project
 {
@@ -15,9 +11,16 @@ namespace Csharp_DB_Project
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginPage());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new LoginPage());
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine(ex.StackTrace);
+            }
         }
     }
 }

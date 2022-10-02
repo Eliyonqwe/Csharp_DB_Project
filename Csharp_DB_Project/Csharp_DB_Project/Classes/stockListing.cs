@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Csharp_DB_Project.Classes
 {
@@ -29,20 +25,65 @@ namespace Csharp_DB_Project.Classes
                 {
                     string sqlQuery = "exec addListing @compID, @userID, @amount, @price";
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
-                    cmd.Parameters.Add("@compID", System.Data.SqlDbType.Int).Value= this.companyID;
+                    cmd.Parameters.Add("@compID", System.Data.SqlDbType.Int).Value = this.companyID;
                     cmd.Parameters.Add("@userID", System.Data.SqlDbType.Int).Value = this.userID;
                     cmd.Parameters.Add("@amount", System.Data.SqlDbType.Money).Value = this.amount;
                     cmd.Parameters.Add("@price", System.Data.SqlDbType.Money).Value = this.price;
                     cmd.ExecuteNonQuery();
                 }
 
-                    return "0";
+                return "0";
             }
             catch (Exception e)
             {
                 return e.Message;
             }
         }
+        public String updateListing(int stockID, double amount, double price)
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
 
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec updateStock @stockID, @amount, @price";
+                    SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                    cmd.Parameters.Add("@stockID", System.Data.SqlDbType.Int).Value = stockID;
+                    cmd.Parameters.Add("@amount", System.Data.SqlDbType.Money).Value = amount;
+                    cmd.Parameters.Add("@price", System.Data.SqlDbType.Money).Value = price;
+                    cmd.ExecuteNonQuery();
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+        public String deleteListing(int stockID)
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec updateStock @stockID";
+                    SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                    cmd.Parameters.Add("@stockID", System.Data.SqlDbType.Int).Value = stockID;
+                    cmd.ExecuteNonQuery();
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
     }
 }

@@ -2,11 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Csharp_DB_Project.Classes
 {
@@ -29,7 +24,7 @@ namespace Csharp_DB_Project.Classes
                 System.Data.SqlClient.SqlConnection con = s.connect();
 
                 if (con.State == System.Data.ConnectionState.Open)
-                { 
+                {
                     string sqlQuery = "exec registerUser @fname, @lname, @uname, @pswd, @phone, @balance";
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
                     cmd.Parameters.AddWithValue("@fname", this.firstName);
@@ -39,8 +34,8 @@ namespace Csharp_DB_Project.Classes
                     cmd.Parameters.AddWithValue("@phone", this.phoneNumber);
                     cmd.Parameters.AddWithValue("@balance", this.balance);
                     cmd.ExecuteNonQuery();
-                 }
-                    return "0";
+                }
+                return "0";
             }
             catch (Exception e)
             {
@@ -64,11 +59,11 @@ namespace Csharp_DB_Project.Classes
                     {
                         this.userid = Convert.ToInt32(result[0]);
                         this.firstName = result[1].ToString();
-                        this.lastName =  result[2].ToString();
-                        this.username = result[3].ToString();   
+                        this.lastName = result[2].ToString();
+                        this.username = result[3].ToString();
                         this.password = result[4].ToString();
                         this.phoneNumber = result[5].ToString();
-                        this.balance = Convert.ToDouble(result[6]); 
+                        this.balance = Convert.ToDouble(result[6]);
                     }
                 }
                 return "0";
@@ -90,7 +85,7 @@ namespace Csharp_DB_Project.Classes
                 {
                     string sqlQuery = "exec updateUser @id, @fname, @lname, @uname, @password, @phone";
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
-                    cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value=id;
+                    cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
                     cmd.Parameters.Add("@fname", System.Data.SqlDbType.VarChar).Value = fname;
                     cmd.Parameters.Add("@lname", System.Data.SqlDbType.VarChar).Value = lname;
                     cmd.Parameters.Add("@uname", System.Data.SqlDbType.VarChar).Value = uname;
@@ -164,7 +159,7 @@ namespace Csharp_DB_Project.Classes
                 {
                     string sqlQuery = "select dbo.FetchID(@username)";
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
-                    cmd.Parameters.Add("@username", SqlDbType.VarChar).Value= this.username;
+                    cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = this.username;
                     this.userid = Convert.ToInt32(cmd.ExecuteScalar());
                 }
                 return "0";
