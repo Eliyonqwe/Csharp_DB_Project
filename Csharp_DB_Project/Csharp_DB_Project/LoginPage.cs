@@ -112,5 +112,10 @@ namespace Csharp_DB_Project
                 txt_passwd.PasswordChar = '*';
             }
                     }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
