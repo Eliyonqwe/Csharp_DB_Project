@@ -221,5 +221,20 @@ namespace Csharp_DB_Project
         {
 
         }
+
+        private void btn_viewAllListing_Click(object sender, EventArgs e)
+        {
+            viewListing v = new viewListing(username);
+            this.Hide();
+            v.Show();
+        }
+
+        private void viewOffer_Click(object sender, EventArgs e)
+        {
+            viewOffer v = new viewOffer(username);
+            this.Hide();
+            v.Show();
+
+        }
     }
 }

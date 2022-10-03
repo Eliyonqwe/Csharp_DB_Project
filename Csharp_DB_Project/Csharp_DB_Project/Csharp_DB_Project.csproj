@@ -59,6 +59,8 @@
       <DependentUpon>addListing.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Company.cs" />
+    <Compile Include="Classes\Offer.cs" />
+    <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\sqlClass.cs" />
     <Compile Include="Classes\stockListing.cs" />
     <Compile Include="Classes\User.cs" />
@@ -94,6 +96,18 @@
     <Compile Include="RegisterPage.Designer.cs">
       <DependentUpon>RegisterPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewListing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewListing.Designer.cs">
+      <DependentUpon>viewListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewOffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewOffer.Designer.cs">
+      <DependentUpon>viewOffer.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addBalance.resx">
       <DependentUpon>addBalance.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +138,12 @@
     </Compile>
     <EmbeddedResource Include="RegisterPage.resx">
       <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewListing.resx">
+      <DependentUpon>viewListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewOffer.resx">
+      <DependentUpon>viewOffer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

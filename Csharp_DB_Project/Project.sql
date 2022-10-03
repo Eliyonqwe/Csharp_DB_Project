@@ -1,6 +1,5 @@
 create database Project
 use Project
-
 create table admin(
 	adminID int primary key identity(1,1),
 	username varchar(30) UNIQUE,
@@ -34,10 +33,8 @@ create table stockListing(
   alter view viewListing as select  username, stockID, c.companyID, companyName, companyType, amount, price from company c join stockListing s on c.companyID = s.companyID join users u on s.userID = u.userID
   select*from viewListing 
   
-  delete from stockListing where stockID = 5
-  delete from company where companyID = 5
---insert into company values('Bank', 'Zemen Bank');
-
+alter view viewAllListing as select  userID, stockID, companyName, companyType, amount, price, status from stockListing s join company c on s.companyID = c.companyID
+select *from viewAllListing
 create table offer(
 	offerID int primary key identity(1,1),
 	offeringUserID int FOREIGN KEY References Users(userID),
@@ -46,7 +43,8 @@ create table offer(
 	offerAmount money NOT NULL,
 	offerStatus varchar(30) default 'pending'
 );
-
+alter view viewOffers as select companyName, companyType, amount, price as askingPrice, offeramount, offerstatus, offerID, offeringUserid, selleruserID, s.stockID from offer o join stockListing s on o.stockID = s.stockID join company c on c.companyID = s.companyID
+select *from viewOffers where selleruserId = 2 and offerstatus = 'pending'
 create table orders(
 	orderID int primary key identity(1,1),
 	orderingUserID int FOREIGN KEY References Users(userID),
@@ -152,3 +150,19 @@ begin
 	delete from Company where companyID = @companyID
 end
 
+
+create proc addOffer
+@offeringID int, @sellerID int, @stockID int,@offerAmount money
+as
+begin
+	insert into offer(offeringUserID, sellerUserID, stockID,offerAmount) values(@offeringID, @sellerID, @stockID,@offerAmount)
+end
+
+create proc addOrder
+@orderingID int, @sellerID int, @stockID int,@orderAmount money, @offerID int
+as
+begin
+	update offer set offerstatus = 'Accepted' where offerID = @offerID
+	update stockListing set status = 'Sold' where stockID = @stockID
+	insert into orders(orderingUserID, sellerUserID, stockID,orderAmount) values(@orderingID, @sellerID, @stockID,@orderAmount)
+end

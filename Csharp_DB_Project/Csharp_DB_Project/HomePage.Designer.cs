@@ -54,7 +54,7 @@
             this.myListingContainer = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btn_viewOffer = new System.Windows.Forms.Button();
             this.btn_myListing = new System.Windows.Forms.Button();
             this.btn_addListing = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -342,13 +342,14 @@
             this.btn_viewAllListing.Text = "                  View All                          Listings";
             this.btn_viewAllListing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_viewAllListing.UseVisualStyleBackColor = false;
+            this.btn_viewAllListing.Click += new System.EventHandler(this.btn_viewAllListing_Click);
             // 
             // myListingContainer
             // 
             this.myListingContainer.BackColor = System.Drawing.Color.Transparent;
             this.myListingContainer.Controls.Add(this.button8);
             this.myListingContainer.Controls.Add(this.pictureBox4);
-            this.myListingContainer.Controls.Add(this.button7);
+            this.myListingContainer.Controls.Add(this.btn_viewOffer);
             this.myListingContainer.Controls.Add(this.btn_myListing);
             this.myListingContainer.Controls.Add(this.btn_addListing);
             this.myListingContainer.Location = new System.Drawing.Point(3, 364);
@@ -386,21 +387,22 @@
             this.pictureBox4.TabIndex = 53;
             this.pictureBox4.TabStop = false;
             // 
-            // button7
+            // btn_viewOffer
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.Location = new System.Drawing.Point(15, 189);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(246, 54);
-            this.button7.TabIndex = 55;
-            this.button7.Text = "          - View Offers ";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btn_viewOffer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_viewOffer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_viewOffer.BackgroundImage")));
+            this.btn_viewOffer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_viewOffer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_viewOffer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btn_viewOffer.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_viewOffer.Location = new System.Drawing.Point(15, 189);
+            this.btn_viewOffer.Name = "btn_viewOffer";
+            this.btn_viewOffer.Size = new System.Drawing.Size(246, 54);
+            this.btn_viewOffer.TabIndex = 55;
+            this.btn_viewOffer.Text = "          - View Offers ";
+            this.btn_viewOffer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_viewOffer.UseVisualStyleBackColor = false;
+            this.btn_viewOffer.Click += new System.EventHandler(this.viewOffer_Click);
             // 
             // btn_myListing
             // 
@@ -589,7 +591,7 @@
         private System.Windows.Forms.Panel myListingContainer;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btn_viewOffer;
         private System.Windows.Forms.Button btn_myListing;
         private System.Windows.Forms.Button btn_addListing;
         private System.Windows.Forms.Button btn_viewAllListing;

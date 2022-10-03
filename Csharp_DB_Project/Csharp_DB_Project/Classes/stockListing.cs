@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Drawing;
 
 namespace Csharp_DB_Project.Classes
 {
@@ -85,5 +87,6 @@ namespace Csharp_DB_Project.Classes
                 return e.Message;
             }
         }
+   
     }
 }

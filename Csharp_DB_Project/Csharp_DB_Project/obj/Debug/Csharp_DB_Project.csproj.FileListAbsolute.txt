@@ -106,3 +106,5 @@ D:\Downloads\Csharp_DB_Project-main\Csharp_DB_Project\Csharp_DB_Project\obj\Debu
 D:\Downloads\Csharp_DB_Project-main\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.editListing.resources
 D:\Downloads\Csharp_DB_Project-main\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.editListings.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.editListing.resources
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.viewListing.resources
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.viewOffer.resources
