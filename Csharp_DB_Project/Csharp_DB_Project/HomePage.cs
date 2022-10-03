@@ -26,11 +26,7 @@ namespace Csharp_DB_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int len = lb_welcome.Text.Length;
-            String x = lb_welcome.Text;
-            string user = x.Substring(13, len - 13); // removes welcome back from "Welcome back 'username'"
-
-            HomePage h = new HomePage(user);
+            HomePage h = new HomePage(username);
             this.Hide();
             h.Show();
         }
@@ -77,7 +73,7 @@ namespace Csharp_DB_Project
 
             if (myProfileCollapsed)
             {
-                myProfileContainer.Height -= 10;
+                myProfileContainer.Height -= 27;
                 if (myProfileContainer.Height == myProfileContainer.MinimumSize.Height)
                 {
                     myProfileCollapsed = false;
@@ -86,7 +82,7 @@ namespace Csharp_DB_Project
             }
             else
             {
-                myProfileContainer.Height += 10;
+                myProfileContainer.Height += 27;
                 if (myProfileContainer.Height == myProfileContainer.MaximumSize.Height)
                 {
                     myProfileCollapsed = true;
@@ -98,7 +94,7 @@ namespace Csharp_DB_Project
         {
             if (sidebarExpand)
             {
-                sidebarContainer.Width -= 10;
+                sidebarContainer.Width -= 50;
                 if (sidebarContainer.Width == sidebarContainer.MinimumSize.Width)
                 {
                     sidebarExpand = false;
@@ -107,7 +103,7 @@ namespace Csharp_DB_Project
             }
             else
             {
-                sidebarContainer.Width += 10;
+                sidebarContainer.Width += 50;
                 if (sidebarContainer.Width == sidebarContainer.MaximumSize.Width)
                 {
                     sidebarExpand = true;
@@ -212,9 +208,18 @@ namespace Csharp_DB_Project
             el.Show();
         }
 
+
+      
+      
+
         private void pictureBox8_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

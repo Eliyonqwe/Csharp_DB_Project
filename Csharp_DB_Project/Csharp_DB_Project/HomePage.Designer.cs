@@ -35,6 +35,7 @@
             this.sidebarTImer = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.lb_welcome = new System.Windows.Forms.Label();
             this.sidebarContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,9 +64,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.lb_welcome = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.sidebarContainer.SuspendLayout();
@@ -83,8 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // myProfileTimer
@@ -106,10 +104,11 @@
             // 
             this.panel3.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.My_project_1;
             this.panel3.Controls.Add(this.pictureBox8);
+            this.panel3.Controls.Add(this.lb_welcome);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(584, 0);
+            this.panel3.Location = new System.Drawing.Point(377, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(751, 613);
+            this.panel3.Size = new System.Drawing.Size(880, 640);
             this.panel3.TabIndex = 52;
             // 
             // pictureBox8
@@ -117,13 +116,25 @@
             this.pictureBox8.BackColor = System.Drawing.Color.IndianRed;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__14_;
-            this.pictureBox8.Location = new System.Drawing.Point(675, 12);
+            this.pictureBox8.Location = new System.Drawing.Point(789, 12);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(64, 22);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 52;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click_1);
+            // 
+            // lb_welcome
+            // 
+            this.lb_welcome.AutoSize = true;
+            this.lb_welcome.BackColor = System.Drawing.Color.Transparent;
+            this.lb_welcome.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_welcome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_welcome.Location = new System.Drawing.Point(20, 577);
+            this.lb_welcome.Name = "lb_welcome";
+            this.lb_welcome.Size = new System.Drawing.Size(222, 41);
+            this.lb_welcome.TabIndex = 51;
+            this.lb_welcome.Text = "Welcome back ";
             // 
             // sidebarContainer
             // 
@@ -174,7 +185,7 @@
             this.menuButton.BackColor = System.Drawing.Color.Transparent;
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::Csharp_DB_Project.Properties.Resources.My_project__1_2;
-            this.menuButton.Location = new System.Drawing.Point(-20, 68);
+            this.menuButton.Location = new System.Drawing.Point(-22, 41);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(124, 56);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -507,50 +518,45 @@
             this.label2.TabIndex = 51;
             this.label2.Text = " © All RIghts Reserved";
             // 
-            // panel7
+            // label3
             // 
-            this.panel7.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.backt;
-            this.panel7.Controls.Add(this.lb_welcome);
-            this.panel7.Controls.Add(this.pictureBox1);
-            this.panel7.Location = new System.Drawing.Point(263, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(388, 678);
-            this.panel7.TabIndex = 53;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Cooper Black", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(311, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 42);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Start";
             // 
-            // lb_welcome
+            // label4
             // 
-            this.lb_welcome.AutoSize = true;
-            this.lb_welcome.BackColor = System.Drawing.Color.Transparent;
-            this.lb_welcome.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_welcome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_welcome.Location = new System.Drawing.Point(25, 438);
-            this.lb_welcome.Name = "lb_welcome";
-            this.lb_welcome.Size = new System.Drawing.Size(148, 27);
-            this.lb_welcome.TabIndex = 51;
-            this.lb_welcome.Text = "Welcome back ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__5_;
-            this.pictureBox1.Location = new System.Drawing.Point(-61, 153);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(427, 109);
-            this.pictureBox1.TabIndex = 50;
-            this.pictureBox1.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Cooper Black", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(264, 113);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(228, 42);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "Trade Now";
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1335, 613);
+            this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
+            this.ClientSize = new System.Drawing.Size(1257, 640);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.sidebarContainer);
-            this.Controls.Add(this.panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomePage";
             this.Text = "HomePag";
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.sidebarContainer.ResumeLayout(false);
             this.sidebarContainer.PerformLayout();
@@ -569,10 +575,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -609,10 +613,10 @@
         private System.Windows.Forms.Timer myProfileTimer;
         private System.Windows.Forms.Timer myListingTImer;
         private System.Windows.Forms.Timer sidebarTImer;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lb_welcome;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

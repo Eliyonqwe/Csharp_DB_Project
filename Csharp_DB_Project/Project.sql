@@ -31,11 +31,17 @@ create table stockListing(
 	status varchar(30) default 'Pending',
 );
  
+  alter view viewListing as select  username, stockID, c.companyID, companyName, companyType, amount, price from company c join stockListing s on c.companyID = s.companyID join users u on s.userID = u.userID
+  select*from viewListing 
+  
+  delete from stockListing where stockID = 5
+  delete from company where companyID = 5
 --insert into company values('Bank', 'Zemen Bank');
 
 create table offer(
 	offerID int primary key identity(1,1),
-	userID int FOREIGN KEY References Users(userID),
+	offeringUserID int FOREIGN KEY References Users(userID),
+	sellerUserID int FOREIGN KEY References Users(userID),
 	stockID int FOREIGN KEY References stockListing(stockID),
 	offerAmount money NOT NULL,
 	offerStatus varchar(30) default 'pending'
@@ -43,7 +49,8 @@ create table offer(
 
 create table orders(
 	orderID int primary key identity(1,1),
-	userID int FOREIGN KEY References Users(userID),
+	orderingUserID int FOREIGN KEY References Users(userID),
+	selleruserID int FOREIGN KEY References Users(userID),
 	stockID int FOREIGN KEY References stockListing(stockID),
 	orderAmount money NOT NULL, 
 );
@@ -95,11 +102,11 @@ as
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-create proc addCompany
+alter proc addCompany
 @name varchar(30), @type varchar(30), @companyID int OUTPUT
 as
 begin
-	insert into company(companyName,companyType) values(@name,@type)
+	insert into company values(@name,@type)
 	set @companyID = SCOPE_IDENTITY()
 end
 
@@ -107,14 +114,41 @@ alter proc addListing
 @compID int, @userID int, @amount money,@price money
 as
 begin
-	insert into stockListing(companyID,userID,amount,price,status) values(@compID, @userID, @amount,@price, 'pending')
+	insert into stockListing values(@compID, @userID, @amount,@price, 'pending')
 end
-	
-alter function fetchID(@username varchar(30))
+
+create function fetchID(@username varchar(30))
 returns int
 as
 begin
-	return (select userID from users where username = @username)
+	return (select userid from users where username = @username)
 end
 
-select dbo.fetchID('ld')
+create proc updateStock
+@stockID int, @amount money, @price money
+as
+begin
+	update stockListing set amount = @amount, price = @price where stockID = @stockID
+end
+	
+create proc updateCompany
+@companyID int, @companyName varchar(30),@companyType varchar(30)
+as
+begin
+	update Company set companyName = @companyName, companyType= @companyType where companyID = @companyID
+end
+
+create proc deleteStock
+@stockID int
+as
+begin
+	delete from stockListing where stockID = @stockID
+end
+	
+create proc deleteCompany
+@companyID int
+as
+begin
+	delete from Company where companyID = @companyID
+end
+
