@@ -108,5 +108,9 @@ namespace Csharp_DB_Project
             changeIndicator++;
         }
 
+        private void ProfilePage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

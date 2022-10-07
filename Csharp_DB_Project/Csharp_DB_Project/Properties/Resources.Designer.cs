@@ -324,6 +324,16 @@ namespace Csharp_DB_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap My_project__3_ {
+            get {
+                object obj = ResourceManager.GetObject("My project (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap My_project__4_ {
             get {
                 object obj = ResourceManager.GetObject("My project (4)", resourceCulture);
@@ -679,6 +689,16 @@ namespace Csharp_DB_Project.Properties {
             get {
                 object obj = ResourceManager.GetObject("this-is-a-graphic-reation-of-a-pad-lock-username-and-password-icon-115534595184fs" +
                         "adfncq61", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transition {
+            get {
+                object obj = ResourceManager.GetObject("transition", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

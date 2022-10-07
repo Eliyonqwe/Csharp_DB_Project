@@ -224,9 +224,21 @@ namespace Csharp_DB_Project
 
         private void btn_viewAllListing_Click(object sender, EventArgs e)
         {
-            viewListing v = new viewListing(username);
+           /* viewListing v = new viewListing(username);
             this.Hide();
             v.Show();
+*/          
+           panel3.Controls.Clear();
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
+            viewListing v = new viewListing(username);
+            v.TopLevel = false;
+            v.AutoScroll = true;
+            v.Dock = DockStyle.Fill;
+            v.Show();
+            panel3.Controls.Add(v);
+          
         }
 
         private void viewOffer_Click(object sender, EventArgs e)
@@ -234,6 +246,24 @@ namespace Csharp_DB_Project
             viewOffer v = new viewOffer(username);
             this.Hide();
             v.Show();
+
+        }
+
+        private void btn_Home_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            label3.Visible=true;
+            label4.Visible=true;
+           lb_welcome.Visible=true;
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
 
         }
     }

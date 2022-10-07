@@ -100,5 +100,15 @@ namespace Csharp_DB_Project
             h.Show();
 
         }
+
+        private void viewListing_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
