@@ -108,3 +108,6 @@ D:\Downloads\Csharp_DB_Project-main\Csharp_DB_Project\Csharp_DB_Project\obj\Debu
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.editListing.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.viewListing.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.viewOffer.resources
+C:\Users\Leul\Documents\GitHub\Csharp_DB_Project_ld\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.editListing.resources
+C:\Users\Leul\Documents\GitHub\Csharp_DB_Project_ld\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.viewListing.resources
+C:\Users\Leul\Documents\GitHub\Csharp_DB_Project_ld\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.viewOffer.resources

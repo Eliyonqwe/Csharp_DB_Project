@@ -15,7 +15,7 @@ namespace Csharp_DB_Project
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new HomePage("eliyonzm"));
+                Application.Run(new HomePage("ld"));
             }
             catch (Exception ex)
             {

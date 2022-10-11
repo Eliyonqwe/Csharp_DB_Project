@@ -233,6 +233,7 @@
             this.Controls.Add(this.label3);
             this.Name = "ProfilePage";
             this.Text = "ProfilePage";
+            this.Load += new System.EventHandler(this.ProfilePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
