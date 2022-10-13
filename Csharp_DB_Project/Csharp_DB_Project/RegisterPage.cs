@@ -41,21 +41,29 @@ namespace Csharp_DB_Project
 
         private void btn_Register_Click(object sender, EventArgs e)
         {
-            User u = new User();
-            u.firstName = txt_firstName.Text;
-            u.lastName = txt_lastName.Text;
-            u.username = txt_uname.Text;
-            u.phoneNumber = txt_phoneno.Text;
-            u.password = txt_password.Text;
-            u.firstName = txt_firstName.Text;
-
-            String conStatus = u.Save();
-
-            if (conStatus == "0")
-                MessageBox.Show("Connected Succesfully!");
+            if(String.IsNullOrEmpty( txt_firstName.Text) || String.IsNullOrEmpty( txt_lastName.Text) || String.IsNullOrEmpty(txt_uname.Text) || String.IsNullOrEmpty(txt_phoneno.Text) || String.IsNullOrEmpty(txt_password.Text) )
+            { 
+                MessageBox.Show("Please check your Credentials!");
+            }
             else
-                MessageBox.Show(conStatus);
+            {
+              User u = new User();
+                u.firstName = txt_firstName.Text;
+                u.lastName = txt_lastName.Text;
+                u.username = txt_uname.Text;
+                u.phoneNumber = txt_phoneno.Text;
+                u.password = txt_password.Text;
+                u.firstName = txt_firstName.Text;
 
+                String conStatus = u.Save();
+
+                if (conStatus == "0")
+                    MessageBox.Show("Account crreated Succesfully!");
+                else
+                    MessageBox.Show(conStatus);
+
+            }
+          
 
         }
     }

@@ -52,6 +52,9 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btn_back = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,20 +65,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Register
             // 
-            this.btn_Register.BackColor = System.Drawing.Color.Orange;
-            this.btn_Register.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.test;
+            this.btn_Register.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Register.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
             this.btn_Register.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Register.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Register.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Register.Image = global::Csharp_DB_Project.Properties.Resources.test;
+            this.btn_Register.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Register.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
             this.btn_Register.Location = new System.Drawing.Point(574, 630);
             this.btn_Register.Name = "btn_Register";
-            this.btn_Register.Size = new System.Drawing.Size(185, 50);
+            this.btn_Register.Size = new System.Drawing.Size(186, 41);
             this.btn_Register.TabIndex = 25;
             this.btn_Register.Text = "Register";
             this.btn_Register.UseVisualStyleBackColor = false;
@@ -83,10 +89,10 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::Csharp_DB_Project.Properties.Resources.png_transparent_orange_button_blue_orange_button_blue_text_rectangle1;
-            this.pictureBox6.Location = new System.Drawing.Point(548, 619);
+            this.pictureBox6.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
+            this.pictureBox6.Location = new System.Drawing.Point(561, 619);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(232, 85);
+            this.pictureBox6.Size = new System.Drawing.Size(210, 61);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 22;
             this.pictureBox6.TabStop = false;
@@ -318,16 +324,16 @@
             // 
             // btn_back
             // 
-            this.btn_back.BackColor = System.Drawing.Color.Orange;
-            this.btn_back.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.test;
+            this.btn_back.BackColor = System.Drawing.Color.White;
             this.btn_back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_back.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_back.Image = global::Csharp_DB_Project.Properties.Resources.test;
+            this.btn_back.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_back.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
             this.btn_back.Location = new System.Drawing.Point(859, 630);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(185, 50);
+            this.btn_back.Size = new System.Drawing.Size(181, 41);
             this.btn_back.TabIndex = 40;
             this.btn_back.Text = "Back to Signin ";
             this.btn_back.UseVisualStyleBackColor = false;
@@ -335,13 +341,46 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::Csharp_DB_Project.Properties.Resources.png_transparent_orange_button_blue_orange_button_blue_text_rectangle1;
-            this.pictureBox8.Location = new System.Drawing.Point(833, 619);
+            this.pictureBox8.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
+            this.pictureBox8.Location = new System.Drawing.Point(841, 619);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(232, 85);
+            this.pictureBox8.Size = new System.Drawing.Size(212, 61);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 39;
             this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Csharp_DB_Project.Properties.Resources.bar_chart_concept_vector_linear_icon_isolated_transparent_bac_background_transparency_outline_style_130088985;
+            this.pictureBox2.Location = new System.Drawing.Point(71, 515);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(54, 46);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 43;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Location = new System.Drawing.Point(22, 564);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(170, 40);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "The Stock";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Csharp_DB_Project.Properties.Resources.Blue_abstract_elements_with_black_background_vector;
+            this.pictureBox11.Location = new System.Drawing.Point(-338, -44);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(850, 870);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 41;
+            this.pictureBox11.TabStop = false;
             // 
             // RegisterPage
             // 
@@ -349,6 +388,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1179, 804);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.lbl_password);
@@ -388,6 +430,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,5 +463,8 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox11;
     }
 }
