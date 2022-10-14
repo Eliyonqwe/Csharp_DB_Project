@@ -1,6 +1,7 @@
 ﻿using Csharp_DB_Project.Classes;
 using System;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Csharp_DB_Project
@@ -41,13 +42,18 @@ namespace Csharp_DB_Project
 
         private void btn_Register_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrEmpty( txt_firstName.Text) || String.IsNullOrEmpty( txt_lastName.Text) || String.IsNullOrEmpty(txt_uname.Text) || String.IsNullOrEmpty(txt_phoneno.Text) || String.IsNullOrEmpty(txt_password.Text) )
-            { 
-                MessageBox.Show("Please check your Credentials!");
-            }
-            else
+
+            Regex fname_error = new Regex(@"[a-z A-Z]{" + txt_firstName.Text.Length + @"}");
+            Regex number_error = new Regex(@"[0-9]{" + txt_phoneno.Text.Length + @"}");
+            Regex lname_error = new Regex(@"[a-z A-Z]{" + txt_lastName.Text.Length + @"}");
+            
+
+
+            if ((txt_firstName.Text.Length != 0 && txt_lastName.Text.Length != 0 && txt_password.Text.Length != 0 && txt_phoneno.Text.Length != 0 && txt_uname.Text.Length != 0) && (number_error.IsMatch(txt_phoneno.Text) && fname_error.IsMatch(txt_firstName.Text) && lname_error.IsMatch(txt_lastName.Text)))
+
             {
-              User u = new User();
+
+                User u = new User();
                 u.firstName = txt_firstName.Text;
                 u.lastName = txt_lastName.Text;
                 u.username = txt_uname.Text;
@@ -63,7 +69,57 @@ namespace Csharp_DB_Project
                     MessageBox.Show(conStatus);
 
             }
-          
+
+            else
+            {
+
+                if (string.IsNullOrEmpty(txt_firstName.Text))
+                {
+                    errorProvider1.SetError(txt_firstName, "please provide a Name ");
+
+                }
+
+                else if (fname_error.IsMatch(txt_firstName.Text) == false)
+                {
+                    errorProvider1.SetError(txt_firstName, "please enter a letters only ");
+                }
+
+                if (string.IsNullOrEmpty(txt_lastName.Text))
+                {
+                    errorProvider1.SetError(txt_lastName, "please provide a Name ");
+
+
+                }
+                else if (lname_error.IsMatch(txt_lastName.Text) == false)
+                {
+                    errorProvider1.SetError(txt_lastName, "please enter letters only ");
+                }
+
+                if (string.IsNullOrEmpty(txt_phoneno.Text))
+                {
+                    errorProvider1.SetError(txt_phoneno, "please provide a phone number ");
+
+
+                }
+                else if (number_error.IsMatch(txt_phoneno.Text) == false)
+                {
+                    errorProvider1.SetError(txt_phoneno, "please enter a number only ");
+                }
+
+                if (string.IsNullOrEmpty(txt_password.Text))
+                {
+                    errorProvider1.SetError(txt_password, "please provide a password ");
+
+
+                }
+                if (string.IsNullOrEmpty(txt_uname.Text))
+                {
+                    errorProvider1.SetError(txt_uname, "please provide a username ");
+
+
+                }
+
+            }
 
         }
     }
