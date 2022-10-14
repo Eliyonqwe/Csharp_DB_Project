@@ -10,8 +10,8 @@ namespace Csharp_DB_Project
         public RegisterPage()
         {
             InitializeComponent();
-            btn_Register.FlatAppearance.BorderColor = Color.Orange;
-            btn_back.FlatAppearance.BorderColor = Color.Orange;
+            btn_Register.FlatAppearance.BorderColor = Color.White;
+            btn_back.FlatAppearance.BorderColor = Color.White;
 
         }
 

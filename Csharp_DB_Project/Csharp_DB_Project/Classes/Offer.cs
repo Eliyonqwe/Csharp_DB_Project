@@ -15,6 +15,7 @@ namespace Csharp_DB_Project.Classes
         public Double offerAmount;
         public String addOffer()
         {
+     
             try
             {
                 sqlClass s = new sqlClass();

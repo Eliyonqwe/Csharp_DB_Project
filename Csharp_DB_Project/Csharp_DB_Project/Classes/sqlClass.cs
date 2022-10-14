@@ -7,7 +7,7 @@ namespace Csharp_DB_Project.Classes
     {
         public System.Data.SqlClient.SqlConnection connect()
         {
-            String conString = @"Data Source=LAPTOP-T23BOQMU;Initial Catalog=Project;Integrated Security=True";
+            String conString = @"Data Source=.;Initial Catalog=Project;Integrated Security=True";
             SqlConnection con = new SqlConnection(conString);
             con.Open();
 

@@ -79,7 +79,7 @@
             this.btn_Register.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Register.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_Register.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
-            this.btn_Register.Location = new System.Drawing.Point(574, 630);
+            this.btn_Register.Location = new System.Drawing.Point(677, 641);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(186, 41);
             this.btn_Register.TabIndex = 25;
@@ -90,7 +90,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
-            this.pictureBox6.Location = new System.Drawing.Point(561, 619);
+            this.pictureBox6.Location = new System.Drawing.Point(664, 630);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(210, 61);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,7 +103,7 @@
             this.txt_lastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_lastName.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_lastName.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_lastName.Location = new System.Drawing.Point(685, 258);
+            this.txt_lastName.Location = new System.Drawing.Point(722, 258);
             this.txt_lastName.Multiline = true;
             this.txt_lastName.Name = "txt_lastName";
             this.txt_lastName.Size = new System.Drawing.Size(341, 29);
@@ -113,7 +113,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Csharp_DB_Project.Properties.Resources.rounded;
-            this.pictureBox4.Location = new System.Drawing.Point(680, 236);
+            this.pictureBox4.Location = new System.Drawing.Point(717, 236);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(356, 58);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,7 +125,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label2.Location = new System.Drawing.Point(790, 98);
+            this.label2.Location = new System.Drawing.Point(827, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 22);
             this.label2.TabIndex = 19;
@@ -134,7 +134,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Csharp_DB_Project.Properties.Resources.fantom1;
-            this.pictureBox3.Location = new System.Drawing.Point(815, 6);
+            this.pictureBox3.Location = new System.Drawing.Point(852, 6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(82, 79);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,7 +168,7 @@
             this.pictureBox1.Image = global::Csharp_DB_Project.Properties.Resources.orangepattern;
             this.pictureBox1.Location = new System.Drawing.Point(-245, -92);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(835, 968);
+            this.pictureBox1.Size = new System.Drawing.Size(776, 968);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
@@ -176,7 +176,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Csharp_DB_Project.Properties.Resources.rounded;
-            this.pictureBox5.Location = new System.Drawing.Point(684, 325);
+            this.pictureBox5.Location = new System.Drawing.Point(721, 325);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(356, 58);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -189,7 +189,7 @@
             this.txt_firstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_firstName.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_firstName.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_firstName.Location = new System.Drawing.Point(685, 168);
+            this.txt_firstName.Location = new System.Drawing.Point(722, 168);
             this.txt_firstName.Multiline = true;
             this.txt_firstName.Name = "txt_firstName";
             this.txt_firstName.Size = new System.Drawing.Size(341, 29);
@@ -199,7 +199,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Csharp_DB_Project.Properties.Resources.rounded;
-            this.pictureBox9.Location = new System.Drawing.Point(680, 145);
+            this.pictureBox9.Location = new System.Drawing.Point(717, 145);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(356, 58);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -212,7 +212,7 @@
             this.txt_phoneno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_phoneno.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_phoneno.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_phoneno.Location = new System.Drawing.Point(688, 441);
+            this.txt_phoneno.Location = new System.Drawing.Point(725, 441);
             this.txt_phoneno.Multiline = true;
             this.txt_phoneno.Name = "txt_phoneno";
             this.txt_phoneno.Size = new System.Drawing.Size(341, 29);
@@ -224,7 +224,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::Csharp_DB_Project.Properties.Resources.rounded;
-            this.pictureBox10.Location = new System.Drawing.Point(684, 419);
+            this.pictureBox10.Location = new System.Drawing.Point(721, 419);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(356, 58);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -237,7 +237,7 @@
             this.txt_uname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_uname.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_uname.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_uname.Location = new System.Drawing.Point(691, 349);
+            this.txt_uname.Location = new System.Drawing.Point(728, 349);
             this.txt_uname.Multiline = true;
             this.txt_uname.Name = "txt_uname";
             this.txt_uname.Size = new System.Drawing.Size(341, 29);
@@ -249,7 +249,7 @@
             this.lbl_fname.AutoSize = true;
             this.lbl_fname.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lbl_fname.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_fname.Location = new System.Drawing.Point(518, 167);
+            this.lbl_fname.Location = new System.Drawing.Point(557, 168);
             this.lbl_fname.Name = "lbl_fname";
             this.lbl_fname.Size = new System.Drawing.Size(105, 22);
             this.lbl_fname.TabIndex = 32;
@@ -260,7 +260,7 @@
             this.lbl_lname.AutoSize = true;
             this.lbl_lname.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lbl_lname.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_lname.Location = new System.Drawing.Point(518, 251);
+            this.lbl_lname.Location = new System.Drawing.Point(557, 255);
             this.lbl_lname.Name = "lbl_lname";
             this.lbl_lname.Size = new System.Drawing.Size(107, 22);
             this.lbl_lname.TabIndex = 33;
@@ -271,7 +271,7 @@
             this.lbl_uname.AutoSize = true;
             this.lbl_uname.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lbl_uname.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_uname.Location = new System.Drawing.Point(518, 347);
+            this.lbl_uname.Location = new System.Drawing.Point(557, 349);
             this.lbl_uname.Name = "lbl_uname";
             this.lbl_uname.Size = new System.Drawing.Size(101, 22);
             this.lbl_uname.TabIndex = 34;
@@ -282,7 +282,7 @@
             this.lbl_phoneno.AutoSize = true;
             this.lbl_phoneno.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lbl_phoneno.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_phoneno.Location = new System.Drawing.Point(518, 441);
+            this.lbl_phoneno.Location = new System.Drawing.Point(557, 441);
             this.lbl_phoneno.Name = "lbl_phoneno";
             this.lbl_phoneno.Size = new System.Drawing.Size(148, 22);
             this.lbl_phoneno.TabIndex = 35;
@@ -293,7 +293,7 @@
             this.lbl_password.AutoSize = true;
             this.lbl_password.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lbl_password.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_password.Location = new System.Drawing.Point(518, 535);
+            this.lbl_password.Location = new System.Drawing.Point(557, 535);
             this.lbl_password.Name = "lbl_password";
             this.lbl_password.Size = new System.Drawing.Size(95, 22);
             this.lbl_password.TabIndex = 38;
@@ -305,7 +305,7 @@
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_password.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_password.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_password.Location = new System.Drawing.Point(692, 535);
+            this.txt_password.Location = new System.Drawing.Point(729, 535);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(341, 29);
@@ -315,7 +315,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Csharp_DB_Project.Properties.Resources.rounded;
-            this.pictureBox7.Location = new System.Drawing.Point(688, 513);
+            this.pictureBox7.Location = new System.Drawing.Point(725, 513);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(356, 58);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -331,7 +331,7 @@
             this.btn_back.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_back.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
-            this.btn_back.Location = new System.Drawing.Point(859, 630);
+            this.btn_back.Location = new System.Drawing.Point(962, 641);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(181, 41);
             this.btn_back.TabIndex = 40;
@@ -342,7 +342,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
-            this.pictureBox8.Location = new System.Drawing.Point(841, 619);
+            this.pictureBox8.Location = new System.Drawing.Point(944, 630);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(212, 61);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,7 +352,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Csharp_DB_Project.Properties.Resources.bar_chart_concept_vector_linear_icon_isolated_transparent_bac_background_transparency_outline_style_130088985;
-            this.pictureBox2.Location = new System.Drawing.Point(71, 515);
+            this.pictureBox2.Location = new System.Drawing.Point(86, 619);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(54, 46);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -366,7 +366,7 @@
             this.label3.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(22, 564);
+            this.label3.Location = new System.Drawing.Point(28, 668);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(170, 40);
             this.label3.TabIndex = 42;
@@ -387,7 +387,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1179, 804);
+            this.ClientSize = new System.Drawing.Size(1209, 743);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox11);

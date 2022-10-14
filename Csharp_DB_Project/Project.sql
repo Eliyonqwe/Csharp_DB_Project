@@ -151,12 +151,21 @@ begin
 end
 
 
-create proc addOffer
+alter proc addOffer
 @offeringID int, @sellerID int, @stockID int,@offerAmount money
 as
 begin
-	insert into offer(offeringUserID, sellerUserID, stockID,offerAmount) values(@offeringID, @sellerID, @stockID,@offerAmount)
+   declare @balance money 
+	select @balance = balance from users where userID = @offeringID
+
+   if @balance < @offerAmount
+   begin
+		Raiserror('Error: Insufficient Balance!',11,1)
+   end
+   else
+	 insert into offer(offeringUserID, sellerUserID, stockID,offerAmount) values(@offeringID, @sellerID, @stockID,@offerAmount)
 end
+
 
 create proc addOrder
 @orderingID int, @sellerID int, @stockID int,@orderAmount money, @offerID int

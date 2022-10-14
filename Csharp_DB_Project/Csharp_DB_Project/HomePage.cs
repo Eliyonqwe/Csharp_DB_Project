@@ -265,5 +265,12 @@ namespace Csharp_DB_Project
         {
 
         }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            LoginPage l = new LoginPage();
+            this.Hide();
+            l.Show();
+        }
     }
 }

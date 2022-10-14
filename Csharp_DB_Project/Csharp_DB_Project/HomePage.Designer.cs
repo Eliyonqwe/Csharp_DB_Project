@@ -66,6 +66,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.sidebarContainer.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -102,6 +104,7 @@
             // panel3
             // 
             this.panel3.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.My_project1;
+            this.panel3.Controls.Add(this.btn_logout);
             this.panel3.Location = new System.Drawing.Point(382, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1051, 738);
@@ -259,6 +262,7 @@
             this.btn_balance.Text = "          - Add Balance";
             this.btn_balance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_balance.UseVisualStyleBackColor = false;
+            this.btn_balance.Click += new System.EventHandler(this.btn_balance_Click);
             // 
             // btn_editProfile
             // 
@@ -275,6 +279,7 @@
             this.btn_editProfile.Text = "          - Edit Profile";
             this.btn_editProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_editProfile.UseVisualStyleBackColor = false;
+            this.btn_editProfile.Click += new System.EventHandler(this.btn_editProfile_Click);
             // 
             // pictureBox6
             // 
@@ -354,7 +359,7 @@
             this.myListingContainer.MaximumSize = new System.Drawing.Size(264, 245);
             this.myListingContainer.MinimumSize = new System.Drawing.Size(264, 68);
             this.myListingContainer.Name = "myListingContainer";
-            this.myListingContainer.Size = new System.Drawing.Size(264, 169);
+            this.myListingContainer.Size = new System.Drawing.Size(264, 68);
             this.myListingContainer.TabIndex = 56;
             // 
             // button8
@@ -440,7 +445,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.button5);
-            this.panel5.Location = new System.Drawing.Point(3, 539);
+            this.panel5.Location = new System.Drawing.Point(3, 438);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(264, 68);
             this.panel5.TabIndex = 55;
@@ -476,7 +481,7 @@
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.pictureBox7);
             this.panel6.Controls.Add(this.button1);
-            this.panel6.Location = new System.Drawing.Point(3, 613);
+            this.panel6.Location = new System.Drawing.Point(3, 512);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(264, 68);
             this.panel6.TabIndex = 56;
@@ -513,7 +518,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(3, 684);
+            this.label2.Location = new System.Drawing.Point(3, 583);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 18);
             this.label2.TabIndex = 51;
@@ -525,7 +530,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(311, 71);
+            this.label3.Location = new System.Drawing.Point(321, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 42);
             this.label3.TabIndex = 52;
@@ -537,11 +542,24 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cooper Black", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(264, 113);
+            this.label4.Location = new System.Drawing.Point(274, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(228, 42);
             this.label4.TabIndex = 53;
             this.label4.Text = "Trade Now";
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_logout.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.Location = new System.Drawing.Point(799, 614);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(122, 48);
+            this.btn_logout.TabIndex = 0;
+            this.btn_logout.Text = "Log Out";
+            this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // HomePage
             // 
@@ -560,6 +578,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePag";
             this.Load += new System.EventHandler(this.HomePage_Load);
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.sidebarContainer.ResumeLayout(false);
             this.sidebarContainer.PerformLayout();
@@ -621,5 +640,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button btn_logout;
     }
 }

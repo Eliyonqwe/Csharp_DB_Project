@@ -147,7 +147,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::Csharp_DB_Project.Properties.Resources.fantom1;
-            this.pictureBox10.Location = new System.Drawing.Point(735, 196);
+            this.pictureBox10.Location = new System.Drawing.Point(732, 196);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(82, 79);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
