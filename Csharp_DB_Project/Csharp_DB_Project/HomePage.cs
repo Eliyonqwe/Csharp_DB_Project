@@ -272,5 +272,10 @@ namespace Csharp_DB_Project
             this.Hide();
             l.Show();
         }
+
+        private void myListingContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

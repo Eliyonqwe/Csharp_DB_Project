@@ -174,7 +174,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Image = global::Csharp_DB_Project.Properties.Resources.blue;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(110, 83);
+            this.label1.Location = new System.Drawing.Point(113, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 41);
             this.label1.TabIndex = 48;
@@ -185,7 +185,7 @@
             this.menuButton.BackColor = System.Drawing.Color.Transparent;
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::Csharp_DB_Project.Properties.Resources.My_project__1_2;
-            this.menuButton.Location = new System.Drawing.Point(-22, 41);
+            this.menuButton.Location = new System.Drawing.Point(10, 41);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(124, 56);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -304,7 +304,7 @@
             this.btn_Profile.Name = "btn_Profile";
             this.btn_Profile.Size = new System.Drawing.Size(246, 54);
             this.btn_Profile.TabIndex = 48;
-            this.btn_Profile.Text = "                  My Profile";
+            this.btn_Profile.Text = "                 My Profile";
             this.btn_Profile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Profile.UseVisualStyleBackColor = false;
             this.btn_Profile.Click += new System.EventHandler(this.btn_Profile_Click);
@@ -316,7 +316,7 @@
             this.panel4.Controls.Add(this.btn_viewAllListing);
             this.panel4.Location = new System.Drawing.Point(3, 290);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(261, 68);
+            this.panel4.Size = new System.Drawing.Size(264, 87);
             this.panel4.TabIndex = 49;
             // 
             // pictureBox5
@@ -342,7 +342,7 @@
             this.btn_viewAllListing.Name = "btn_viewAllListing";
             this.btn_viewAllListing.Size = new System.Drawing.Size(245, 68);
             this.btn_viewAllListing.TabIndex = 48;
-            this.btn_viewAllListing.Text = "                  View All                          Listings";
+            this.btn_viewAllListing.Text = "                 View All                         Listings";
             this.btn_viewAllListing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_viewAllListing.UseVisualStyleBackColor = false;
             this.btn_viewAllListing.Click += new System.EventHandler(this.btn_viewAllListing_Click);
@@ -355,12 +355,13 @@
             this.myListingContainer.Controls.Add(this.btn_viewOffer);
             this.myListingContainer.Controls.Add(this.btn_myListing);
             this.myListingContainer.Controls.Add(this.btn_addListing);
-            this.myListingContainer.Location = new System.Drawing.Point(3, 364);
+            this.myListingContainer.Location = new System.Drawing.Point(3, 383);
             this.myListingContainer.MaximumSize = new System.Drawing.Size(264, 245);
             this.myListingContainer.MinimumSize = new System.Drawing.Size(264, 68);
             this.myListingContainer.Name = "myListingContainer";
             this.myListingContainer.Size = new System.Drawing.Size(264, 68);
             this.myListingContainer.TabIndex = 56;
+            this.myListingContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.myListingContainer_Paint);
             // 
             // button8
             // 
@@ -418,7 +419,7 @@
             this.btn_myListing.Name = "btn_myListing";
             this.btn_myListing.Size = new System.Drawing.Size(246, 54);
             this.btn_myListing.TabIndex = 48;
-            this.btn_myListing.Text = "                My Listings";
+            this.btn_myListing.Text = "                 My Listings";
             this.btn_myListing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_myListing.UseVisualStyleBackColor = false;
             this.btn_myListing.Click += new System.EventHandler(this.btn_myListing_Click);
@@ -431,7 +432,7 @@
             this.btn_addListing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addListing.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btn_addListing.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_addListing.Location = new System.Drawing.Point(15, 67);
+            this.btn_addListing.Location = new System.Drawing.Point(15, 70);
             this.btn_addListing.Name = "btn_addListing";
             this.btn_addListing.Size = new System.Drawing.Size(246, 54);
             this.btn_addListing.TabIndex = 54;
@@ -445,7 +446,7 @@
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.button5);
-            this.panel5.Location = new System.Drawing.Point(3, 438);
+            this.panel5.Location = new System.Drawing.Point(3, 457);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(264, 68);
             this.panel5.TabIndex = 55;
@@ -472,7 +473,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(246, 54);
             this.button5.TabIndex = 48;
-            this.button5.Text = "                My Offers";
+            this.button5.Text = "                 My Offers";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
             // 
@@ -481,7 +482,7 @@
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.pictureBox7);
             this.panel6.Controls.Add(this.button1);
-            this.panel6.Location = new System.Drawing.Point(3, 512);
+            this.panel6.Location = new System.Drawing.Point(3, 531);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(264, 68);
             this.panel6.TabIndex = 56;
@@ -508,7 +509,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(246, 54);
             this.button1.TabIndex = 48;
-            this.button1.Text = "                About";
+            this.button1.Text = "                 About";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -518,7 +519,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(3, 583);
+            this.label2.Location = new System.Drawing.Point(3, 602);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 18);
             this.label2.TabIndex = 51;
