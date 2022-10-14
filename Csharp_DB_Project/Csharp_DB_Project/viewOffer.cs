@@ -98,5 +98,10 @@ namespace Csharp_DB_Project
             stockID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[9].Value);
 
         }
+
+        private void viewOffer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

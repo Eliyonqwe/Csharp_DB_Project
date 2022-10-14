@@ -46,7 +46,8 @@
             // 
             // txt_companyType
             // 
-            this.txt_companyType.Location = new System.Drawing.Point(679, 226);
+            this.txt_companyType.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_companyType.Location = new System.Drawing.Point(434, 237);
             this.txt_companyType.Multiline = true;
             this.txt_companyType.Name = "txt_companyType";
             this.txt_companyType.Size = new System.Drawing.Size(233, 28);
@@ -56,11 +57,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(496, 276);
+            this.label1.Location = new System.Drawing.Point(207, 287);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 28);
+            this.label1.Size = new System.Drawing.Size(178, 26);
             this.label1.TabIndex = 89;
             this.label1.Text = "Amount(birr)";
             // 
@@ -76,7 +77,8 @@
             // 
             // txt_amount
             // 
-            this.txt_amount.Location = new System.Drawing.Point(679, 276);
+            this.txt_amount.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_amount.Location = new System.Drawing.Point(434, 287);
             this.txt_amount.Multiline = true;
             this.txt_amount.Name = "txt_amount";
             this.txt_amount.Size = new System.Drawing.Size(233, 28);
@@ -84,7 +86,8 @@
             // 
             // txt_companyName
             // 
-            this.txt_companyName.Location = new System.Drawing.Point(679, 176);
+            this.txt_companyName.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_companyName.Location = new System.Drawing.Point(434, 187);
             this.txt_companyName.Multiline = true;
             this.txt_companyName.Name = "txt_companyName";
             this.txt_companyName.Size = new System.Drawing.Size(233, 28);
@@ -94,11 +97,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(496, 226);
+            this.label4.Location = new System.Drawing.Point(207, 237);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 28);
+            this.label4.Size = new System.Drawing.Size(180, 26);
             this.label4.TabIndex = 77;
             this.label4.Text = "Company type";
             // 
@@ -106,11 +109,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(496, 176);
+            this.label3.Location = new System.Drawing.Point(207, 187);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 28);
+            this.label3.Size = new System.Drawing.Size(194, 26);
             this.label3.TabIndex = 75;
             this.label3.Text = "Company Name";
             // 
@@ -118,17 +121,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(496, 326);
+            this.label2.Location = new System.Drawing.Point(207, 337);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 28);
+            this.label2.Size = new System.Drawing.Size(225, 26);
             this.label2.TabIndex = 91;
             this.label2.Text = "Selling price(birr)";
             // 
             // txt_price
             // 
-            this.txt_price.Location = new System.Drawing.Point(679, 326);
+            this.txt_price.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_price.Location = new System.Drawing.Point(434, 337);
             this.txt_price.Multiline = true;
             this.txt_price.Name = "txt_price";
             this.txt_price.Size = new System.Drawing.Size(233, 28);
@@ -171,8 +175,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.My_project__4_;
-            this.ClientSize = new System.Drawing.Size(996, 523);
+            this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
+            this.ClientSize = new System.Drawing.Size(913, 523);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_add);

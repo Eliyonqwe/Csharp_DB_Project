@@ -114,24 +114,45 @@ namespace Csharp_DB_Project
         private void btn_editProfile_Click(object sender, EventArgs e)
         {
             ProfilePage p = new ProfilePage(username);
-            this.Hide();
+            panel3.Controls.Clear();
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
+            p.TopLevel = false;
+            p.AutoScroll = true;
+            p.Dock = DockStyle.Fill;
             p.Show();
+            panel3.Controls.Add(p);
 
         }
 
         private void btn_balance_Click(object sender, EventArgs e)
         {
             addBalance b = new addBalance(username);
-            this.Hide();
+            panel3.Controls.Clear();
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
+            b.TopLevel = false;
+            b.AutoScroll = true;
+            b.Dock = DockStyle.Fill;
             b.Show();
+            panel3.Controls.Add(b);
         }
 
 
         private void btn_addListing_Click(object sender, EventArgs e)
         {
             addListing l = new addListing(username);
-            this.Hide();
+            panel3.Controls.Clear();
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
+            l.TopLevel = false;
+            l.AutoScroll = true;
+            l.Dock = DockStyle.Fill;
             l.Show();
+            panel3.Controls.Add(l);
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -200,16 +221,24 @@ namespace Csharp_DB_Project
         {
             button1.ForeColor = Color.Transparent;
         }
-        private void button8_Click(object sender, EventArgs e)
+       
+
+        private void btn_editlising_Click(object sender, EventArgs e)
         {
+            panel3.Controls.Clear();
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
             editListing el = new editListing(username);
-            this.Show();
+            el.TopLevel = false;
+            el.AutoScroll = true;
+            el.Dock = DockStyle.Fill;
             el.Show();
+            panel3.Controls.Add(el);
         }
 
 
-      
-      
+
 
         private void pictureBox8_Click_1(object sender, EventArgs e)
         {
@@ -243,8 +272,15 @@ namespace Csharp_DB_Project
         private void viewOffer_Click(object sender, EventArgs e)
         {
             viewOffer v = new viewOffer(username);
-            this.Hide();
+            panel3.Controls.Clear();
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
+            v.TopLevel = false;
+            v.AutoScroll = true;
+            v.Dock = DockStyle.Fill;
             v.Show();
+            panel3.Controls.Add(v);
 
         }
 
