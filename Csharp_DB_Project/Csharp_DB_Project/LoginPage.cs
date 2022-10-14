@@ -111,5 +111,10 @@ namespace Csharp_DB_Project
             }
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

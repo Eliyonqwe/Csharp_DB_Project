@@ -200,7 +200,6 @@ namespace Csharp_DB_Project
         {
             button1.ForeColor = Color.Transparent;
         }
-
         private void button8_Click(object sender, EventArgs e)
         {
             editListing el = new editListing(username);

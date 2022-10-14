@@ -354,7 +354,7 @@
             this.myListingContainer.MaximumSize = new System.Drawing.Size(264, 245);
             this.myListingContainer.MinimumSize = new System.Drawing.Size(264, 68);
             this.myListingContainer.Name = "myListingContainer";
-            this.myListingContainer.Size = new System.Drawing.Size(264, 68);
+            this.myListingContainer.Size = new System.Drawing.Size(264, 169);
             this.myListingContainer.TabIndex = 56;
             // 
             // button8
@@ -433,13 +433,14 @@
             this.btn_addListing.Text = "          - Add Listing";
             this.btn_addListing.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_addListing.UseVisualStyleBackColor = false;
+            this.btn_addListing.Click += new System.EventHandler(this.btn_addListing_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Controls.Add(this.button5);
-            this.panel5.Location = new System.Drawing.Point(3, 438);
+            this.panel5.Location = new System.Drawing.Point(3, 539);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(264, 68);
             this.panel5.TabIndex = 55;
@@ -475,7 +476,7 @@
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.pictureBox7);
             this.panel6.Controls.Add(this.button1);
-            this.panel6.Location = new System.Drawing.Point(3, 512);
+            this.panel6.Location = new System.Drawing.Point(3, 613);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(264, 68);
             this.panel6.TabIndex = 56;
@@ -512,7 +513,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(3, 583);
+            this.label2.Location = new System.Drawing.Point(3, 684);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 18);
             this.label2.TabIndex = 51;
