@@ -121,3 +121,4 @@ C:\Users\Leul\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Pro
 C:\Users\Leul\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.viewOffer.resources
 C:\Users\Leul\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.displayLsitingsControl.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.displayLsitingsControl.resources
+C:\Users\Leul\Documents\GitHub\Csharp_DB_Project_ld\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.displayLsitingsControl.resources

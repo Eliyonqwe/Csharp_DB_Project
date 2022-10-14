@@ -158,7 +158,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(90, 590);
+            this.label6.Location = new System.Drawing.Point(90, 589);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(139, 23);
             this.label6.TabIndex = 27;
@@ -238,18 +238,18 @@
             // 
             // displayLsitings1
             // 
-            this.displayLsitings1.amount = "   Amount";
+            this.displayLsitings1.amount = "       Amount";
             this.displayLsitings1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.displayLsitings1.companyname = "   Companyname";
-            this.displayLsitings1.companytype = "   Companytype";
+            this.displayLsitings1.companyname = "       Companyname";
+            this.displayLsitings1.companytype = "       Companytype";
             this.displayLsitings1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.displayLsitings1.Location = new System.Drawing.Point(3, 3);
             this.displayLsitings1.Name = "displayLsitings1";
-            this.displayLsitings1.sellingprice = "   Sellingprice";
+            this.displayLsitings1.sellingprice = "       Sellingprice";
             this.displayLsitings1.Size = new System.Drawing.Size(700, 325);
-            this.displayLsitings1.stockid = "   stockid";
+            this.displayLsitings1.stockid = "       stockid";
             this.displayLsitings1.TabIndex = 18;
-            this.displayLsitings1.userid = "   userID";
+            this.displayLsitings1.userid = "       userID";
             this.displayLsitings1.Load += new System.EventHandler(this.displayLsitings1_Load);
             // 
             // viewListing
