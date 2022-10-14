@@ -159,19 +159,53 @@ begin
 	select @balance = balance from users where userID = @offeringID
 
    if @balance < @offerAmount
-   begin
 		Raiserror('Error: Insufficient Balance!',11,1)
-   end
+   
    else
 	 insert into offer(offeringUserID, sellerUserID, stockID,offerAmount) values(@offeringID, @sellerID, @stockID,@offerAmount)
 end
 
 
-create proc addOrder
+alter proc addOrder
 @orderingID int, @sellerID int, @stockID int,@orderAmount money, @offerID int
 as
 begin
-	update offer set offerstatus = 'Accepted' where offerID = @offerID
-	update stockListing set status = 'Sold' where stockID = @stockID
-	insert into orders(orderingUserID, sellerUserID, stockID,orderAmount) values(@orderingID, @sellerID, @stockID,@orderAmount)
+
+   declare @balance money 
+	DECLARE @errValue int	
+	select @balance = balance from users where userID = @orderingID
+
+   if @balance < @orderAmount
+		Raiserror('Error: Buyer has insufficient Balance!',11,1)
+    
+   else
+	begin
+	
+	begin transaction
+		update offer set offerstatus = 'Accepted' where offerID = @offerID
+		SET @errValue = @@ERROR
+		IF @errValue > 0
+			ROLLBACK TRANSACTION
+		
+		update stockListing set status = 'Sold' where stockID = @stockID
+		SET @errValue = @@ERROR
+		IF @errValue > 0
+			ROLLBACK TRANSACTION
+		
+		update users set balance-= @orderAmount where userID = @orderingID
+		SET @errValue = @@ERROR
+		IF @errValue > 0
+			ROLLBACK TRANSACTION
+		
+		update users set balance+= @orderAmount where userID = @sellerID
+		SET @errValue = @@ERROR
+		IF @errValue > 0
+			ROLLBACK TRANSACTION
+		insert into orders(orderingUserID, sellerUserID, stockID,orderAmount) values(@orderingID, @sellerID, @stockID,@orderAmount)
+		SET @errValue = @@ERROR
+		IF @errValue > 0
+			ROLLBACK TRANSACTION
+	commit transaction
+	
+	end
 end
