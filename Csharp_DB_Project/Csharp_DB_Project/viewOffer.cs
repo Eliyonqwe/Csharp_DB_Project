@@ -79,7 +79,7 @@ namespace Csharp_DB_Project
             o.orderAmount = Convert.ToDouble(txt_offeramount.Text);
             String status = o.addOrder(offerID);
             if (status == "0")
-                MessageBox.Show("Offer has been accepeted!");
+                MessageBox.Show(" Offer has been accepeted!");
             else
                 MessageBox.Show(status);
         }
