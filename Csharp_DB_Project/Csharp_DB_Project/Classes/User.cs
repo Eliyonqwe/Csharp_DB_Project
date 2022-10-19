@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace Csharp_DB_Project.Classes
 {
@@ -15,6 +17,7 @@ namespace Csharp_DB_Project.Classes
         public string password { get; set; }
         public string phoneNumber { get; set; }
         public double balance { get; set; }
+        public DataTable dt;
 
         public String Save()
         {
@@ -41,6 +44,57 @@ namespace Csharp_DB_Project.Classes
             {
                 return e.Message;
             }
+
+        }
+        public String viewAllUsers(DataGridView d)
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec viewAllUser";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                   
+                    d.DataSource = dt;
+                }
+                return "0";
+            }
+
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+
+        }
+        public String searchUsers(DataGridView d, String search)
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec searchUser  '" + search + "'";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    d.DataSource = dt;
+                }
+                return "0";
+            }
+
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+
         }
         public String viewUser(String username)
         {
