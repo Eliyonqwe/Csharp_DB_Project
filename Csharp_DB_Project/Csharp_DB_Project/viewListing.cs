@@ -137,6 +137,7 @@ namespace Csharp_DB_Project
 
                 int i = 0;
                 
+               
                 display_panel.Controls.Clear();
                 foreach (DataRow row in dt.Rows)
                 {
@@ -178,5 +179,71 @@ namespace Csharp_DB_Project
         {
 
         }
+
+        private void search_btn_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+                string sqlQuery = "select *from viewAllListing where not userID = '" + userID + "' and status = 'pending'";
+
+                SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                DataTable dt = new DataTable();
+
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    sda.Fill(dt);
+                }
+
+                int i = 0;
+                int result = 0;
+
+               
+                    display_panel.Controls.Clear();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (search_txt.Text == dt.Rows[i][2].ToString())
+                        {
+                            result++;
+                            displayLsitingsControl ds = new displayLsitingsControl(u.username);
+                            ds.userid = dt.Rows[i][0].ToString();
+                            ds.stockid = dt.Rows[i][1].ToString();
+                            ds.companyname = dt.Rows[i][2].ToString();
+                            ds.companytype = dt.Rows[i][3].ToString();
+                            ds.amount = dt.Rows[i][4].ToString();
+                            ds.sellingprice = dt.Rows[i][5].ToString();
+
+                            ds.Click += (object o, EventArgs e2) =>
+                            {
+                                txt_userID.Text = ds.userid.ToString();
+                                txt_stockID.Text = ds.stockid.ToString();
+                                txt_cname.Text = ds.companyname.ToString();
+                                txt_ctype.Text = ds.companytype.ToString();
+                                txt_amount.Text = ds.amount.ToString();
+                                txt_price.Text = ds.sellingprice.ToString();
+                            };
+
+                            
+                            display_panel.Controls.Add(ds);
+                        }
+                        i++;
+                    }
+
+                    if(result==0)
+                    { 
+                        MessageBox.Show("No results!");
+                    }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+ 
     }
-}
+ }
+

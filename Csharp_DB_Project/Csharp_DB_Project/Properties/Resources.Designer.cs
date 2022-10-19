@@ -424,6 +424,16 @@ namespace Csharp_DB_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap My_project_1__15_ {
+            get {
+                object obj = ResourceManager.GetObject("My project-1 (15)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap My_project_1__4_ {
             get {
                 object obj = ResourceManager.GetObject("My project-1 (4)", resourceCulture);
