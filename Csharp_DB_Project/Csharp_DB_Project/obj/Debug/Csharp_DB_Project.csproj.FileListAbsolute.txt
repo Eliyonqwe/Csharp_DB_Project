@@ -121,6 +121,8 @@ C:\Users\Leul\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Pro
 C:\Users\Leul\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.viewOffer.resources
 C:\Users\Leul\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.displayLsitingsControl.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.displayLsitingsControl.resources
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 C:\Users\Leul\Documents\GitHub\Csharp_DB_Project_ld\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.displayLsitingsControl.resources
 C:\Users\Machino\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\Csharp_DB_Project.exe.config
 C:\Users\Machino\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\Csharp_DB_Project.exe
@@ -142,3 +144,19 @@ C:\Users\Machino\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_
 C:\Users\Machino\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.csproj.CoreCompileInputs.cache
 C:\Users\Machino\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.exe
 C:\Users\Machino\Documents\GitHub\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.pdb
+=======
+=======
+>>>>>>> Stashed changes
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.AdminPage.resources
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\EntityFramework.dll
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\EntityFramework.SqlServer.dll
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\EntityFramework.xml
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\EntityFramework.SqlServer.xml
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.csproj.CopyComplete
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.AdminLoginPage.resources
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.viewUser.resources
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.viewListings.resources
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
