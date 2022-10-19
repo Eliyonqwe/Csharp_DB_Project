@@ -33,6 +33,7 @@
             this.btn_offer = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.display_panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.displayLsitings1 = new Csharp_DB_Project.displayLsitingsControl();
             this.txt_price = new System.Windows.Forms.TextBox();
             this.txt_amount = new System.Windows.Forms.TextBox();
             this.txt_ctype = new System.Windows.Forms.TextBox();
@@ -46,8 +47,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.title = new System.Windows.Forms.Label();
-            this.displayLsitings1 = new Csharp_DB_Project.displayLsitingsControl();
+            this.search_txt = new System.Windows.Forms.TextBox();
+            this.search_btn = new System.Windows.Forms.PictureBox();
             this.display_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.search_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -96,13 +99,29 @@
             this.display_panel.BackColor = System.Drawing.Color.Transparent;
             this.display_panel.Controls.Add(this.displayLsitings1);
             this.display_panel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.display_panel.Location = new System.Drawing.Point(125, 85);
+            this.display_panel.Location = new System.Drawing.Point(125, 77);
             this.display_panel.Margin = new System.Windows.Forms.Padding(4);
             this.display_panel.Name = "display_panel";
-            this.display_panel.Size = new System.Drawing.Size(838, 328);
+            this.display_panel.Size = new System.Drawing.Size(838, 336);
             this.display_panel.TabIndex = 19;
             this.display_panel.WrapContents = false;
             this.display_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.display_panel_Paint);
+            // 
+            // displayLsitings1
+            // 
+            this.displayLsitings1.amount = "              Amount";
+            this.displayLsitings1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.displayLsitings1.companyname = "              Companyname";
+            this.displayLsitings1.companytype = "              Companytype";
+            this.displayLsitings1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.displayLsitings1.Location = new System.Drawing.Point(3, 3);
+            this.displayLsitings1.Name = "displayLsitings1";
+            this.displayLsitings1.sellingprice = "              Sellingprice";
+            this.displayLsitings1.Size = new System.Drawing.Size(700, 325);
+            this.displayLsitings1.stockid = "              stockid";
+            this.displayLsitings1.TabIndex = 18;
+            this.displayLsitings1.userid = "              userID";
+            this.displayLsitings1.Load += new System.EventHandler(this.displayLsitings1_Load);
             // 
             // txt_price
             // 
@@ -230,27 +249,31 @@
             this.title.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.title.Font = new System.Drawing.Font("Cooper Black", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.title.Location = new System.Drawing.Point(202, 63);
+            this.title.Location = new System.Drawing.Point(202, 56);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(304, 32);
             this.title.TabIndex = 20;
             this.title.Text = "Listings you can buy";
             // 
-            // displayLsitings1
+            // search_txt
             // 
-            this.displayLsitings1.amount = "       Amount";
-            this.displayLsitings1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.displayLsitings1.companyname = "       Companyname";
-            this.displayLsitings1.companytype = "       Companytype";
-            this.displayLsitings1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.displayLsitings1.Location = new System.Drawing.Point(3, 3);
-            this.displayLsitings1.Name = "displayLsitings1";
-            this.displayLsitings1.sellingprice = "       Sellingprice";
-            this.displayLsitings1.Size = new System.Drawing.Size(700, 325);
-            this.displayLsitings1.stockid = "       stockid";
-            this.displayLsitings1.TabIndex = 18;
-            this.displayLsitings1.userid = "       userID";
-            this.displayLsitings1.Load += new System.EventHandler(this.displayLsitings1_Load);
+            this.search_txt.Location = new System.Drawing.Point(545, 52);
+            this.search_txt.Name = "search_txt";
+            this.search_txt.Size = new System.Drawing.Size(258, 22);
+            this.search_txt.TabIndex = 19;
+            // 
+            // search_btn
+            // 
+            this.search_btn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.search_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.search_btn.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__15_;
+            this.search_btn.Location = new System.Drawing.Point(824, 38);
+            this.search_btn.Name = "search_btn";
+            this.search_btn.Size = new System.Drawing.Size(43, 36);
+            this.search_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.search_btn.TabIndex = 54;
+            this.search_btn.TabStop = false;
+            this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
             // viewListing
             // 
@@ -258,7 +281,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
             this.ClientSize = new System.Drawing.Size(1123, 694);
+            this.Controls.Add(this.search_txt);
             this.Controls.Add(this.txt_price);
+            this.Controls.Add(this.search_btn);
             this.Controls.Add(this.title);
             this.Controls.Add(this.txt_amount);
             this.Controls.Add(this.txt_ctype);
@@ -282,6 +307,7 @@
             this.Text = "viewListingcs";
             this.Load += new System.EventHandler(this.viewListing_Load);
             this.display_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.search_btn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +333,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label title;
+        private System.Windows.Forms.TextBox search_txt;
+        private System.Windows.Forms.PictureBox search_btn;
     }
 }

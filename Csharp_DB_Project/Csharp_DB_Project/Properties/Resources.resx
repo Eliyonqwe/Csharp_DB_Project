@@ -127,6 +127,9 @@
   <data name="1000_F_238139168_W61DfgMLyPvOnj2D6kZrlDYYJ0xhJTVf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1000_F_238139168_W61DfgMLyPvOnj2D6kZrlDYYJ0xhJTVf.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Screenshot (18)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\Screenshot (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="My project1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\My project.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,11 +178,14 @@
   <data name="Screenshot (16)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\Screenshot (16).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bar-chart-concept-vector-linear-icon-isolated-transparent-bac-background-transparency-outline-style-130088985" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bar-chart-concept-vector-linear-icon-isolated-transparent-bac-background-transparency-outline-style-130088985.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="this-is-a-graphic-reation-of-a-pad-lock-username-and-password-icon-115534595184fsadfncq61" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\this-is-a-graphic-reation-of-a-pad-lock-username-and-password-icon-115534595184fsadfncq6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loginicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pics\loginicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loginicon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Screenshot (10)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\Screenshot (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -189,9 +195,6 @@
   </data>
   <data name="My project-1 (13)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\My project-1 (13).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-transparent-orange-button-blue-orange-button-blue-text-rectangle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pics\png-transparent-orange-button-blue-orange-button-blue-text-rectangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="My project-1 (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\My project-1 (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,8 +235,8 @@
   <data name="backt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backt1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Screenshot (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pics\Screenshot (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loginicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\loginicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="My project-1 (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\My project-1 (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,14 +262,11 @@
   <data name="rounded1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\rounded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Screenshot (18)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\pics\Screenshot (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="My project-1 (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\My project-1 (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="My project-1 (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\My project-1 (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="360_F_234593935_quRUrCKIZRGTOvIK4LGiyRxKScHQyeEe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\360_F_234593935_quRUrCKIZRGTOvIK4LGiyRxKScHQyeEe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,8 +280,8 @@
   <data name="orangepattern1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\orangepattern.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bar-chart-concept-vector-linear-icon-isolated-transparent-bac-background-transparency-outline-style-130088985" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bar-chart-concept-vector-linear-icon-isolated-transparent-bac-background-transparency-outline-style-130088985.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="png-transparent-orange-button-blue-orange-button-blue-text-rectangle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\png-transparent-orange-button-blue-orange-button-blue-text-rectangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="My project-1 (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\My project-1 (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,10 +313,13 @@
   <data name="png-transparent-orange-button-blue-orange-button-blue-text-rectangle3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\png-transparent-orange-button-blue-orange-button-blue-text-rectangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Screenshot (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\Screenshot (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="469-4691153_png-file-svg-user-id-icon-transparent-png1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\469-4691153_png-file-svg-user-id-icon-transparent-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loginicon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loginicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="My project-1 (15)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\My project-1 (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

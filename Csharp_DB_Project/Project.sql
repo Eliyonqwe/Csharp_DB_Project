@@ -209,3 +209,15 @@ begin
 	
 	end
 end
+
+-------------------------------------------------------------------
+use Project
+
+create login UserLogin with password='user'
+
+create user StockUser for login UserLogin
+
+create login AdminLogin with password='admin'
+
+create user AdminUser for login AdminLogin
+
