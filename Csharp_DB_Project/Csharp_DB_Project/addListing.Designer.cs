@@ -68,9 +68,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Csharp_DB_Project.Properties.Resources.f;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 203);
+            this.pictureBox1.Location = new System.Drawing.Point(3, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(101, 101);
+            this.pictureBox1.Size = new System.Drawing.Size(139, 101);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 85;
             this.pictureBox1.TabStop = false;

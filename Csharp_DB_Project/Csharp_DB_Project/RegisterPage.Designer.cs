@@ -58,6 +58,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btn_upload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -83,7 +84,7 @@
             this.btn_Register.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Register.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_Register.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
-            this.btn_Register.Location = new System.Drawing.Point(677, 641);
+            this.btn_Register.Location = new System.Drawing.Point(676, 641);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(186, 41);
             this.btn_Register.TabIndex = 25;
@@ -391,12 +392,27 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
+            // btn_upload
+            // 
+            this.btn_upload.BackColor = System.Drawing.Color.Transparent;
+            this.btn_upload.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_upload.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_upload.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
+            this.btn_upload.Location = new System.Drawing.Point(729, 53);
+            this.btn_upload.Name = "btn_upload";
+            this.btn_upload.Size = new System.Drawing.Size(105, 32);
+            this.btn_upload.TabIndex = 44;
+            this.btn_upload.Text = "Upload";
+            this.btn_upload.UseVisualStyleBackColor = false;
+            this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
+            // 
             // RegisterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1209, 743);
+            this.Controls.Add(this.btn_upload);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox11);
@@ -477,5 +493,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btn_upload;
     }
 }

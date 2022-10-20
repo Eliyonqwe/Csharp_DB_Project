@@ -40,6 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(233, 140);
             this.label1.Name = "label1";
@@ -50,6 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(233, 187);
             this.label2.Name = "label2";
@@ -74,6 +76,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(355, 56);
             this.label3.Name = "label3";
@@ -100,10 +103,12 @@
             this.button2.Text = "Go Back";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // AdminPage
+            // AdminLoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
             this.ClientSize = new System.Drawing.Size(890, 511);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -112,7 +117,7 @@
             this.Controls.Add(this.txt_uname);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AdminPage";
+            this.Name = "AdminLoginPage";
             this.Text = "AdminPage";
             this.ResumeLayout(false);
             this.PerformLayout();
