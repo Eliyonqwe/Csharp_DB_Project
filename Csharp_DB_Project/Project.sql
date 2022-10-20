@@ -67,7 +67,16 @@ drop table stockListing
 drop table users
 drop table company
 
+alter procedure searchUser
+@search varchar(30)
+as
+	select *from users where (concat(firstName, lastName, phoneNumber, username)) like '%'+@search+'%'
 
+alter procedure searchListing
+@search varchar(30)
+as
+	select *from viewListings where (concat(username,companyName, companyType, status)) like '%'+@search+'%'
+	
 ----------------------------------------------------------------------------------------------------------------------------------
 create procedure registerUser
 @fname varchar(30), @lname varchar(30), @uname varchar(30), @passwd varchar(30), @phoneno varchar(30), @balance money

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_load = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_accept = new System.Windows.Forms.Button();
@@ -42,19 +41,9 @@
             this.txt_amount = new System.Windows.Forms.TextBox();
             this.txt_companyName = new System.Windows.Forms.TextBox();
             this.txt_offeramount = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 45);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(974, 277);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btn_load
             // 
@@ -199,12 +188,24 @@
             this.txt_offeramount.Size = new System.Drawing.Size(233, 28);
             this.txt_offeramount.TabIndex = 118;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 25);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(958, 281);
+            this.dataGridView1.TabIndex = 119;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
             // viewOffer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
             this.ClientSize = new System.Drawing.Size(998, 667);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_offeramount);
             this.Controls.Add(this.txt_price);
             this.Controls.Add(this.txt_companyType);
@@ -218,7 +219,6 @@
             this.Controls.Add(this.btn_accept);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_load);
-            this.Controls.Add(this.dataGridView1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "viewOffer";
@@ -231,8 +231,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_load;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_accept;
@@ -246,5 +244,6 @@
         private System.Windows.Forms.TextBox txt_amount;
         private System.Windows.Forms.TextBox txt_companyName;
         private System.Windows.Forms.TextBox txt_offeramount;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

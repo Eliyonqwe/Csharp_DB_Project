@@ -25,7 +25,7 @@ namespace Csharp_DB_Project
         {
             InitializeComponent();
             username = user;
-
+            
             User u = new User();
             u.username = user;
 
@@ -53,6 +53,7 @@ namespace Csharp_DB_Project
                     DataTable dt = new DataTable();
 
                     sda.Fill(dt);
+                    dataGridView1.DataSource = null;
                     dataGridView1.DataSource = dt;
                 }
                 MessageBox.Show("Success");
@@ -86,17 +87,18 @@ namespace Csharp_DB_Project
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txt_companyName.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txt_companyType.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            txt_amount.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txt_price.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txt_offeramount.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
 
             offerID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[6].Value);
             orderingUserID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[7].Value);
             sellerUserID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[8].Value);
             stockID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[9].Value);
 
+            txt_companyName.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txt_companyType.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txt_amount.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txt_price.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txt_offeramount.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+        
         }
 
         private void viewOffer_Load(object sender, EventArgs e)

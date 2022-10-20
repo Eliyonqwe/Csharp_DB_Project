@@ -118,6 +118,12 @@
     <Compile Include="editListing.Designer.cs">
       <DependentUpon>editListing.cs</DependentUpon>
     </Compile>
+    <Compile Include="OfferSent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfferSent.Designer.cs">
+      <DependentUpon>OfferSent.cs</DependentUpon>
+    </Compile>
     <Compile Include="viewListings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="editListing.resx">
       <DependentUpon>editListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfferSent.resx">
+      <DependentUpon>OfferSent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewListings.resx">
       <DependentUpon>viewListings.cs</DependentUpon>

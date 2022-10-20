@@ -313,5 +313,12 @@ namespace Csharp_DB_Project
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OfferSent o = new OfferSent(username);
+            this.Hide();
+            o.Show();
+        }
     }
 }

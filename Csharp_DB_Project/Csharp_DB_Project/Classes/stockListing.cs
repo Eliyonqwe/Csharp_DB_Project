@@ -42,6 +42,7 @@ namespace Csharp_DB_Project.Classes
             }
 
         }
+
         public String searchListing(DataGridView d, String search)
         {
             try
@@ -66,8 +67,9 @@ namespace Csharp_DB_Project.Classes
                 return e.Message;
             }
         }
+        
 
-            public String addListing()
+        public String addListing()
         {
             try
             {
