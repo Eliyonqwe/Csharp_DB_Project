@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e0d366a2ca3346648cf462e702087b6f" Name="Diagram1">
+        <EntityTypeShape EntityType="ProjectModel1.admin" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel1.company" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel1.offer" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel1.order" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel1.stockListing" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel1.user" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel1.viewAllListing" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel1.viewListing" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel1.viewOffer" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="ProjectModel1.FK__stockList__compa__1BC821DD" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel1.FK__offer__offeringU__2180FB33" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel1.FK__offer__sellerUse__22751F6C" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel1.FK__offer__stockID__236943A5" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel1.FK__orders__ordering__2739D489" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel1.FK__orders__sellerus__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel1.FK__orders__stockID__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel1.FK__stockList__userI__1CBC4616" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
