@@ -81,7 +81,7 @@ namespace Csharp_DB_Project
 
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlQuery = "select stockID, companyName, companyType, amount, price from viewListing where username = '" + username + "'";
+                    string sqlQuery = "select stockID, companyName, companyType, amount, price, status from viewListing where username = '" + username + "' and status = 'pending'";
                     sda = new SqlDataAdapter(sqlQuery, con);
                     dt = new DataTable();
 
@@ -144,6 +144,11 @@ namespace Csharp_DB_Project
             HomePage h = new HomePage(username);
             this.Hide();
             h.Show();
+
+        }
+
+        private void editListing_Load(object sender, EventArgs e)
+        {
 
         }
     }
