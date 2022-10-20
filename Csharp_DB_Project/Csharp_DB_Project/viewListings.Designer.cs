@@ -32,6 +32,7 @@
             this.txt_search = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,16 +72,27 @@
             this.dataGridView1.Size = new System.Drawing.Size(695, 383);
             this.dataGridView1.TabIndex = 62;
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(871, 459);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 32);
+            this.button1.TabIndex = 66;
+            this.button1.Text = "back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // viewListings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 616);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
+            this.Name = "viewListings";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -95,5 +107,6 @@
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Label Search;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -124,7 +124,7 @@ namespace Csharp_DB_Project
             {
                 sqlClass s = new sqlClass();
                 System.Data.SqlClient.SqlConnection con = s.connect();
-                string sqlQuery = "select *from viewAllListing where not userID = '" + userID + "' and status = 'pending'";
+                string sqlQuery = "select *from viewAllListing where not userID = '" + userID + "' and status = 'pending' ";
               
                 SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
                 DataTable dt = new DataTable();

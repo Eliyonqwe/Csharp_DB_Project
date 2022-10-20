@@ -119,11 +119,11 @@ namespace Csharp_DB_Project
 
         private void lbl_adminPage_Click(object sender, EventArgs e)
         {
-            /*AdminPage a = new AdminPage();
+            AdminLoginPage a = new AdminLoginPage();
             this.Hide();
             a.Show();
              
-             */
+             
         }
     }
 }

@@ -53,5 +53,12 @@ namespace Csharp_DB_Project
                 MessageBox.Show(status);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminPage p = new AdminPage();
+            this.Hide();
+            p.Show();
+        }
     }
 }
