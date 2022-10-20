@@ -56,6 +56,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(958, 281);
             this.dataGridView1.TabIndex = 133;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txt_offeramount
             // 
@@ -233,6 +234,7 @@
             this.Controls.Add(this.btn_load);
             this.Name = "OfferSent";
             this.Text = "OfferSent";
+            this.Load += new System.EventHandler(this.OfferSent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

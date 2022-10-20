@@ -62,10 +62,11 @@
             this.button5 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_order = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.sidebarContainer.SuspendLayout();
@@ -489,7 +490,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.pictureBox7);
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.btn_order);
             this.panel6.Location = new System.Drawing.Point(3, 549);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(264, 68);
@@ -506,20 +507,21 @@
             this.pictureBox7.TabIndex = 53;
             this.pictureBox7.TabStop = false;
             // 
-            // button1
+            // btn_order
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(9, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 54);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "                 About";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_order.BackColor = System.Drawing.Color.Transparent;
+            this.btn_order.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_order.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_order.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_order.Location = new System.Drawing.Point(9, 3);
+            this.btn_order.Name = "btn_order";
+            this.btn_order.Size = new System.Drawing.Size(246, 54);
+            this.btn_order.TabIndex = 48;
+            this.btn_order.Text = "                 Orders(sent)";
+            this.btn_order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_order.UseVisualStyleBackColor = false;
+            this.btn_order.Click += new System.EventHandler(this.btn_order_Click);
             // 
             // label2
             // 
@@ -557,12 +559,29 @@
             this.label4.TabIndex = 53;
             this.label4.Text = "Trade Now";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(21, 644);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(246, 54);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "   Orders(recieved)";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
             this.ClientSize = new System.Drawing.Size(1431, 736);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lb_welcome);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.label4);
@@ -616,7 +635,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_order;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_Profile;
         private System.Windows.Forms.Panel myProfileContainer;
@@ -637,5 +656,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.Button button1;
     }
 }

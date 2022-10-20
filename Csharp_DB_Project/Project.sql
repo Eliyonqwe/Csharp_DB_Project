@@ -67,16 +67,89 @@ drop table stockListing
 drop table users
 drop table company
 
+alter view offerList as select offerID ,offeringUserID, companyName, companyType, amount, price, offerAmount,offerStatus from offer o join stockListing s on o.StockID = s.stockID join company c on c.companyID = s.CompanyID
+alter view orderList as select orderinguserID, sellerUserID, companyName, companyType, amount as stockAmount,orderAmount as orderingPrice, orderID from orders o join stockListing s on o.StockID = s.stockID join company c on c.companyID = s.CompanyID
+
 alter procedure searchUser
 @search varchar(30)
 as
 	select *from users where (concat(firstName, lastName, phoneNumber, username)) like '%'+@search+'%'
 
-alter procedure searchListing
+alter procedure searchListing -- for admin
 @search varchar(30)
 as
 	select *from viewListings where (concat(username,companyName, companyType, status)) like '%'+@search+'%'
 	
+create procedure searchListings -- for user
+@search varchar(30), @userID int
+as
+	select *from viewAllListing where not userID = @userID and (concat(companyName, companyType)) like '%'+@search+'%' and status = 'pending'
+
+alter proc viewSentOffer
+@userID int
+as
+	select offerID,companyName, companyType, amount, price, offerAmount, offerStatus from offerList where not offerStatus='accepted' and offeringUserID = @userID
+
+alter proc updateOffer
+@offerID int, @userID int, @offerAmount money
+as
+begin
+	declare @balance money 
+	select @balance = balance from users where userID = @userID
+
+   if @balance < @offerAmount
+		Raiserror('Error: Insufficient Balance!',11,1)
+   
+   else
+	 update offer set offerAmount= @offerAmount where offerID = @offerID
+end
+
+alter proc deleteOffer
+@offerID int
+as
+begin
+	 delete from offer where offerID = @offerID
+end
+
+alter proc viewMyOrder
+@userID int
+as
+	select * from orderList where orderingUserID = @userID
+
+create proc viewRecievedOrder
+@userID int
+as
+	select * from orderList where sellerUserID = @userID
+	
+	select *from users
+alter proc cancelOrder
+@orderID int, @sellerID int, @buyerID int
+as
+begin
+	DECLARE @errValue int
+	declare @amount money 
+	select @amount = orderamount from orders where selleruserID = @sellerID
+
+	BEGIN tran
+		update users set balance += @amount  where userID = @buyerID
+		SET @errValue = @@ERROR
+		IF @errValue > 0
+			ROLLBACK tran
+		
+		update users set balance -= @amount  where userID = @sellerID
+		SET @errValue = @@ERROR
+		IF @errValue > 0
+			ROLLBACK tran
+		
+		delete from orders where orderID = @orderID
+		SET @errValue = @@ERROR
+		IF @errValue > 0
+			ROLLBACK tran
+	commit tran
+	
+end
+
+
 ----------------------------------------------------------------------------------------------------------------------------------
 create procedure registerUser
 @fname varchar(30), @lname varchar(30), @uname varchar(30), @passwd varchar(30), @phoneno varchar(30), @balance money

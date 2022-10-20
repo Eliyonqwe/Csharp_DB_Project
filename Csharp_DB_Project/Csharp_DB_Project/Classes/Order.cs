@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Csharp_DB_Project.Classes
 {
@@ -32,6 +34,86 @@ namespace Csharp_DB_Project.Classes
                     cmd.Parameters.Add("@offerID", System.Data.SqlDbType.Int).Value = offerID;
 
                     cmd.ExecuteNonQuery();
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+        public String viewMyOrders(DataGridView d, int userID)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec viewMyOrder '" + userID + "'";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+
+                    sda.Fill(dt);
+                    d.DataSource = null;
+                    d.DataSource = dt;
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+        public String viewRecievedOrders(DataGridView d, int userID)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec viewRecievedOrder '" + userID + "'";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+
+                    sda.Fill(dt);
+                    d.DataSource = null;
+                    d.DataSource = dt;
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+        public String cancelOrder(int orderID,int sellerID, int buyerID)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec cancelOrder @orderID, @sellerID, @buyerID";
+                    SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                    cmd.Parameters.Add("@orderID", System.Data.SqlDbType.Int).Value = orderID;
+                    cmd.Parameters.Add("@sellerID", System.Data.SqlDbType.Int).Value = sellerID;
+                    cmd.Parameters.Add("@buyerID", System.Data.SqlDbType.Int).Value = buyerID;
+
+                    cmd.ExecuteNonQuery();
+
+
                 }
 
                 return "0";

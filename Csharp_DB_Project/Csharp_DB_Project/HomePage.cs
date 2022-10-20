@@ -214,12 +214,12 @@ namespace Csharp_DB_Project
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            button1.ForeColor = Color.DarkRed;
+            btn_order.ForeColor = Color.DarkRed;
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.ForeColor = Color.Transparent;
+            btn_order.ForeColor = Color.Transparent;
         }
        
 
@@ -317,6 +317,20 @@ namespace Csharp_DB_Project
         private void button5_Click(object sender, EventArgs e)
         {
             OfferSent o = new OfferSent(username);
+            this.Hide();
+            o.Show();
+        }
+
+        private void btn_order_Click(object sender, EventArgs e)
+        {
+            OrderPage o = new OrderPage(username);
+            this.Hide();
+            o.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RecievedOrder o = new RecievedOrder(username);
             this.Hide();
             o.Show();
         }

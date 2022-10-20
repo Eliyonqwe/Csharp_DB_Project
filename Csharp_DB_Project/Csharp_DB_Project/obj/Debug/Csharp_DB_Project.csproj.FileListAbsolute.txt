@@ -86,3 +86,5 @@ D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csh
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.exe
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.pdb
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.OfferSent.resources
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.OrderPage.resources
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.RecievedOrder.resources
