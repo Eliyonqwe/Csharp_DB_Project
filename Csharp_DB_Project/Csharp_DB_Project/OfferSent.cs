@@ -58,7 +58,6 @@ namespace Csharp_DB_Project
             txt_amount.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             txt_price.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             txt_offeramount.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            
         }
 
         private void btn_edit_Click(object sender, EventArgs e)
@@ -69,6 +68,17 @@ namespace Csharp_DB_Project
                 MessageBox.Show(status);
             else
                 MessageBox.Show("updated");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Offer o = new Offer();
+            String status = o.cancelOffer((int)dataGridView1.CurrentRow.Cells[0].Value);
+            if (status != "0")
+                MessageBox.Show(status);
+            else
+                MessageBox.Show("canceled");
+
         }
     }
 }

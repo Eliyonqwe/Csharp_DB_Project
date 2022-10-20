@@ -94,5 +94,29 @@ namespace Csharp_DB_Project.Classes
                 return e.Message;
             }
         }
+        public String cancelOffer(int offerID)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec deleteOffer @offerID";
+                    SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                    cmd.Parameters.Add("@offerID", System.Data.SqlDbType.Int).Value = offerID;
+                    
+                    cmd.ExecuteNonQuery();
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
     }
 }
