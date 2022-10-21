@@ -70,42 +70,75 @@
     <Compile Include="addListing.Designer.cs">
       <DependentUpon>addListing.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminLoginPage.cs">
+    <Compile Include="Admin\AdminLoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminLoginPage.Designer.cs">
+    <Compile Include="Admin\AdminLoginPage.Designer.cs">
       <DependentUpon>AdminLoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPage.cs">
+    <Compile Include="Admin\AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPage.Designer.cs">
+    <Compile Include="Admin\AdminPage.Designer.cs">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\admin.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Classes\Company.cs" />
-    <Compile Include="Classes\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Classes\Admin.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Admin.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Classes\Offer.cs" />
     <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\sqlClass.cs" />
     <Compile Include="Classes\stockListing.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="DB\admin.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\company.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Database.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Database.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Database.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\offer.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\order.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\searchListing_Result.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\stockListing.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\user.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\viewAllListing.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ViewAllUsers_Result.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\viewListing.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\viewOffer.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\viewUser_Result.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
     <Compile Include="displayLsitingsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,10 +169,10 @@
     <Compile Include="RecievedOrder.Designer.cs">
       <DependentUpon>RecievedOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="viewListings.cs">
+    <Compile Include="Admin\viewListings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="viewListings.Designer.cs">
+    <Compile Include="Admin\viewListings.Designer.cs">
       <DependentUpon>viewListings.cs</DependentUpon>
     </Compile>
     <Compile Include="HomePage.cs">
@@ -180,10 +213,10 @@
     <Compile Include="viewOffer.Designer.cs">
       <DependentUpon>viewOffer.cs</DependentUpon>
     </Compile>
-    <Compile Include="viewUser.cs">
+    <Compile Include="Admin\viewUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="viewUser.Designer.cs">
+    <Compile Include="Admin\viewUser.Designer.cs">
       <DependentUpon>viewUser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="addBalance.resx">
@@ -192,10 +225,10 @@
     <EmbeddedResource Include="addListing.resx">
       <DependentUpon>addListing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminLoginPage.resx">
+    <EmbeddedResource Include="Admin\AdminLoginPage.resx">
       <DependentUpon>AdminLoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminPage.resx">
+    <EmbeddedResource Include="Admin\AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="displayLsitingsControl.resx">
@@ -213,7 +246,7 @@
     <EmbeddedResource Include="RecievedOrder.resx">
       <DependentUpon>RecievedOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="viewListings.resx">
+    <EmbeddedResource Include="Admin\viewListings.resx">
       <DependentUpon>viewListings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
@@ -244,15 +277,15 @@
     <EmbeddedResource Include="viewOffer.resx">
       <DependentUpon>viewOffer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="viewUser.resx">
+    <EmbeddedResource Include="Admin\viewUser.resx">
       <DependentUpon>viewUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Classes\Admin.edmx">
+    <EntityDeploy Include="DB\Database.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Admin.Designer.cs</LastGenOutput>
+      <LastGenOutput>Database.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Classes\Admin.edmx.diagram">
-      <DependentUpon>Admin.edmx</DependentUpon>
+    <None Include="DB\Database.edmx.diagram">
+      <DependentUpon>Database.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -431,15 +464,15 @@
     <None Include="Resources\loginicon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Classes\Model1.Context.tt">
+    <Content Include="DB\Database.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Admin.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Classes\Model1.tt">
+    <Content Include="DB\Database.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Admin.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
     <None Include="Resources\My project-1 %2815%29.png" />
   </ItemGroup>

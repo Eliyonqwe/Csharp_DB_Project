@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProjectModel1StoreContainer" CdmEntityContainer="DatabaseEntities">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="ProjectModel1.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="adminID" ColumnName="adminID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="companies">
+      <EntityTypeMapping TypeName="ProjectModel1.company">
+        <MappingFragment StoreEntitySet="company">
+          <ScalarProperty Name="companyID" ColumnName="companyID" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="companyType" ColumnName="companyType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="offers">
+      <EntityTypeMapping TypeName="ProjectModel1.offer">
+        <MappingFragment StoreEntitySet="offer">
+          <ScalarProperty Name="offerID" ColumnName="offerID" />
+          <ScalarProperty Name="offeringUserID" ColumnName="offeringUserID" />
+          <ScalarProperty Name="sellerUserID" ColumnName="sellerUserID" />
+          <ScalarProperty Name="stockID" ColumnName="stockID" />
+          <ScalarProperty Name="offerAmount" ColumnName="offerAmount" />
+          <ScalarProperty Name="offerStatus" ColumnName="offerStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="ProjectModel1.order">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="orderingUserID" ColumnName="orderingUserID" />
+          <ScalarProperty Name="selleruserID" ColumnName="selleruserID" />
+          <ScalarProperty Name="stockID" ColumnName="stockID" />
+          <ScalarProperty Name="orderAmount" ColumnName="orderAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stockListings">
+      <EntityTypeMapping TypeName="ProjectModel1.stockListing">
+        <MappingFragment StoreEntitySet="stockListing">
+          <ScalarProperty Name="stockID" ColumnName="stockID" />
+          <ScalarProperty Name="companyID" ColumnName="companyID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="ProjectModel1.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewAllListings">
+      <EntityTypeMapping TypeName="ProjectModel1.viewAllListing">
+        <MappingFragment StoreEntitySet="viewAllListing">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="stockID" ColumnName="stockID" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="companyType" ColumnName="companyType" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewListings">
+      <EntityTypeMapping TypeName="ProjectModel1.viewListing">
+        <MappingFragment StoreEntitySet="viewListing">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="stockID" ColumnName="stockID" />
+          <ScalarProperty Name="companyID" ColumnName="companyID" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="companyType" ColumnName="companyType" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewOffers">
+      <EntityTypeMapping TypeName="ProjectModel1.viewOffer">
+        <MappingFragment StoreEntitySet="viewOffers">
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="companyType" ColumnName="companyType" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="askingPrice" ColumnName="askingPrice" />
+          <ScalarProperty Name="offeramount" ColumnName="offeramount" />
+          <ScalarProperty Name="offerstatus" ColumnName="offerstatus" />
+          <ScalarProperty Name="offerID" ColumnName="offerID" />
+          <ScalarProperty Name="offeringUserid" ColumnName="offeringUserid" />
+          <ScalarProperty Name="selleruserID" ColumnName="selleruserID" />
+          <ScalarProperty Name="stockID" ColumnName="stockID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="addCompany" FunctionName="ProjectModel1.Store.addCompany" />
+    <FunctionImportMapping FunctionImportName="addListing" FunctionName="ProjectModel1.Store.addListing" />
+    <FunctionImportMapping FunctionImportName="addOffer" FunctionName="ProjectModel1.Store.addOffer" />
+    <FunctionImportMapping FunctionImportName="addOrder" FunctionName="ProjectModel1.Store.addOrder" />
+    <FunctionImportMapping FunctionImportName="deleteCompany" FunctionName="ProjectModel1.Store.deleteCompany" />
+    <FunctionImportMapping FunctionImportName="deleteStock" FunctionName="ProjectModel1.Store.deleteStock" />
+    <FunctionImportMapping FunctionImportName="deleteUser" FunctionName="ProjectModel1.Store.deleteUser" />
+    <FunctionImportMapping FunctionImportName="registerUser" FunctionName="ProjectModel1.Store.registerUser" />
+    <FunctionImportMapping FunctionImportName="searchListing" FunctionName="ProjectModel1.Store.searchListing">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProjectModel1.searchListing_Result">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="stockID" ColumnName="stockID" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="companyType" ColumnName="companyType" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="updateBalance" FunctionName="ProjectModel1.Store.updateBalance" />
+    <FunctionImportMapping FunctionImportName="updateCompany" FunctionName="ProjectModel1.Store.updateCompany" />
+    <FunctionImportMapping FunctionImportName="updateStock" FunctionName="ProjectModel1.Store.updateStock" />
+    <FunctionImportMapping FunctionImportName="updateUser" FunctionName="ProjectModel1.Store.updateUser" />
+    <FunctionImportMapping FunctionImportName="ViewAllUsers" FunctionName="ProjectModel1.Store.ViewAllUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProjectModel1.ViewAllUsers_Result">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="viewUser" FunctionName="ProjectModel1.Store.viewUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProjectModel1.viewUser_Result">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="balance" ColumnName="balance" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

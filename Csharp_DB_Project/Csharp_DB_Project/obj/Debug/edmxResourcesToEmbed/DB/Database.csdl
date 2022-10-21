@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProjectModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="adminID" />
+    </Key>
+    <Property Name="adminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="company">
+    <Key>
+      <PropertyRef Name="companyID" />
+    </Key>
+    <Property Name="companyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="stockListings" Relationship="Self.FK__stockList__compa__1BC821DD" FromRole="company" ToRole="stockListing" />
+  </EntityType>
+  <EntityType Name="offer">
+    <Key>
+      <PropertyRef Name="offerID" />
+    </Key>
+    <Property Name="offerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="offeringUserID" Type="Int32" />
+    <Property Name="sellerUserID" Type="Int32" />
+    <Property Name="stockID" Type="Int32" />
+    <Property Name="offerAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="offerStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="user" Relationship="Self.FK__offer__offeringU__2180FB33" FromRole="offer" ToRole="users" />
+    <NavigationProperty Name="user1" Relationship="Self.FK__offer__sellerUse__22751F6C" FromRole="offer" ToRole="users" />
+    <NavigationProperty Name="stockListing" Relationship="Self.FK__offer__stockID__236943A5" FromRole="offer" ToRole="stockListing" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="orderID" />
+    </Key>
+    <Property Name="orderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="orderingUserID" Type="Int32" />
+    <Property Name="selleruserID" Type="Int32" />
+    <Property Name="stockID" Type="Int32" />
+    <Property Name="orderAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <NavigationProperty Name="user" Relationship="Self.FK__orders__ordering__2739D489" FromRole="orders" ToRole="users" />
+    <NavigationProperty Name="user1" Relationship="Self.FK__orders__sellerus__282DF8C2" FromRole="orders" ToRole="users" />
+    <NavigationProperty Name="stockListing" Relationship="Self.FK__orders__stockID__29221CFB" FromRole="orders" ToRole="stockListing" />
+  </EntityType>
+  <EntityType Name="stockListing">
+    <Key>
+      <PropertyRef Name="stockID" />
+    </Key>
+    <Property Name="stockID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="companyID" Type="Int32" />
+    <Property Name="userID" Type="Int32" />
+    <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="company" Relationship="Self.FK__stockList__compa__1BC821DD" FromRole="stockListing" ToRole="company" />
+    <NavigationProperty Name="offers" Relationship="Self.FK__offer__stockID__236943A5" FromRole="stockListing" ToRole="offer" />
+    <NavigationProperty Name="orders" Relationship="Self.FK__orders__stockID__29221CFB" FromRole="stockListing" ToRole="orders" />
+    <NavigationProperty Name="user" Relationship="Self.FK__stockList__userI__1CBC4616" FromRole="stockListing" ToRole="users" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="phoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="balance" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="offers" Relationship="Self.FK__offer__offeringU__2180FB33" FromRole="users" ToRole="offer" />
+    <NavigationProperty Name="offers1" Relationship="Self.FK__offer__sellerUse__22751F6C" FromRole="users" ToRole="offer" />
+    <NavigationProperty Name="orders" Relationship="Self.FK__orders__ordering__2739D489" FromRole="users" ToRole="orders" />
+    <NavigationProperty Name="orders1" Relationship="Self.FK__orders__sellerus__282DF8C2" FromRole="users" ToRole="orders" />
+    <NavigationProperty Name="stockListings" Relationship="Self.FK__stockList__userI__1CBC4616" FromRole="users" ToRole="stockListing" />
+  </EntityType>
+  <EntityType Name="viewAllListing">
+    <Key>
+      <PropertyRef Name="stockID" />
+      <PropertyRef Name="companyName" />
+      <PropertyRef Name="companyType" />
+      <PropertyRef Name="price" />
+    </Key>
+    <Property Name="userID" Type="Int32" />
+    <Property Name="stockID" Type="Int32" Nullable="false" />
+    <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="viewListing">
+    <Key>
+      <PropertyRef Name="username" />
+      <PropertyRef Name="stockID" />
+      <PropertyRef Name="companyID" />
+      <PropertyRef Name="companyName" />
+      <PropertyRef Name="companyType" />
+      <PropertyRef Name="price" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="stockID" Type="Int32" Nullable="false" />
+    <Property Name="companyID" Type="Int32" Nullable="false" />
+    <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="viewOffer">
+    <Key>
+      <PropertyRef Name="companyName" />
+      <PropertyRef Name="companyType" />
+      <PropertyRef Name="amount" />
+      <PropertyRef Name="askingPrice" />
+      <PropertyRef Name="offeramount" />
+      <PropertyRef Name="offerID" />
+      <PropertyRef Name="stockID" />
+    </Key>
+    <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="askingPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="offeramount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="offerstatus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="offerID" Type="Int32" Nullable="false" />
+    <Property Name="offeringUserid" Type="Int32" />
+    <Property Name="selleruserID" Type="Int32" />
+    <Property Name="stockID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__stockList__compa__1BC821DD">
+    <End Role="company" Type="Self.company" Multiplicity="0..1" />
+    <End Role="stockListing" Type="Self.stockListing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="company">
+        <PropertyRef Name="companyID" />
+      </Principal>
+      <Dependent Role="stockListing">
+        <PropertyRef Name="companyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__offer__offeringU__2180FB33">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="offer" Type="Self.offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="offer">
+        <PropertyRef Name="offeringUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__offer__sellerUse__22751F6C">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="offer" Type="Self.offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="offer">
+        <PropertyRef Name="sellerUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__offer__stockID__236943A5">
+    <End Role="stockListing" Type="Self.stockListing" Multiplicity="0..1" />
+    <End Role="offer" Type="Self.offer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="stockListing">
+        <PropertyRef Name="stockID" />
+      </Principal>
+      <Dependent Role="offer">
+        <PropertyRef Name="stockID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders__ordering__2739D489">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="orders" Type="Self.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="orderingUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders__sellerus__282DF8C2">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="orders" Type="Self.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="selleruserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders__stockID__29221CFB">
+    <End Role="stockListing" Type="Self.stockListing" Multiplicity="0..1" />
+    <End Role="orders" Type="Self.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="stockListing">
+        <PropertyRef Name="stockID" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="stockID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__stockList__userI__1CBC4616">
+    <End Role="users" Type="Self.user" Multiplicity="0..1" />
+    <End Role="stockListing" Type="Self.stockListing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="stockListing">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admins" EntityType="Self.admin" />
+    <EntitySet Name="companies" EntityType="Self.company" />
+    <EntitySet Name="offers" EntityType="Self.offer" />
+    <EntitySet Name="orders" EntityType="Self.order" />
+    <EntitySet Name="stockListings" EntityType="Self.stockListing" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <EntitySet Name="viewAllListings" EntityType="Self.viewAllListing" />
+    <EntitySet Name="viewListings" EntityType="Self.viewListing" />
+    <EntitySet Name="viewOffers" EntityType="Self.viewOffer" />
+    <AssociationSet Name="FK__stockList__compa__1BC821DD" Association="Self.FK__stockList__compa__1BC821DD">
+      <End Role="company" EntitySet="companies" />
+      <End Role="stockListing" EntitySet="stockListings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__offer__offeringU__2180FB33" Association="Self.FK__offer__offeringU__2180FB33">
+      <End Role="users" EntitySet="users" />
+      <End Role="offer" EntitySet="offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__offer__sellerUse__22751F6C" Association="Self.FK__offer__sellerUse__22751F6C">
+      <End Role="users" EntitySet="users" />
+      <End Role="offer" EntitySet="offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__offer__stockID__236943A5" Association="Self.FK__offer__stockID__236943A5">
+      <End Role="stockListing" EntitySet="stockListings" />
+      <End Role="offer" EntitySet="offers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders__ordering__2739D489" Association="Self.FK__orders__ordering__2739D489">
+      <End Role="users" EntitySet="users" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders__sellerus__282DF8C2" Association="Self.FK__orders__sellerus__282DF8C2">
+      <End Role="users" EntitySet="users" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders__stockID__29221CFB" Association="Self.FK__orders__stockID__29221CFB">
+      <End Role="stockListing" EntitySet="stockListings" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__stockList__userI__1CBC4616" Association="Self.FK__stockList__userI__1CBC4616">
+      <End Role="users" EntitySet="users" />
+      <End Role="stockListing" EntitySet="stockListings" />
+    </AssociationSet>
+    <FunctionImport Name="addCompany">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="type" Mode="In" Type="String" />
+      <Parameter Name="companyID" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="addListing">
+      <Parameter Name="compID" Mode="In" Type="Int32" />
+      <Parameter Name="userID" Mode="In" Type="Int32" />
+      <Parameter Name="amount" Mode="In" Type="Decimal" />
+      <Parameter Name="price" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="addOffer">
+      <Parameter Name="offeringID" Mode="In" Type="Int32" />
+      <Parameter Name="sellerID" Mode="In" Type="Int32" />
+      <Parameter Name="stockID" Mode="In" Type="Int32" />
+      <Parameter Name="offerAmount" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="addOrder">
+      <Parameter Name="orderingID" Mode="In" Type="Int32" />
+      <Parameter Name="sellerID" Mode="In" Type="Int32" />
+      <Parameter Name="stockID" Mode="In" Type="Int32" />
+      <Parameter Name="orderAmount" Mode="In" Type="Decimal" />
+      <Parameter Name="offerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="deleteCompany">
+      <Parameter Name="companyID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="deleteStock">
+      <Parameter Name="stockID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="deleteUser">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="registerUser">
+      <Parameter Name="fname" Mode="In" Type="String" />
+      <Parameter Name="lname" Mode="In" Type="String" />
+      <Parameter Name="uname" Mode="In" Type="String" />
+      <Parameter Name="passwd" Mode="In" Type="String" />
+      <Parameter Name="phoneno" Mode="In" Type="String" />
+      <Parameter Name="balance" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="searchListing" ReturnType="Collection(ProjectModel1.searchListing_Result)">
+      <Parameter Name="companyName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="updateBalance">
+      <Parameter Name="uname" Mode="In" Type="String" />
+      <Parameter Name="balance" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="updateCompany">
+      <Parameter Name="companyID" Mode="In" Type="Int32" />
+      <Parameter Name="companyName" Mode="In" Type="String" />
+      <Parameter Name="companyType" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="updateStock">
+      <Parameter Name="stockID" Mode="In" Type="Int32" />
+      <Parameter Name="amount" Mode="In" Type="Decimal" />
+      <Parameter Name="price" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="updateUser">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="fname" Mode="In" Type="String" />
+      <Parameter Name="lname" Mode="In" Type="String" />
+      <Parameter Name="uname" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ViewAllUsers" ReturnType="Collection(ProjectModel1.ViewAllUsers_Result)" />
+    <FunctionImport Name="viewUser" ReturnType="Collection(ProjectModel1.viewUser_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="searchListing_Result">
+    <Property Type="Int32" Name="userID" Nullable="true" />
+    <Property Type="Int32" Name="stockID" Nullable="false" />
+    <Property Type="String" Name="companyName" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="companyType" Nullable="false" MaxLength="30" />
+    <Property Type="Decimal" Name="amount" Nullable="false" Precision="19" />
+    <Property Type="Decimal" Name="price" Nullable="false" Precision="19" />
+    <Property Type="String" Name="status" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="ViewAllUsers_Result">
+    <Property Type="Int32" Name="userID" Nullable="false" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="username" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="password" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="phoneNumber" Nullable="true" MaxLength="15" />
+    <Property Type="Decimal" Name="balance" Nullable="true" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="viewUser_Result">
+    <Property Type="Int32" Name="userID" Nullable="false" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="username" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="password" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="phoneNumber" Nullable="true" MaxLength="15" />
+    <Property Type="Decimal" Name="balance" Nullable="true" Precision="19" />
+  </ComplexType>
+</Schema>
