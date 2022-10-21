@@ -39,11 +39,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 93);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 269);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(695, 383);
+            this.dataGridView1.Size = new System.Drawing.Size(695, 164);
             this.dataGridView1.TabIndex = 0;
             // 
             // btn_search
@@ -94,6 +94,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "viewUser";
             this.Text = "viewUser";
+            this.Load += new System.EventHandler(this.viewUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

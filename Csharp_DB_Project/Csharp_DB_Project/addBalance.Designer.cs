@@ -34,8 +34,10 @@
             this.btn_plus = new System.Windows.Forms.PictureBox();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_HomePage = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_plus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_balance
@@ -107,12 +109,23 @@
             this.btn_HomePage.UseVisualStyleBackColor = false;
             this.btn_HomePage.Click += new System.EventHandler(this.btn_HomePage_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Csharp_DB_Project.Properties.Resources.f;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(139, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 86;
+            this.pictureBox1.TabStop = false;
+            // 
             // addBalance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
             this.ClientSize = new System.Drawing.Size(974, 536);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_HomePage);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_minus);
@@ -124,6 +137,7 @@
             this.Text = "addBalancecs";
             ((System.ComponentModel.ISupportInitialize)(this.btn_minus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_plus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +151,6 @@
         private System.Windows.Forms.PictureBox btn_minus;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_HomePage;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

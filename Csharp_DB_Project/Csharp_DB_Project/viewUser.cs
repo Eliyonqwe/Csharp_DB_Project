@@ -55,5 +55,20 @@ namespace Csharp_DB_Project
             this.Hide();
             p.Show();
         }
+
+        private void displayLsitingsControl1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewUser_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void displayLsitingsControl1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
