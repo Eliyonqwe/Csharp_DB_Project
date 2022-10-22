@@ -22,6 +22,7 @@ namespace Csharp_DB_Project
 
         private void btn_Profile_Click(object sender, EventArgs e)
         {
+            panel3.Controls.Clear();
             viewUser v = new viewUser();
             v.Show();
             v.TopLevel = false;
@@ -33,6 +34,7 @@ namespace Csharp_DB_Project
 
         private void btn_viewAllListing_Click(object sender, EventArgs e)
         {
+            panel3.Controls.Clear();
             viewListings v = new viewListings();
             v.Show();
             v.TopLevel = false;
@@ -52,6 +54,7 @@ namespace Csharp_DB_Project
 
         private void btn_offer_Click(object sender, EventArgs e)
         {
+            panel3.Controls.Clear();
             viewOffers o = new viewOffers();
             o.Show();
             o.TopLevel = false;
@@ -65,6 +68,7 @@ namespace Csharp_DB_Project
 
         private void btn_order_Click(object sender, EventArgs e)
         {
+            panel3.Controls.Clear();
             viewOrders o = new viewOrders();
             o.Show();
             o.TopLevel = false;
