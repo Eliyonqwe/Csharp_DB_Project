@@ -124,5 +124,10 @@ namespace Csharp_DB_Project
 
             }
         }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

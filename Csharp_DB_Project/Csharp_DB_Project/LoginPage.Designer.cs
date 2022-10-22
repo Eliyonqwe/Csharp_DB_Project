@@ -34,6 +34,7 @@
             this.txt_uname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbl_adminPage = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_adminPage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -98,6 +98,7 @@
             this.txt_passwd.TabIndex = 27;
             this.txt_passwd.Text = "type your password";
             this.txt_passwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_passwd.Click += new System.EventHandler(this.pswdclick);
             // 
             // txt_uname
             // 
@@ -112,6 +113,7 @@
             this.txt_uname.TabIndex = 26;
             this.txt_uname.Text = "username";
             this.txt_uname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_uname.Click += new System.EventHandler(this.uname_click);
             // 
             // label2
             // 
@@ -137,6 +139,17 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "The Stock";
             // 
+            // lbl_adminPage
+            // 
+            this.lbl_adminPage.AutoSize = true;
+            this.lbl_adminPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_adminPage.Location = new System.Drawing.Point(977, 9);
+            this.lbl_adminPage.Name = "lbl_adminPage";
+            this.lbl_adminPage.Size = new System.Drawing.Size(50, 16);
+            this.lbl_adminPage.TabIndex = 38;
+            this.lbl_adminPage.Text = "Admin";
+            this.lbl_adminPage.Click += new System.EventHandler(this.lbl_adminPage_Click);
+            // 
             // pictureBox11
             // 
             this.pictureBox11.Image = global::Csharp_DB_Project.Properties.Resources.loginicon1;
@@ -156,6 +169,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 36;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox10
             // 
@@ -265,17 +279,6 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // lbl_adminPage
-            // 
-            this.lbl_adminPage.AutoSize = true;
-            this.lbl_adminPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_adminPage.Location = new System.Drawing.Point(977, 9);
-            this.lbl_adminPage.Name = "lbl_adminPage";
-            this.lbl_adminPage.Size = new System.Drawing.Size(50, 16);
-            this.lbl_adminPage.TabIndex = 38;
-            this.lbl_adminPage.Text = "Admin";
-            this.lbl_adminPage.Click += new System.EventHandler(this.lbl_adminPage_Click);
             // 
             // LoginPage
             // 

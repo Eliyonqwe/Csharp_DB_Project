@@ -196,10 +196,29 @@ as
 	update users set balance = @balance where username = @uname
 
 ----------------------------------------------------------------------------------------------------------------------------------
-create proc deleteUser
+alter proc deleteUser
 @id int
 as
+begin
+	declare @errValue int
+	begin transaction
 	delete from users where userId = @id
+	SET @errValue = @@ERROR
+		IF @errValue > 0
+			ROLLBACK tran
+		
+	delete from  stockListing where userID = @id
+	SET @errValue = @@ERROR
+		IF @errValue > 0
+			ROLLBACK tran
+		
+	delete from  offer where offeringUserID = @id or sellerUserID = @id
+	SET @errValue = @@ERROR
+		IF @errValue > 0
+			ROLLBACK tran
+		
+	commit transaction
+end
 
 ----------------------------------------------------------------------------------------------------------------------------------
 

@@ -52,7 +52,7 @@
             // 
             // save_btn
             // 
-            this.save_btn.Location = new System.Drawing.Point(678, 372);
+            this.save_btn.Location = new System.Drawing.Point(688, 362);
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(74, 37);
             this.save_btn.TabIndex = 106;
@@ -184,7 +184,7 @@
             // 
             // delete_btn
             // 
-            this.delete_btn.Location = new System.Drawing.Point(793, 188);
+            this.delete_btn.Location = new System.Drawing.Point(688, 422);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(117, 24);
             this.delete_btn.TabIndex = 93;
@@ -194,7 +194,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(781, 470);
+            this.button1.Location = new System.Drawing.Point(688, 475);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 32);
             this.button1.TabIndex = 92;
@@ -238,6 +238,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(710, 219);
             this.dataGridView1.TabIndex = 88;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // viewUser
             // 
@@ -263,7 +264,9 @@
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "viewUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "viewUser";
             this.Load += new System.EventHandler(this.viewUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

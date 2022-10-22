@@ -70,5 +70,10 @@ namespace Csharp_DB_Project.Admin
             else
                 MessageBox.Show(status);
         }
+
+        private void viewOrders_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

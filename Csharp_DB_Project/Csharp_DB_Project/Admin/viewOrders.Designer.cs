@@ -107,8 +107,11 @@
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "viewOrders";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "viewOrders";
+            this.Load += new System.EventHandler(this.viewOrders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -31,18 +31,12 @@ namespace Csharp_DB_Project
 
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void pswdclick(object sender, MouseEventArgs e)
+        private void pswdclick(object sender, EventArgs e)
         {
             txt_passwd.Clear();
         }
 
-        private void unameclick(object sender, MouseEventArgs e)
+        private void uname_click(object sender, EventArgs e)
         {
             txt_uname.Clear();
         }
@@ -91,7 +85,7 @@ namespace Csharp_DB_Project
                     if (result == null) // there is no row with the entered username and password
                     {
                         MessageBox.Show("Invalid Credentials!");
-                        //   txt_uname.Text = "Enter Username";
+                        // txt_uname.Text = "Enter Username";
                         // txt_passwd.Text = "************";
                     }
                     else
@@ -125,5 +119,7 @@ namespace Csharp_DB_Project
              
              
         }
+
+      
     }
 }
