@@ -253,12 +253,6 @@
     <Compile Include="Admin\AdminPage.Designer.cs">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdminHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\AdminHome.Designer.cs">
-      <DependentUpon>AdminHome.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\viewOffers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,9 +413,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdminHome.resx">
-      <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\viewOffers.resx">
       <DependentUpon>viewOffers.cs</DependentUpon>

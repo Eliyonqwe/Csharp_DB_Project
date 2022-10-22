@@ -37,8 +37,8 @@ namespace Csharp_DB_Project
         private void btn_viewAllListing_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
-            label1.Hide();
-            btn_logout.Hide();
+            label1.Visible = false;
+            btn_logout.Visible = false;
             viewListings v = new viewListings();
             v.Show();
             v.TopLevel = false;
@@ -90,13 +90,22 @@ namespace Csharp_DB_Project
         private void btn_Home_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
-            AdminHome o = new AdminHome();
-            o.Show();
-            o.TopLevel = false;
-            o.AutoScroll = true;
-            o.Dock = DockStyle.Fill;
-            o.Show();
-            panel3.Controls.Add(o);
+            label1.Visible = true;
+            btn_logout.Visible = true;
+            panel3.Controls.Add(label1);
+            panel3.Controls.Add(btn_logout);
+            
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            LoginPage l = new LoginPage();
+            this.Hide();
+            l.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

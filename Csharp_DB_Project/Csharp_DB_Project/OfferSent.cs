@@ -15,6 +15,7 @@ namespace Csharp_DB_Project
 {
     public partial class OfferSent : Form
     {
+        int changeIndicator = 0;
         String username;
         int userID;
         public OfferSent(String user)
@@ -41,14 +42,16 @@ namespace Csharp_DB_Project
             String status = o.viewSentOffer(dataGridView1,userID);
             if (status != "0")  
                 MessageBox.Show(status);
+            else
+            {
+                changeIndicator = 0; 
+            }
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            HomePage h = new HomePage(username);
             this.Hide();
-            h.Show();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -62,12 +65,23 @@ namespace Csharp_DB_Project
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            Offer o = new Offer();
-            String status = o.updateOffer((int)dataGridView1.CurrentRow.Cells[0].Value, userID,Convert.ToDouble(txt_offeramount.Text));
-            if (status != "0")
-                MessageBox.Show(status);
+            if (changeIndicator == 0)
+            {
+                MessageBox.Show("Nothing has been altered/changed!");
+            }
             else
-                MessageBox.Show("updated");
+            {
+                Offer o = new Offer();
+                String status = o.updateOffer((int)dataGridView1.CurrentRow.Cells[0].Value, userID, Convert.ToDouble(txt_offeramount.Text));
+                if (status != "0")
+                    MessageBox.Show(status);
+                else
+                {
+                    changeIndicator = 0;
+                    MessageBox.Show("updated");
+                    
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -89,6 +103,11 @@ namespace Csharp_DB_Project
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txt_offeramount_TextChanged(object sender, EventArgs e)
+        {
+            changeIndicator++;
         }
     }
 }

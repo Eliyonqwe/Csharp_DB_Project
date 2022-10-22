@@ -94,4 +94,3 @@ D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\Sys
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\System.Text.Encoding.CodePages.xml
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\System.Threading.AccessControl.xml
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.csproj.Fody.CopyLocal.cache
-D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.Admin.AdminHome.resources

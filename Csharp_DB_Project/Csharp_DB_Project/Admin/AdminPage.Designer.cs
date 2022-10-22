@@ -250,12 +250,11 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.btn_logout);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(273, 0);
+            this.panel3.Controls.Add(this.btn_logout);
+            this.panel3.Location = new System.Drawing.Point(270, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(897, 662);
+            this.panel3.Size = new System.Drawing.Size(900, 662);
             this.panel3.TabIndex = 55;
             // 
             // pictureBox2
@@ -409,17 +408,19 @@
             this.btn_logout.TabIndex = 4;
             this.btn_logout.Text = "Logout";
             this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 65F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.label1.Location = new System.Drawing.Point(68, 225);
+            this.label1.Location = new System.Drawing.Point(23, 222);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(682, 146);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 5;
             this.label1.Text = "Admin Page";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AdminPage
             // 

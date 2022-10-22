@@ -55,9 +55,7 @@ namespace Csharp_DB_Project
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            HomePage h = new HomePage(txt_uname.Text);
             this.Hide();
-            h.Show();
         }
         private void btn_update_Click(object sender, EventArgs e)
         {

@@ -33,9 +33,7 @@ namespace Csharp_DB_Project.Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminPage p = new AdminPage();
             this.Hide();
-            p.Show();
         }
 
         private void btn_search_Click(object sender, EventArgs e)

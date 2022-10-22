@@ -46,9 +46,7 @@ namespace Csharp_DB_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminPage p = new AdminPage();
             this.Hide();
-            p.Show();
         }
 
         private void viewUser_Load(object sender, EventArgs e)

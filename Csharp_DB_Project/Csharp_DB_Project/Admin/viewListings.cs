@@ -58,9 +58,8 @@ namespace Csharp_DB_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminPage p = new AdminPage();
             this.Hide();
-            p.Show();
+            
         }
     }
 }

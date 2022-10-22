@@ -28,8 +28,10 @@ namespace Csharp_DB_Project
             sidebarContainer.VerticalScroll.Visible = false;
             sidebarContainer.AutoScroll = true;
             sidebarContainer.VerticalScroll.Maximum = 113;
+            panel3.Controls.Add(btn_logout);
+            
         }
-        
+
         private void button2_Click(object sender, EventArgs e)
         {
             HomePage h = new HomePage(username);
@@ -312,15 +314,16 @@ namespace Csharp_DB_Project
 
         private void btn_viewAllListing_Click(object sender, EventArgs e)
         {
-           /* viewListing v = new viewListing(username);
-            this.Hide();
-            v.Show();
-*/          
-           panel3.Controls.Clear();
-            btn_logout.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
-            lb_welcome.Visible = false;
+            /* viewListing v = new viewListing(username);
+             this.Hide();
+             v.Show();
+ */
+            panel3.Controls.Clear();
+            btn_logout.Hide();
+            pictureBox8.Hide();
+            label3.Hide();
+            label4.Hide();
+            lb_welcome.Hide();
             viewListing v = new viewListing(username);
             v.TopLevel = false;
             v.AutoScroll = true;
@@ -353,6 +356,7 @@ namespace Csharp_DB_Project
             label3.Visible=true;
             label4.Visible=true;
             lb_welcome.Visible=false;
+            panel3.Controls.Add(btn_logout);
         }
 
         private void panel3_Paint_1(object sender, PaintEventArgs e)
@@ -367,9 +371,7 @@ namespace Csharp_DB_Project
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-            LoginPage l = new LoginPage();
-            this.Hide();
-            l.Show();
+           
         }
 
         private void myListingContainer_Paint(object sender, PaintEventArgs e)
@@ -425,6 +427,13 @@ namespace Csharp_DB_Project
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_logout_Click_1(object sender, EventArgs e)
+        {
+            LoginPage l = new LoginPage();
+            this.Hide();
+            l.Show();
         }
     }
 }

@@ -37,9 +37,7 @@ namespace Csharp_DB_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            HomePage h = new HomePage(username);
             this.Hide();
-            h.Show();
         }
 
         private void btn_load_Click(object sender, EventArgs e)

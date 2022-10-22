@@ -66,6 +66,7 @@
             this.txt_offeramount.Name = "txt_offeramount";
             this.txt_offeramount.Size = new System.Drawing.Size(233, 28);
             this.txt_offeramount.TabIndex = 132;
+            this.txt_offeramount.TextChanged += new System.EventHandler(this.txt_offeramount_TextChanged);
             // 
             // txt_price
             // 
