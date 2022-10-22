@@ -22,30 +22,19 @@ namespace Csharp_DB_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            admin a = new admin();
+            string status = a.check(txt_uname.Text, txt_passwd.Text);
+            if (status == "0")
             {
-                using (var context = new DatabaseEntities())
-                {
-                    var query = from a in context.admins where a.username == txt_uname.Text && a.password == txt_passwd.Text select a;
-
-
-                    if (!query.Any())
-                    {
-                        MessageBox.Show("invalid username or password");
-                    }
-                    else
-                    {
-
-                        MessageBox.Show("Success");
-                        AdminPage ap = new AdminPage();
-                        this.Hide();
-                        ap.Show();
-                    }
-
-                }
+                MessageBox.Show("Success");
+                AdminPage ap = new AdminPage();
+                this.Hide();
+                ap.Show();
             }
-            catch (Exception ex)
-            { MessageBox.Show(ex.ToString()); }
+            else
+            {
+                MessageBox.Show(status);
+            }
 
         }
     }

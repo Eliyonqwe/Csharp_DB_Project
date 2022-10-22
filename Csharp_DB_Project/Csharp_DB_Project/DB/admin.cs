@@ -11,11 +11,35 @@ namespace Csharp_DB_Project.DB
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+
     public partial class admin
     {
         public int adminID { get; set; }
         public string username { get; set; }
         public string password { get; set; }
+
+        public String check(String uname, String passwd)
+        {
+            try
+            {
+                var context = new DatabaseEntities();
+                if (context.admins.Where(r => r.username == uname && r.password == passwd).Count() > 0)
+                {
+                    return "0";
+                }
+                else
+                {
+                    return "Invalid Credentials";
+                }
+            }
+            catch(Exception e)
+            {
+                return e.Message;
+
+            }
+
+        }
+
     }
 }

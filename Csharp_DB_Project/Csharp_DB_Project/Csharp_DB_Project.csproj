@@ -82,6 +82,18 @@
     <Compile Include="Admin\AdminPage.Designer.cs">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\viewOffers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\viewOffers.Designer.cs">
+      <DependentUpon>viewOffers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\viewOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\viewOrders.Designer.cs">
+      <DependentUpon>viewOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\Company.cs" />
     <Compile Include="Classes\Offer.cs" />
     <Compile Include="Classes\Order.cs" />
@@ -230,6 +242,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\viewOffers.resx">
+      <DependentUpon>viewOffers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\viewOrders.resx">
+      <DependentUpon>viewOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="displayLsitingsControl.resx">
       <DependentUpon>displayLsitingsControl.cs</DependentUpon>

@@ -5,11 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e0d366a2ca3346648cf462e702087b6f" Name="Diagram1">
-        <EntityTypeShape EntityType="ProjectModel1.admin" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel1.company" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel1.admin" Width="1.5" PointX="5.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel1.company" Width="1.5" PointX="0.5" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ProjectModel1.offer" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ProjectModel1.order" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProjectModel1.stockListing" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel1.stockListing" Width="1.5" PointX="3.375" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ProjectModel1.user" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ProjectModel1.viewAllListing" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ProjectModel1.viewListing" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />

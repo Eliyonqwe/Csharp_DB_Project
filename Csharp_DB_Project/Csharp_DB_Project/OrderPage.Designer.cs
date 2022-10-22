@@ -158,7 +158,7 @@
             this.btn_load.Name = "btn_load";
             this.btn_load.Size = new System.Drawing.Size(126, 50);
             this.btn_load.TabIndex = 135;
-            this.btn_load.Text = "Load the Orders";
+            this.btn_load.Text = " Load Order";
             this.btn_load.UseVisualStyleBackColor = false;
             this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
             // 

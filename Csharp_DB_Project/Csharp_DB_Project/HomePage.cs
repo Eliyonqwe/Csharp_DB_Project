@@ -15,15 +15,16 @@ namespace Csharp_DB_Project
         bool sidebarExpand;
         bool myListingCollapsed;
         bool myProfileCollapsed;
+        bool offerCollapsed;
+        bool orderCollapsed;
         String username = "";
         public HomePage(String user)
         {
             InitializeComponent();
             username = user;
             lb_welcome.Text += user;
-
         }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
             HomePage h = new HomePage(username);
@@ -35,7 +36,32 @@ namespace Csharp_DB_Project
         {
             sidebarTImer.Start();
         }
+        private void btn_orders_Click(object sender, EventArgs e)
+        {
+            orderTimer.Start();
+        }
 
+        private void orderTimer_Tick(object sender, EventArgs e)
+        {
+            if (orderCollapsed)
+            {
+                orderContainer.Height -= 10;
+                if (orderContainer.Height == orderContainer.MinimumSize.Height)
+                {
+                    orderCollapsed = false;
+                    orderTimer.Stop();
+                }
+            }
+            else
+            {
+                orderContainer.Height += 10;
+                if (orderContainer.Height == orderContainer.MaximumSize.Height)
+                {
+                    orderCollapsed = true;
+                    orderTimer.Stop();
+                }
+            }
+        }
         private void myListingTImer_Tick(object sender, EventArgs e)
         {
             if (myListingCollapsed)
@@ -73,7 +99,7 @@ namespace Csharp_DB_Project
 
             if (myProfileCollapsed)
             {
-                myProfileContainer.Height -= 27;
+                myProfileContainer.Height -= 10;
                 if (myProfileContainer.Height == myProfileContainer.MinimumSize.Height)
                 {
                     myProfileCollapsed = false;
@@ -82,7 +108,7 @@ namespace Csharp_DB_Project
             }
             else
             {
-                myProfileContainer.Height += 27;
+                myProfileContainer.Height += 10;
                 if (myProfileContainer.Height == myProfileContainer.MaximumSize.Height)
                 {
                     myProfileCollapsed = true;
@@ -110,6 +136,31 @@ namespace Csharp_DB_Project
                     sidebarTImer.Stop();
                 }
             }
+        }
+        private void offerTimer_Tick(object sender, EventArgs e)
+        {
+            if (offerCollapsed)
+            {
+                offerContainer.Height -= 10;
+                if (offerContainer.Height == offerContainer.MinimumSize.Height)
+                {
+                    offerCollapsed = false;
+                    offerTimer.Stop();
+                }
+            }
+            else
+            {
+                offerContainer.Height += 10;
+                if (offerContainer.Height == offerContainer.MaximumSize.Height)
+                {
+                    offerCollapsed = true;
+                    offerTimer.Stop();
+                }
+            }
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            offerTimer.Start();
         }
         private void btn_editProfile_Click(object sender, EventArgs e)
         {
@@ -214,12 +265,12 @@ namespace Csharp_DB_Project
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            btn_order.ForeColor = Color.DarkRed;
+            btn_orderSent.ForeColor = Color.DarkRed;
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            btn_order.ForeColor = Color.Transparent;
+            btn_orderSent.ForeColor = Color.Transparent;
         }
        
 
@@ -333,6 +384,11 @@ namespace Csharp_DB_Project
             RecievedOrder o = new RecievedOrder(username);
             this.Hide();
             o.Show();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

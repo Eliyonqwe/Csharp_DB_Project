@@ -1,4 +1,5 @@
-﻿using Csharp_DB_Project.Classes;
+﻿using Csharp_DB_Project.Admin;
+using Csharp_DB_Project.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,23 @@ namespace Csharp_DB_Project
         private void myProfileContainer_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+       
+
+        private void btn_offer_Click(object sender, EventArgs e)
+        {
+            viewOffers o = new viewOffers();
+            this.Hide();
+            o.Show();
+
+        }
+
+        private void btn_order_Click(object sender, EventArgs e)
+        {
+            viewOrders o = new viewOrders();
+            this.Hide();
+            o.Show();
         }
     }
 }

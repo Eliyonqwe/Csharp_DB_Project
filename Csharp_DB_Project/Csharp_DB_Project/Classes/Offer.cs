@@ -42,6 +42,57 @@ namespace Csharp_DB_Project.Classes
             }
         }
 
+        public String searchOffer(DataGridView d, String search)
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec searchOffersForAdmin  '" + search + "'";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    d.DataSource = dt;
+                }
+                return "0";
+            }
+
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+
+        }
+        public String viewOffers(DataGridView d)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec viewOffersForAdmin";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+
+                    sda.Fill(dt);
+                    d.DataSource = null;
+                    d.DataSource = dt;
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
         public String viewSentOffer(DataGridView d,int userID)
         {
 

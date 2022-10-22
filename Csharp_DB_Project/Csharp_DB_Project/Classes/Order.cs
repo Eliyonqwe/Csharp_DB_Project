@@ -43,6 +43,57 @@ namespace Csharp_DB_Project.Classes
                 return e.Message;
             }
         }
+        public String searchOrder(DataGridView d, String search)
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec searchOrdersForAdmin  '" + search + "'";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    d.DataSource = dt;
+                }
+                return "0";
+            }
+
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+
+        }
+        public String viewOrders(DataGridView d)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec viewOrdersForAdmin";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+
+                    sda.Fill(dt);
+                    d.DataSource = null;
+                    d.DataSource = dt;
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
         public String viewMyOrders(DataGridView d, int userID)
         {
 
@@ -123,5 +174,6 @@ namespace Csharp_DB_Project.Classes
                 return e.Message;
             }
         }
+
     }
 }
