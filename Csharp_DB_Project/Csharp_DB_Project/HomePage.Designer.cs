@@ -73,7 +73,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.offerTimer = new System.Windows.Forms.Timer(this.components);
             this.orderTimer = new System.Windows.Forms.Timer(this.components);
-            this.panel3.SuspendLayout();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.sidebarContainer.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -91,6 +91,7 @@
             this.orderContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // myProfileTimer
@@ -111,21 +112,21 @@
             // panel3
             // 
             this.panel3.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.My_project1;
-            this.panel3.Controls.Add(this.btn_logout);
-            this.panel3.Location = new System.Drawing.Point(382, 0);
+            this.panel3.Location = new System.Drawing.Point(365, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1051, 738);
+            this.panel3.Size = new System.Drawing.Size(1069, 736);
             this.panel3.TabIndex = 52;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
             // 
             // btn_logout
             // 
             this.btn_logout.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_logout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_logout.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(799, 614);
+            this.btn_logout.Location = new System.Drawing.Point(1254, 682);
             this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(122, 48);
+            this.btn_logout.Size = new System.Drawing.Size(125, 42);
             this.btn_logout.TabIndex = 0;
             this.btn_logout.Text = "Log Out";
             this.btn_logout.UseVisualStyleBackColor = false;
@@ -148,7 +149,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.IndianRed;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__14_;
-            this.pictureBox8.Location = new System.Drawing.Point(1361, 3);
+            this.pictureBox8.Location = new System.Drawing.Point(1355, 3);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(64, 22);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -179,6 +180,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.menuButton);
@@ -206,9 +208,9 @@
             this.menuButton.BackColor = System.Drawing.Color.Transparent;
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuButton.Image = global::Csharp_DB_Project.Properties.Resources.My_project__1_2;
-            this.menuButton.Location = new System.Drawing.Point(-6, 41);
+            this.menuButton.Location = new System.Drawing.Point(-3, 51);
             this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(124, 56);
+            this.menuButton.Size = new System.Drawing.Size(124, 41);
             this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menuButton.TabIndex = 50;
             this.menuButton.TabStop = false;
@@ -590,6 +592,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.pictureBox7);
             this.panel6.Controls.Add(this.button2);
             this.panel6.Location = new System.Drawing.Point(3, 605);
             this.panel6.Name = "panel6";
@@ -657,14 +660,26 @@
             this.orderTimer.Interval = 10;
             this.orderTimer.Tick += new System.EventHandler(this.orderTimer_Tick);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__12_;
+            this.pictureBox7.Location = new System.Drawing.Point(15, 20);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(75, 33);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 56;
+            this.pictureBox7.TabStop = false;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
             this.ClientSize = new System.Drawing.Size(1431, 736);
-            this.Controls.Add(this.lb_welcome);
             this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.btn_logout);
+            this.Controls.Add(this.lb_welcome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel3);
@@ -675,7 +690,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePag";
             this.Load += new System.EventHandler(this.HomePage_Load);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.sidebarContainer.ResumeLayout(false);
             this.sidebarContainer.PerformLayout();
@@ -695,6 +709,7 @@
             this.orderContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -746,5 +761,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Timer offerTimer;
         private System.Windows.Forms.Timer orderTimer;
+        private System.Windows.Forms.PictureBox pictureBox7;
     }
 }

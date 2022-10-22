@@ -23,6 +23,11 @@ namespace Csharp_DB_Project
             InitializeComponent();
             username = user;
             lb_welcome.Text += user;
+            sidebarContainer.HorizontalScroll.Maximum = 0;
+            sidebarContainer.AutoScroll = false;
+            sidebarContainer.VerticalScroll.Visible = false;
+            sidebarContainer.AutoScroll = true;
+            sidebarContainer.VerticalScroll.Maximum = 113;
         }
         
         private void button2_Click(object sender, EventArgs e)
@@ -166,6 +171,7 @@ namespace Csharp_DB_Project
         {
             ProfilePage p = new ProfilePage(username);
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -181,6 +187,7 @@ namespace Csharp_DB_Project
         {
             addBalance b = new addBalance(username);
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -196,6 +203,7 @@ namespace Csharp_DB_Project
         {
             addListing l = new addListing(username);
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -277,6 +285,7 @@ namespace Csharp_DB_Project
         private void btn_editlising_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -308,6 +317,7 @@ namespace Csharp_DB_Project
             v.Show();
 */          
            panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -324,6 +334,7 @@ namespace Csharp_DB_Project
         {
             viewOffer v = new viewOffer(username);
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -338,9 +349,10 @@ namespace Csharp_DB_Project
         private void btn_Home_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
+            btn_logout.Visible = true;
             label3.Visible=true;
             label4.Visible=true;
-           lb_welcome.Visible=true;
+            lb_welcome.Visible=false;
         }
 
         private void panel3_Paint_1(object sender, PaintEventArgs e)
@@ -369,6 +381,7 @@ namespace Csharp_DB_Project
         {
             OfferSent o = new OfferSent(username);
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -383,6 +396,7 @@ namespace Csharp_DB_Project
         {
             OrderPage o = new OrderPage(username);
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -397,6 +411,7 @@ namespace Csharp_DB_Project
         {
             RecievedOrder o = new RecievedOrder(username);
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
