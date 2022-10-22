@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
             this.sidebarContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_Home = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.btn_order = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel = new System.Windows.Forms.Panel();
             this.sidebarContainer.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,6 +82,14 @@
             this.sidebarContainer.Name = "sidebarContainer";
             this.sidebarContainer.Size = new System.Drawing.Size(267, 638);
             this.sidebarContainer.TabIndex = 54;
+            // 
+            // panel
+            // 
+            this.panel.BackColor = System.Drawing.Color.Transparent;
+            this.panel.Location = new System.Drawing.Point(3, 3);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(264, 68);
+            this.panel.TabIndex = 56;
             // 
             // panel2
             // 
@@ -382,14 +390,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(885, 636);
             this.panel3.TabIndex = 55;
-            // 
-            // panel
-            // 
-            this.panel.BackColor = System.Drawing.Color.Transparent;
-            this.panel.Location = new System.Drawing.Point(3, 3);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(264, 68);
-            this.panel.TabIndex = 56;
             // 
             // AdminPage
             // 
