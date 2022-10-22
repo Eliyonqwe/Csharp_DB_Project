@@ -49,7 +49,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(69, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(43, 43);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -61,7 +61,7 @@
             // txt_offeramount
             // 
             this.txt_offeramount.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_offeramount.Location = new System.Drawing.Point(377, 600);
+            this.txt_offeramount.Location = new System.Drawing.Point(351, 631);
             this.txt_offeramount.Multiline = true;
             this.txt_offeramount.Name = "txt_offeramount";
             this.txt_offeramount.Size = new System.Drawing.Size(233, 28);
@@ -70,7 +70,7 @@
             // txt_price
             // 
             this.txt_price.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_price.Location = new System.Drawing.Point(377, 544);
+            this.txt_price.Location = new System.Drawing.Point(351, 575);
             this.txt_price.Multiline = true;
             this.txt_price.Name = "txt_price";
             this.txt_price.ReadOnly = true;
@@ -80,7 +80,7 @@
             // txt_companyType
             // 
             this.txt_companyType.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_companyType.Location = new System.Drawing.Point(377, 444);
+            this.txt_companyType.Location = new System.Drawing.Point(351, 475);
             this.txt_companyType.Multiline = true;
             this.txt_companyType.Name = "txt_companyType";
             this.txt_companyType.ReadOnly = true;
@@ -90,7 +90,7 @@
             // txt_amount
             // 
             this.txt_amount.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_amount.Location = new System.Drawing.Point(377, 494);
+            this.txt_amount.Location = new System.Drawing.Point(351, 525);
             this.txt_amount.Multiline = true;
             this.txt_amount.Name = "txt_amount";
             this.txt_amount.ReadOnly = true;
@@ -100,7 +100,7 @@
             // txt_companyName
             // 
             this.txt_companyName.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_companyName.Location = new System.Drawing.Point(377, 394);
+            this.txt_companyName.Location = new System.Drawing.Point(351, 425);
             this.txt_companyName.Multiline = true;
             this.txt_companyName.Name = "txt_companyName";
             this.txt_companyName.ReadOnly = true;
@@ -113,7 +113,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(102, 601);
+            this.label5.Location = new System.Drawing.Point(76, 632);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 26);
             this.label5.TabIndex = 127;
@@ -125,7 +125,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(102, 556);
+            this.label2.Location = new System.Drawing.Point(76, 587);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(223, 26);
             this.label2.TabIndex = 126;
@@ -137,7 +137,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(102, 501);
+            this.label1.Location = new System.Drawing.Point(76, 532);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 26);
             this.label1.TabIndex = 125;
@@ -149,7 +149,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(102, 441);
+            this.label4.Location = new System.Drawing.Point(76, 472);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 26);
             this.label4.TabIndex = 124;
@@ -161,7 +161,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(102, 388);
+            this.label3.Location = new System.Drawing.Point(76, 419);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 26);
             this.label3.TabIndex = 123;
@@ -170,7 +170,7 @@
             // btn_edit
             // 
             this.btn_edit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_edit.Location = new System.Drawing.Point(679, 423);
+            this.btn_edit.Location = new System.Drawing.Point(653, 454);
             this.btn_edit.Name = "btn_edit";
             this.btn_edit.Size = new System.Drawing.Size(140, 63);
             this.btn_edit.TabIndex = 122;
@@ -181,7 +181,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Location = new System.Drawing.Point(679, 577);
+            this.button1.Location = new System.Drawing.Point(653, 608);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 62);
             this.button1.TabIndex = 121;
@@ -192,7 +192,7 @@
             // btn_load
             // 
             this.btn_load.BackColor = System.Drawing.Color.YellowGreen;
-            this.btn_load.Location = new System.Drawing.Point(439, 315);
+            this.btn_load.Location = new System.Drawing.Point(413, 346);
             this.btn_load.Name = "btn_load";
             this.btn_load.Size = new System.Drawing.Size(126, 50);
             this.btn_load.TabIndex = 120;
@@ -203,7 +203,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(679, 501);
+            this.button2.Location = new System.Drawing.Point(653, 532);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(140, 63);
             this.button2.TabIndex = 134;
@@ -216,6 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
             this.ClientSize = new System.Drawing.Size(1154, 728);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -232,7 +233,9 @@
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OfferSent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OfferSent";
             this.Load += new System.EventHandler(this.OfferSent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -368,22 +368,43 @@ namespace Csharp_DB_Project
         private void button5_Click(object sender, EventArgs e)
         {
             OfferSent o = new OfferSent(username);
-            this.Hide();
+            panel3.Controls.Clear();
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
+            o.TopLevel = false;
+            o.AutoScroll = true;
+            o.Dock = DockStyle.Fill;
             o.Show();
+            panel3.Controls.Add(o);
         }
 
         private void btn_order_Click(object sender, EventArgs e)
         {
             OrderPage o = new OrderPage(username);
-            this.Hide();
+            panel3.Controls.Clear();
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
+            o.TopLevel = false;
+            o.AutoScroll = true;
+            o.Dock = DockStyle.Fill;
             o.Show();
+            panel3.Controls.Add(o);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             RecievedOrder o = new RecievedOrder(username);
-            this.Hide();
+            panel3.Controls.Clear();
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
+            o.TopLevel = false;
+            o.AutoScroll = true;
+            o.Dock = DockStyle.Fill;
             o.Show();
+            panel3.Controls.Add(o);
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)

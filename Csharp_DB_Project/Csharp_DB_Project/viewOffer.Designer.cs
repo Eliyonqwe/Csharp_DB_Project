@@ -48,7 +48,7 @@
             // btn_load
             // 
             this.btn_load.BackColor = System.Drawing.Color.YellowGreen;
-            this.btn_load.Location = new System.Drawing.Point(439, 328);
+            this.btn_load.Location = new System.Drawing.Point(413, 331);
             this.btn_load.Name = "btn_load";
             this.btn_load.Size = new System.Drawing.Size(126, 50);
             this.btn_load.TabIndex = 17;
@@ -59,7 +59,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Location = new System.Drawing.Point(862, 514);
+            this.button1.Location = new System.Drawing.Point(633, 620);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 50);
             this.button1.TabIndex = 107;
@@ -70,7 +70,7 @@
             // btn_accept
             // 
             this.btn_accept.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_accept.Location = new System.Drawing.Point(659, 514);
+            this.btn_accept.Location = new System.Drawing.Point(633, 543);
             this.btn_accept.Name = "btn_accept";
             this.btn_accept.Size = new System.Drawing.Size(126, 50);
             this.btn_accept.TabIndex = 108;
@@ -84,7 +84,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(102, 571);
+            this.label2.Location = new System.Drawing.Point(76, 600);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(223, 26);
             this.label2.TabIndex = 112;
@@ -96,7 +96,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(102, 514);
+            this.label1.Location = new System.Drawing.Point(76, 543);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 26);
             this.label1.TabIndex = 111;
@@ -108,7 +108,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(102, 454);
+            this.label4.Location = new System.Drawing.Point(76, 483);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 26);
             this.label4.TabIndex = 110;
@@ -120,7 +120,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(102, 401);
+            this.label3.Location = new System.Drawing.Point(76, 427);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 26);
             this.label3.TabIndex = 109;
@@ -132,7 +132,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(102, 614);
+            this.label5.Location = new System.Drawing.Point(76, 643);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 26);
             this.label5.TabIndex = 113;
@@ -141,7 +141,7 @@
             // txt_price
             // 
             this.txt_price.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_price.Location = new System.Drawing.Point(377, 557);
+            this.txt_price.Location = new System.Drawing.Point(351, 586);
             this.txt_price.Multiline = true;
             this.txt_price.Name = "txt_price";
             this.txt_price.ReadOnly = true;
@@ -151,7 +151,7 @@
             // txt_companyType
             // 
             this.txt_companyType.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_companyType.Location = new System.Drawing.Point(377, 457);
+            this.txt_companyType.Location = new System.Drawing.Point(351, 486);
             this.txt_companyType.Multiline = true;
             this.txt_companyType.Name = "txt_companyType";
             this.txt_companyType.ReadOnly = true;
@@ -161,7 +161,7 @@
             // txt_amount
             // 
             this.txt_amount.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_amount.Location = new System.Drawing.Point(377, 507);
+            this.txt_amount.Location = new System.Drawing.Point(351, 536);
             this.txt_amount.Multiline = true;
             this.txt_amount.Name = "txt_amount";
             this.txt_amount.ReadOnly = true;
@@ -171,7 +171,7 @@
             // txt_companyName
             // 
             this.txt_companyName.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_companyName.Location = new System.Drawing.Point(377, 407);
+            this.txt_companyName.Location = new System.Drawing.Point(351, 436);
             this.txt_companyName.Multiline = true;
             this.txt_companyName.Name = "txt_companyName";
             this.txt_companyName.ReadOnly = true;
@@ -181,7 +181,7 @@
             // txt_offeramount
             // 
             this.txt_offeramount.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_offeramount.Location = new System.Drawing.Point(377, 613);
+            this.txt_offeramount.Location = new System.Drawing.Point(351, 642);
             this.txt_offeramount.Multiline = true;
             this.txt_offeramount.Name = "txt_offeramount";
             this.txt_offeramount.ReadOnly = true;
@@ -191,7 +191,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 25);
+            this.dataGridView1.Location = new System.Drawing.Point(43, 43);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -204,7 +204,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
-            this.ClientSize = new System.Drawing.Size(998, 667);
+            this.ClientSize = new System.Drawing.Size(1154, 728);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_offeramount);
             this.Controls.Add(this.txt_price);
