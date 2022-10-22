@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.save_btn = new System.Windows.Forms.Button();
             this.txt_lname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,13 +49,13 @@
             this.btn_search = new System.Windows.Forms.Button();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new MetroFramework.Controls.MetroGrid();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // save_btn
             // 
-            this.save_btn.Location = new System.Drawing.Point(688, 362);
+            this.save_btn.Location = new System.Drawing.Point(556, 360);
             this.save_btn.Name = "save_btn";
             this.save_btn.Size = new System.Drawing.Size(74, 37);
             this.save_btn.TabIndex = 106;
@@ -62,7 +65,7 @@
             // 
             // txt_lname
             // 
-            this.txt_lname.Location = new System.Drawing.Point(355, 402);
+            this.txt_lname.Location = new System.Drawing.Point(272, 398);
             this.txt_lname.Multiline = true;
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(233, 28);
@@ -74,7 +77,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(180, 402);
+            this.label1.Location = new System.Drawing.Point(97, 398);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 26);
             this.label1.TabIndex = 104;
@@ -82,7 +85,7 @@
             // 
             // txt_phone
             // 
-            this.txt_phone.Location = new System.Drawing.Point(355, 552);
+            this.txt_phone.Location = new System.Drawing.Point(272, 548);
             this.txt_phone.Multiline = true;
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(233, 28);
@@ -90,7 +93,7 @@
             // 
             // txt_uname
             // 
-            this.txt_uname.Location = new System.Drawing.Point(355, 452);
+            this.txt_uname.Location = new System.Drawing.Point(272, 448);
             this.txt_uname.Multiline = true;
             this.txt_uname.Name = "txt_uname";
             this.txt_uname.Size = new System.Drawing.Size(233, 28);
@@ -98,7 +101,7 @@
             // 
             // txt_password
             // 
-            this.txt_password.Location = new System.Drawing.Point(355, 502);
+            this.txt_password.Location = new System.Drawing.Point(272, 498);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.ReadOnly = true;
@@ -111,7 +114,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(180, 552);
+            this.label7.Location = new System.Drawing.Point(97, 548);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 26);
             this.label7.TabIndex = 100;
@@ -123,7 +126,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(180, 502);
+            this.label6.Location = new System.Drawing.Point(97, 498);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(127, 26);
             this.label6.TabIndex = 99;
@@ -135,7 +138,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(180, 452);
+            this.label5.Location = new System.Drawing.Point(97, 448);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(128, 26);
             this.label5.TabIndex = 98;
@@ -143,7 +146,7 @@
             // 
             // txt_fname
             // 
-            this.txt_fname.Location = new System.Drawing.Point(355, 352);
+            this.txt_fname.Location = new System.Drawing.Point(272, 348);
             this.txt_fname.Multiline = true;
             this.txt_fname.Name = "txt_fname";
             this.txt_fname.Size = new System.Drawing.Size(233, 28);
@@ -155,7 +158,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(180, 352);
+            this.label4.Location = new System.Drawing.Point(97, 348);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 26);
             this.label4.TabIndex = 96;
@@ -163,7 +166,7 @@
             // 
             // txt_id
             // 
-            this.txt_id.Location = new System.Drawing.Point(355, 302);
+            this.txt_id.Location = new System.Drawing.Point(272, 298);
             this.txt_id.Multiline = true;
             this.txt_id.Name = "txt_id";
             this.txt_id.ReadOnly = true;
@@ -176,7 +179,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(180, 302);
+            this.label3.Location = new System.Drawing.Point(97, 298);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 26);
             this.label3.TabIndex = 94;
@@ -184,7 +187,7 @@
             // 
             // delete_btn
             // 
-            this.delete_btn.Location = new System.Drawing.Point(688, 422);
+            this.delete_btn.Location = new System.Drawing.Point(556, 420);
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(117, 24);
             this.delete_btn.TabIndex = 93;
@@ -194,7 +197,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(688, 475);
+            this.button1.Location = new System.Drawing.Point(556, 473);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(74, 32);
             this.button1.TabIndex = 92;
@@ -204,7 +207,7 @@
             // 
             // btn_search
             // 
-            this.btn_search.Location = new System.Drawing.Point(549, 22);
+            this.btn_search.Location = new System.Drawing.Point(634, 38);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(74, 32);
             this.btn_search.TabIndex = 91;
@@ -214,7 +217,7 @@
             // 
             // txt_search
             // 
-            this.txt_search.Location = new System.Drawing.Point(169, 23);
+            this.txt_search.Location = new System.Drawing.Point(258, 43);
             this.txt_search.Name = "txt_search";
             this.txt_search.Size = new System.Drawing.Size(358, 22);
             this.txt_search.TabIndex = 90;
@@ -222,30 +225,68 @@
             // Search
             // 
             this.Search.AutoSize = true;
-            this.Search.Location = new System.Drawing.Point(93, 26);
+            this.Search.Location = new System.Drawing.Point(182, 46);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(50, 16);
             this.Search.TabIndex = 89;
             this.Search.Text = "Search";
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.IndianRed;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 60);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            this.dataGridView1.Location = new System.Drawing.Point(23, 86);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(710, 219);
-            this.dataGridView1.TabIndex = 88;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(685, 179);
+            this.dataGridView1.TabIndex = 107;
+            this.dataGridView1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // viewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 602);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.save_btn);
             this.Controls.Add(this.txt_lname);
             this.Controls.Add(this.label1);
@@ -264,10 +305,7 @@
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.Search);
-            this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "viewUser";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "viewUser";
             this.Load += new System.EventHandler(this.viewUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -296,6 +334,6 @@
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Label Search;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private MetroFramework.Controls.MetroGrid dataGridView1;
     }
 }

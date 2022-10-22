@@ -62,8 +62,6 @@ D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csh
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.pdb
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.Admin.viewOffers.resources
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.Admin.viewOrders.resources
-D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\Bunifu.UI.WinForms.xml
-D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\Bunifu.UI.WinForms.1.5.3.xml
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\Microsoft.Win32.Registry.xml
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\Microsoft.Win32.Registry.AccessControl.xml
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\Microsoft.Win32.SystemEvents.xml
@@ -96,3 +94,4 @@ D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\Sys
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\System.Text.Encoding.CodePages.xml
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\bin\Debug\System.Threading.AccessControl.xml
 D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.csproj.Fody.CopyLocal.cache
+D:\Documents\CSharp_DB_Project\Csharp_DB_Project\Csharp_DB_Project\obj\Debug\Csharp_DB_Project.Admin.AdminHome.resources

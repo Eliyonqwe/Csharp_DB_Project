@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Controls;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -68,7 +69,7 @@ namespace Csharp_DB_Project.Classes
             }
 
         }
-        public String viewOrders(DataGridView d)
+        public String viewOrders(MetroGrid d)
         {
 
             try

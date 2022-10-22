@@ -12,12 +12,15 @@ using System.Windows.Forms;
 
 namespace Csharp_DB_Project
 {
-    public partial class viewUser : Form
+    public partial class viewUser : MetroFramework.Forms.MetroForm
     {
         int userid;
         public viewUser()
         {
             InitializeComponent();
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
+            this.ControlBox = false;
+
 
         }
 
@@ -126,6 +129,11 @@ namespace Csharp_DB_Project
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Search_Click(object sender, EventArgs e)
         {
 
         }

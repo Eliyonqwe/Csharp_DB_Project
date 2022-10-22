@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Csharp_DB_Project.Admin;
+using System;
 using System.Windows.Forms;
 
 namespace Csharp_DB_Project
@@ -15,7 +16,7 @@ namespace Csharp_DB_Project
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new HomePage("eliyonzm"));
+                Application.Run(new AdminPage());
             }
             catch (Exception ex)
             {

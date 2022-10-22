@@ -11,11 +11,13 @@ using System.Windows.Forms;
 
 namespace Csharp_DB_Project
 {
-    public partial class viewListings : Form
+    public partial class viewListings : MetroFramework.Forms.MetroForm
     {
         public viewListings()
         {
             InitializeComponent();
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
+            this.ControlBox = false;
             stockListing s = new stockListing();
             dataGridView1.DataSource = null;
             String status = s.viewListings(dataGridView1);

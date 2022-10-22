@@ -12,11 +12,14 @@ using System.Windows.Forms;
 
 namespace Csharp_DB_Project.Admin
 {
-    public partial class viewOrders : Form
+    public partial class viewOrders : MetroFramework.Forms.MetroForm
     {
         public viewOrders()
         {
             InitializeComponent();
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
+            this.ControlBox = false;
+
             Order o = new Order();
             dataGridView1.DataSource = null;
             String status = o.viewOrders(dataGridView1);

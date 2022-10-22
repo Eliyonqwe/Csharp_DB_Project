@@ -11,11 +11,13 @@ using System.Windows.Forms;
 
 namespace Csharp_DB_Project.Admin
 {
-    public partial class viewOffers : Form
+    public partial class viewOffers : MetroFramework.Forms.MetroForm
     {
         public viewOffers()
         {
             InitializeComponent();
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
+            this.ControlBox = false;
             Offer o = new Offer();
             dataGridView1.DataSource = null;
             String status = o.viewOffers(dataGridView1);
@@ -58,7 +60,7 @@ namespace Csharp_DB_Project.Admin
 
         private void viewOffers_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
