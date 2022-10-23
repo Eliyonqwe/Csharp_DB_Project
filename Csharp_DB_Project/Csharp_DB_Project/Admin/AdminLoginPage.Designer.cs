@@ -33,8 +33,8 @@
             this.txt_uname = new System.Windows.Forms.TextBox();
             this.txt_passwd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.login_btn = new System.Windows.Forms.Button();
-            this.back_btn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -87,25 +87,24 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Admin Page";
             // 
-            // login_btn
+            // button1
             // 
-            this.login_btn.Location = new System.Drawing.Point(313, 283);
-            this.login_btn.Name = "login_btn";
-            this.login_btn.Size = new System.Drawing.Size(103, 52);
-            this.login_btn.TabIndex = 5;
-            this.login_btn.Text = "Login";
-            this.login_btn.UseVisualStyleBackColor = true;
-            this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
+            this.button1.Location = new System.Drawing.Point(313, 283);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 52);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // back_btn
+            // button2
             // 
-            this.back_btn.Location = new System.Drawing.Point(495, 283);
-            this.back_btn.Name = "back_btn";
-            this.back_btn.Size = new System.Drawing.Size(103, 52);
-            this.back_btn.TabIndex = 6;
-            this.back_btn.Text = "Go Back";
-            this.back_btn.UseVisualStyleBackColor = true;
-            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
+            this.button2.Location = new System.Drawing.Point(495, 283);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 52);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Go Back";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // AdminLoginPage
             // 
@@ -114,8 +113,8 @@
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
             this.ClientSize = new System.Drawing.Size(890, 511);
-            this.Controls.Add(this.back_btn);
-            this.Controls.Add(this.login_btn);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_passwd);
             this.Controls.Add(this.txt_uname);
@@ -135,7 +134,7 @@
         private System.Windows.Forms.TextBox txt_uname;
         private System.Windows.Forms.TextBox txt_passwd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button login_btn;
-        private System.Windows.Forms.Button back_btn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -61,8 +61,7 @@ namespace Csharp_DB_Project.Admin
             
         }
 
-       
-        private void removeOffer_btn_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             Offer o = new Offer();
             String status = o.cancelOffer((int)dataGridView1.CurrentRow.Cells[2].Value);

@@ -33,7 +33,6 @@
             this.myListingTImer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTImer = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_logout = new System.Windows.Forms.Button();
             this.lb_welcome = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.sidebarContainer = new System.Windows.Forms.FlowLayoutPanel();
@@ -74,6 +73,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.offerTimer = new System.Windows.Forms.Timer(this.components);
             this.orderTimer = new System.Windows.Forms.Timer(this.components);
+            this.btn_logout = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.sidebarContainer.SuspendLayout();
@@ -119,19 +119,6 @@
             this.panel3.Size = new System.Drawing.Size(1069, 702);
             this.panel3.TabIndex = 52;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
-            // 
-            // btn_logout
-            // 
-            this.btn_logout.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(944, 643);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(110, 47);
-            this.btn_logout.TabIndex = 53;
-            this.btn_logout.Text = "Log Out";
-            this.btn_logout.UseVisualStyleBackColor = false;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click_1);
             // 
             // lb_welcome
             // 
@@ -671,6 +658,19 @@
             // 
             this.orderTimer.Interval = 10;
             this.orderTimer.Tick += new System.EventHandler(this.orderTimer_Tick);
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.Location = new System.Drawing.Point(944, 643);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(110, 47);
+            this.btn_logout.TabIndex = 53;
+            this.btn_logout.Text = "Log Out";
+            this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click_1);
             // 
             // HomePage
             // 
