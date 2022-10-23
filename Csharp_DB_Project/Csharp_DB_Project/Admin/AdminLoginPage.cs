@@ -20,7 +20,8 @@ namespace Csharp_DB_Project
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+        private void login_btn_Click(object sender, EventArgs e)
         {
             admin a = new admin();
             string status = a.check(txt_uname.Text, txt_passwd.Text);
@@ -36,6 +37,13 @@ namespace Csharp_DB_Project
                 MessageBox.Show(status);
             }
 
+        }
+
+        private void back_btn_Click(object sender, EventArgs e)
+        {
+            LoginPage lp = new LoginPage();
+            this.Close();
+            lp.Show();
         }
     }
 }

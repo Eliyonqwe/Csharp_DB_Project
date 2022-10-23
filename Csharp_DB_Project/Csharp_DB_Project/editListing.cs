@@ -81,7 +81,7 @@ namespace Csharp_DB_Project
 
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlQuery = "select stockID, companyName, companyType, amount, price, status from viewListing where username = '" + username + "' and status = 'pending'";
+                    string sqlQuery = "select stockID, companyName, companyType, amount, price, status from viewListings where username = '" + username + "' and status = 'pending'";
                     sda = new SqlDataAdapter(sqlQuery, con);
                     dt = new DataTable();
 

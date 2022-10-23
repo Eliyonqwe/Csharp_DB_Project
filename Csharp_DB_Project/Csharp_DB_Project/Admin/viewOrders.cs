@@ -60,7 +60,9 @@ namespace Csharp_DB_Project.Admin
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+       
+
+        private void delete_btn_Click(object sender, EventArgs e)
         {
             Order o = new Order();
             String status = o.cancelOrder((int)dataGridView1.CurrentRow.Cells[6].Value, (int)dataGridView1.CurrentRow.Cells[1].Value, (int)dataGridView1.CurrentRow.Cells[0].Value);
@@ -71,6 +73,7 @@ namespace Csharp_DB_Project.Admin
             else
                 MessageBox.Show(status);
         }
+
 
         private void viewOrders_Load(object sender, EventArgs e)
         {
