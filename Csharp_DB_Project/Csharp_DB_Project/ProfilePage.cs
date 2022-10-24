@@ -16,6 +16,7 @@ namespace Csharp_DB_Project
             InitializeComponent();
             username = user;
             String status = u.viewUser(user);
+
             if (status == "0")
             {
                 txt_id.Text = u.userid.ToString();
@@ -77,7 +78,7 @@ namespace Csharp_DB_Project
             else
             {
 
-                String status = u.updateUser(Convert.ToInt32(txt_id.Text), txt_fname.Text, txt_lname.Text, txt_uname.Text, txt_password.Text, txt_phone.Text);
+                String status = u.updateUser(Convert.ToInt32(txt_id.Text), txt_fname.Text, txt_lname.Text, txt_gender.Text, txt_uname.Text, txt_password.Text, txt_phone.Text);
 
                 if (status == "0")
                 {

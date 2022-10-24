@@ -17,7 +17,7 @@ namespace Csharp_DB_Project
         bool myProfileCollapsed;
         bool offerCollapsed;
         bool orderCollapsed;
-        String username = "";
+        public static String username = "";
         public HomePage(String user)
         {
             InitializeComponent();

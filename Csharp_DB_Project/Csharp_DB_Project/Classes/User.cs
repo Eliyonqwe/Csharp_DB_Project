@@ -147,20 +147,21 @@ namespace Csharp_DB_Project.Classes
             }
 
         }
-        public String updateUser(int id, String fname, String lname, String uname, String password, String phone)
+        public String updateUser(int id, String fname, String lname, String gender, String uname, String password, String phone)
         {
             try
             {
                 sqlClass s = new sqlClass();
                 System.Data.SqlClient.SqlConnection con = s.connect();
-
+                HomePage.username = uname;
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlQuery = "exec updateUser @id, @fname, @lname, @uname, @password, @phone";
+                    string sqlQuery = "exec updateUser @id, @fname, @lname,@gender, @uname, @password, @phone";
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
                     cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
                     cmd.Parameters.Add("@fname", System.Data.SqlDbType.VarChar).Value = fname;
                     cmd.Parameters.Add("@lname", System.Data.SqlDbType.VarChar).Value = lname;
+                    cmd.Parameters.Add("@gender", System.Data.SqlDbType.VarChar).Value = gender;
                     cmd.Parameters.Add("@uname", System.Data.SqlDbType.VarChar).Value = uname;
                     cmd.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password;
                     cmd.Parameters.Add("@phone", System.Data.SqlDbType.VarChar).Value = phone;
