@@ -149,6 +149,7 @@
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.Search);
+            this.Movable = false;
             this.Name = "viewOrders";
             this.Text = "viewOrders";
             this.Load += new System.EventHandler(this.viewOrders_Load);

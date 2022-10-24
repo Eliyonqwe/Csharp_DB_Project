@@ -21,7 +21,10 @@ namespace Csharp_DB_Project
         public OfferSent(String user)
         {
             InitializeComponent();
+           
+
             username = user;
+
 
             User u = new User();
             u.username = user;
@@ -100,10 +103,7 @@ namespace Csharp_DB_Project
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+    
 
         private void txt_offeramount_TextChanged(object sender, EventArgs e)
         {

@@ -211,9 +211,10 @@
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(786, 281);
+            this.dataGridView1.Size = new System.Drawing.Size(882, 281);
             this.dataGridView1.TabIndex = 162;
             this.dataGridView1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // RecievedOrder
             // 

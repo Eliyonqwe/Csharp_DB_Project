@@ -38,7 +38,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.picbox_Logo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.txt_firstName = new System.Windows.Forms.TextBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -59,11 +58,15 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btn_upload = new System.Windows.Forms.Button();
+            this.lbl_gender = new System.Windows.Forms.Label();
+            this.lbl_dateofbirth = new System.Windows.Forms.Label();
+            this.radioButton_male = new System.Windows.Forms.RadioButton();
+            this.radioButton_female = new System.Windows.Forms.RadioButton();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_Logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -84,7 +87,7 @@
             this.btn_Register.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Register.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_Register.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
-            this.btn_Register.Location = new System.Drawing.Point(676, 641);
+            this.btn_Register.Location = new System.Drawing.Point(648, 811);
             this.btn_Register.Name = "btn_Register";
             this.btn_Register.Size = new System.Drawing.Size(186, 41);
             this.btn_Register.TabIndex = 25;
@@ -95,7 +98,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
-            this.pictureBox6.Location = new System.Drawing.Point(664, 630);
+            this.pictureBox6.Location = new System.Drawing.Point(636, 800);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(210, 61);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -138,6 +141,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox3.Image = global::Csharp_DB_Project.Properties.Resources.fantom1;
             this.pictureBox3.Location = new System.Drawing.Point(852, 6);
             this.pictureBox3.Name = "pictureBox3";
@@ -168,20 +172,10 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "The Score";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Csharp_DB_Project.Properties.Resources.orangepattern;
-            this.pictureBox1.Location = new System.Drawing.Point(-245, -92);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 968);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Csharp_DB_Project.Properties.Resources.rounded;
-            this.pictureBox5.Location = new System.Drawing.Point(721, 325);
+            this.pictureBox5.Location = new System.Drawing.Point(721, 505);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(356, 58);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -217,19 +211,19 @@
             this.txt_phoneno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_phoneno.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_phoneno.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_phoneno.Location = new System.Drawing.Point(725, 441);
+            this.txt_phoneno.Location = new System.Drawing.Point(725, 617);
             this.txt_phoneno.Multiline = true;
             this.txt_phoneno.Name = "txt_phoneno";
             this.txt_phoneno.Size = new System.Drawing.Size(341, 29);
             this.txt_phoneno.TabIndex = 31;
-            this.txt_phoneno.Text = "09xxxxxxxx";
+            this.txt_phoneno.Text = "09********";
             this.txt_phoneno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_phoneno.Click += new System.EventHandler(this.pw_click);
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = global::Csharp_DB_Project.Properties.Resources.rounded;
-            this.pictureBox10.Location = new System.Drawing.Point(721, 419);
+            this.pictureBox10.Location = new System.Drawing.Point(721, 595);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(356, 58);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -242,7 +236,7 @@
             this.txt_uname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_uname.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_uname.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_uname.Location = new System.Drawing.Point(728, 349);
+            this.txt_uname.Location = new System.Drawing.Point(728, 529);
             this.txt_uname.Multiline = true;
             this.txt_uname.Name = "txt_uname";
             this.txt_uname.Size = new System.Drawing.Size(341, 29);
@@ -265,7 +259,7 @@
             this.lbl_lname.AutoSize = true;
             this.lbl_lname.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lbl_lname.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_lname.Location = new System.Drawing.Point(557, 255);
+            this.lbl_lname.Location = new System.Drawing.Point(557, 258);
             this.lbl_lname.Name = "lbl_lname";
             this.lbl_lname.Size = new System.Drawing.Size(107, 22);
             this.lbl_lname.TabIndex = 33;
@@ -276,7 +270,7 @@
             this.lbl_uname.AutoSize = true;
             this.lbl_uname.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lbl_uname.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_uname.Location = new System.Drawing.Point(557, 349);
+            this.lbl_uname.Location = new System.Drawing.Point(557, 528);
             this.lbl_uname.Name = "lbl_uname";
             this.lbl_uname.Size = new System.Drawing.Size(101, 22);
             this.lbl_uname.TabIndex = 34;
@@ -287,7 +281,7 @@
             this.lbl_phoneno.AutoSize = true;
             this.lbl_phoneno.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lbl_phoneno.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_phoneno.Location = new System.Drawing.Point(557, 441);
+            this.lbl_phoneno.Location = new System.Drawing.Point(557, 618);
             this.lbl_phoneno.Name = "lbl_phoneno";
             this.lbl_phoneno.Size = new System.Drawing.Size(148, 22);
             this.lbl_phoneno.TabIndex = 35;
@@ -298,7 +292,7 @@
             this.lbl_password.AutoSize = true;
             this.lbl_password.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lbl_password.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbl_password.Location = new System.Drawing.Point(557, 535);
+            this.lbl_password.Location = new System.Drawing.Point(557, 708);
             this.lbl_password.Name = "lbl_password";
             this.lbl_password.Size = new System.Drawing.Size(95, 22);
             this.lbl_password.TabIndex = 38;
@@ -310,7 +304,7 @@
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_password.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txt_password.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_password.Location = new System.Drawing.Point(729, 535);
+            this.txt_password.Location = new System.Drawing.Point(729, 707);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(341, 29);
@@ -320,7 +314,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Csharp_DB_Project.Properties.Resources.rounded;
-            this.pictureBox7.Location = new System.Drawing.Point(725, 513);
+            this.pictureBox7.Location = new System.Drawing.Point(725, 685);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(356, 58);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -336,7 +330,7 @@
             this.btn_back.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_back.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
-            this.btn_back.Location = new System.Drawing.Point(962, 641);
+            this.btn_back.Location = new System.Drawing.Point(934, 811);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(181, 41);
             this.btn_back.TabIndex = 40;
@@ -347,7 +341,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Csharp_DB_Project.Properties.Resources.Screenshot__18_;
-            this.pictureBox8.Location = new System.Drawing.Point(944, 630);
+            this.pictureBox8.Location = new System.Drawing.Point(916, 800);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(212, 61);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -382,7 +376,7 @@
             this.pictureBox11.Image = global::Csharp_DB_Project.Properties.Resources.Blue_abstract_elements_with_black_background_vector;
             this.pictureBox11.Location = new System.Drawing.Point(-338, -44);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(850, 870);
+            this.pictureBox11.Size = new System.Drawing.Size(850, 957);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox11.TabIndex = 41;
             this.pictureBox11.TabStop = false;
@@ -406,12 +400,73 @@
             this.btn_upload.UseVisualStyleBackColor = false;
             this.btn_upload.Click += new System.EventHandler(this.btn_upload_Click);
             // 
+            // lbl_gender
+            // 
+            this.lbl_gender.AutoSize = true;
+            this.lbl_gender.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.lbl_gender.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_gender.Location = new System.Drawing.Point(557, 438);
+            this.lbl_gender.Name = "lbl_gender";
+            this.lbl_gender.Size = new System.Drawing.Size(82, 22);
+            this.lbl_gender.TabIndex = 45;
+            this.lbl_gender.Text = "Gender";
+            // 
+            // lbl_dateofbirth
+            // 
+            this.lbl_dateofbirth.AutoSize = true;
+            this.lbl_dateofbirth.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.lbl_dateofbirth.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lbl_dateofbirth.Location = new System.Drawing.Point(557, 348);
+            this.lbl_dateofbirth.Name = "lbl_dateofbirth";
+            this.lbl_dateofbirth.Size = new System.Drawing.Size(128, 22);
+            this.lbl_dateofbirth.TabIndex = 46;
+            this.lbl_dateofbirth.Text = "Date Of Birth";
+            // 
+            // radioButton_male
+            // 
+            this.radioButton_male.AutoSize = true;
+            this.radioButton_male.Font = new System.Drawing.Font("Segoe UI Semilight", 9F);
+            this.radioButton_male.Location = new System.Drawing.Point(788, 440);
+            this.radioButton_male.Name = "radioButton_male";
+            this.radioButton_male.Size = new System.Drawing.Size(62, 24);
+            this.radioButton_male.TabIndex = 51;
+            this.radioButton_male.TabStop = true;
+            this.radioButton_male.Text = "Male";
+            this.radioButton_male.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_female
+            // 
+            this.radioButton_female.AutoSize = true;
+            this.radioButton_female.Font = new System.Drawing.Font("Segoe UI Semilight", 9F);
+            this.radioButton_female.Location = new System.Drawing.Point(916, 440);
+            this.radioButton_female.Name = "radioButton_female";
+            this.radioButton_female.Size = new System.Drawing.Size(77, 24);
+            this.radioButton_female.TabIndex = 52;
+            this.radioButton_female.TabStop = true;
+            this.radioButton_female.Text = "Female";
+            this.radioButton_female.UseVisualStyleBackColor = true;
+            // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.CustomFormat = "yyyy-MM-dd";
+            this.metroDateTime1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.metroDateTime1.Location = new System.Drawing.Point(721, 347);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 30);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(349, 30);
+            this.metroDateTime1.TabIndex = 53;
+            // 
             // RegisterPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1209, 743);
+            this.ClientSize = new System.Drawing.Size(1209, 903);
+            this.Controls.Add(this.metroDateTime1);
+            this.Controls.Add(this.radioButton_female);
+            this.Controls.Add(this.radioButton_male);
+            this.Controls.Add(this.lbl_dateofbirth);
+            this.Controls.Add(this.lbl_gender);
             this.Controls.Add(this.btn_upload);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
@@ -439,7 +494,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.picbox_Logo);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegisterPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -449,7 +503,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_Logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -473,7 +526,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox picbox_Logo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox txt_firstName;
         private System.Windows.Forms.PictureBox pictureBox9;
@@ -494,5 +546,10 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btn_upload;
+        private System.Windows.Forms.Label lbl_dateofbirth;
+        private System.Windows.Forms.Label lbl_gender;
+        private System.Windows.Forms.RadioButton radioButton_female;
+        private System.Windows.Forms.RadioButton radioButton_male;
+        private MetroFramework.Controls.MetroDateTime metroDateTime1;
     }
 }

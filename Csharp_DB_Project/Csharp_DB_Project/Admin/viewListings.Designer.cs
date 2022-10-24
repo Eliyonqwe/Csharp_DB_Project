@@ -123,6 +123,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(685, 369);
             this.dataGridView1.TabIndex = 79;
             this.dataGridView1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.dataGridView1.UseCustomBackColor = true;
             // 
             // viewListings
             // 
@@ -134,9 +135,9 @@
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.Search);
+            this.Movable = false;
             this.Name = "viewListings";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

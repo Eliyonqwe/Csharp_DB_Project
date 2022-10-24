@@ -31,11 +31,6 @@ namespace Csharp_DB_Project
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_search_Click(object sender, EventArgs e)
         {
             stockListing s = new stockListing();
