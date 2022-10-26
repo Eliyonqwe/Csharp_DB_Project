@@ -62,24 +62,26 @@ namespace Csharp_DB_Project
             {
                 MessageBox.Show("Error: You can't update this offer because it has been already rejected by the owner. \n\nTo send new offer head to view listing!");
             }
-            
-            if (MessageBox.Show("If your offer gets accepted you cannot get a refund! \n\nAre you sure you want to Update?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            else
             {
-                if (changeIndicator == 0)
+                if (MessageBox.Show("If your offer gets accepted you cannot get a refund! \n\nAre you sure you want to Update?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Nothing has been altered/changed!");
-                }
-                else
-                {
-                    Offer o = new Offer();
-                    String status = o.updateOffer((int)dataGridView1.CurrentRow.Cells[0].Value, userID, Convert.ToDouble(txt_offeramount.Text));
-                    if (status != "0")
-                        MessageBox.Show(status);
+                    if (changeIndicator == 0)
+                    {
+                        MessageBox.Show("Nothing has been altered/changed!");
+                    }
                     else
                     {
-                        changeIndicator = 0;
-                        MessageBox.Show("updated");
-                        loadData();
+                        Offer o = new Offer();
+                        String status = o.updateOffer((int)dataGridView1.CurrentRow.Cells[0].Value, userID, Convert.ToDouble(txt_offeramount.Text));
+                        if (status != "0")
+                            MessageBox.Show(status);
+                        else
+                        {
+                            changeIndicator = 0;
+                            MessageBox.Show("updated");
+                            loadData();
+                        }
                     }
                 }
             }
@@ -146,6 +148,11 @@ namespace Csharp_DB_Project
             search_txt.Clear();
             search_txt.ForeColor = Color.Black;
             
+        }
+
+        private void txt_price_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

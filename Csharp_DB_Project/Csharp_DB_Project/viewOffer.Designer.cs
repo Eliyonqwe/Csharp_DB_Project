@@ -55,7 +55,8 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Location = new System.Drawing.Point(749, 604);
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(760, 580);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 50);
             this.button1.TabIndex = 107;
@@ -66,7 +67,8 @@
             // btn_accept
             // 
             this.btn_accept.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_accept.Location = new System.Drawing.Point(749, 467);
+            this.btn_accept.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_accept.Location = new System.Drawing.Point(760, 443);
             this.btn_accept.Name = "btn_accept";
             this.btn_accept.Size = new System.Drawing.Size(126, 50);
             this.btn_accept.TabIndex = 108;
@@ -78,11 +80,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(192, 584);
+            this.label2.Location = new System.Drawing.Point(201, 579);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(223, 26);
+            this.label2.Size = new System.Drawing.Size(196, 31);
             this.label2.TabIndex = 112;
             this.label2.Text = "Askingprice(birr)";
             // 
@@ -90,11 +92,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(192, 527);
+            this.label1.Location = new System.Drawing.Point(201, 526);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 26);
+            this.label1.Size = new System.Drawing.Size(157, 31);
             this.label1.TabIndex = 111;
             this.label1.Text = "Amount(birr)";
             // 
@@ -102,11 +104,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(192, 467);
+            this.label4.Location = new System.Drawing.Point(201, 473);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(180, 26);
+            this.label4.Size = new System.Drawing.Size(168, 31);
             this.label4.TabIndex = 110;
             this.label4.Text = "Company type";
             // 
@@ -114,11 +116,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(192, 411);
+            this.label3.Location = new System.Drawing.Point(201, 420);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 26);
+            this.label3.Size = new System.Drawing.Size(184, 31);
             this.label3.TabIndex = 109;
             this.label3.Text = "Company Name";
             // 
@@ -126,18 +128,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(192, 627);
+            this.label5.Location = new System.Drawing.Point(201, 632);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 26);
+            this.label5.Size = new System.Drawing.Size(160, 31);
             this.label5.TabIndex = 113;
-            this.label5.Text = "offer amount";
+            this.label5.Text = "Offer amount";
             // 
             // txt_price
             // 
-            this.txt_price.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_price.Location = new System.Drawing.Point(467, 570);
+            this.txt_price.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_price.Location = new System.Drawing.Point(467, 581);
             this.txt_price.Multiline = true;
             this.txt_price.Name = "txt_price";
             this.txt_price.ReadOnly = true;
@@ -146,8 +148,8 @@
             // 
             // txt_companyType
             // 
-            this.txt_companyType.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_companyType.Location = new System.Drawing.Point(467, 470);
+            this.txt_companyType.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_companyType.Location = new System.Drawing.Point(467, 475);
             this.txt_companyType.Multiline = true;
             this.txt_companyType.Name = "txt_companyType";
             this.txt_companyType.ReadOnly = true;
@@ -156,8 +158,8 @@
             // 
             // txt_amount
             // 
-            this.txt_amount.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_amount.Location = new System.Drawing.Point(467, 520);
+            this.txt_amount.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_amount.Location = new System.Drawing.Point(467, 528);
             this.txt_amount.Multiline = true;
             this.txt_amount.Name = "txt_amount";
             this.txt_amount.ReadOnly = true;
@@ -166,8 +168,8 @@
             // 
             // txt_companyName
             // 
-            this.txt_companyName.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_companyName.Location = new System.Drawing.Point(467, 420);
+            this.txt_companyName.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_companyName.Location = new System.Drawing.Point(467, 422);
             this.txt_companyName.Multiline = true;
             this.txt_companyName.Name = "txt_companyName";
             this.txt_companyName.ReadOnly = true;
@@ -176,8 +178,8 @@
             // 
             // txt_offeramount
             // 
-            this.txt_offeramount.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_offeramount.Location = new System.Drawing.Point(467, 626);
+            this.txt_offeramount.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_offeramount.Location = new System.Drawing.Point(467, 634);
             this.txt_offeramount.Multiline = true;
             this.txt_offeramount.Name = "txt_offeramount";
             this.txt_offeramount.ReadOnly = true;
@@ -273,7 +275,8 @@
             // btn_reject
             // 
             this.btn_reject.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_reject.Location = new System.Drawing.Point(749, 537);
+            this.btn_reject.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reject.Location = new System.Drawing.Point(760, 513);
             this.btn_reject.Name = "btn_reject";
             this.btn_reject.Size = new System.Drawing.Size(126, 50);
             this.btn_reject.TabIndex = 142;

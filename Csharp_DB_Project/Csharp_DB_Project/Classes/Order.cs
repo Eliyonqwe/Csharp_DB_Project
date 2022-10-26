@@ -69,6 +69,54 @@ namespace Csharp_DB_Project.Classes
             }
 
         }
+        public String searchOrder(DataGridView d, String search, int userid)
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec searchMyOrder  '" + userid + "','" + search + "'";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    d.DataSource = dt;
+                }
+                return "0";
+            }
+
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+         }
+        public String searchrecievedOrder(DataGridView d, String search, int userid)
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec searchrecievedOrder  '" + userid + "','" + search + "'";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    d.DataSource = dt;
+                }
+                return "0";
+            }
+
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
         public String viewOrders(MetroGrid d)
         {
 

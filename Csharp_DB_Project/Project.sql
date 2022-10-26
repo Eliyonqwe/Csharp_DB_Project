@@ -246,16 +246,22 @@ create procedure searchOffersForAdmin
 @search varchar(30)
 as
 	select *from offerData where (concat(offerer,offeree, companyName, companyType, offerStatus)) like '%'+@search+'%' 
+create proc searchofferforuser
+@search varchar(30),@userID int
+as
+	select offerID,companyName, companyType, amount, price, offerAmount, offerStatus from offerList where not offerStatus='accepted' and offeringUserID = @userID and (concat(companyName, companyType)) like '%'+@search+'%' 
 
 alter procedure viewOffersForAdmin
 as
 	select *from offerData
-
+	
 alter proc viewSentOffer
 @userID int
 as
 	select offerID,companyName, companyType, amount, price, offerAmount, offerStatus from offerList where not offerStatus='accepted' and offeringUserID = @userID
 
+	select *from offer
+	select *from users
 alter proc updateOffer
 @offerID int, @userID int, @offerAmount money
 as

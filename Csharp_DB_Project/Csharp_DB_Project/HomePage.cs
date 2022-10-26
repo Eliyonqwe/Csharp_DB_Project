@@ -221,8 +221,6 @@ namespace Csharp_DB_Project
 
         }
 
-    
-
         private void btn_Home_MouseHover(object sender, EventArgs e)
         {
             btn_Home.ForeColor = Color.DarkRed;

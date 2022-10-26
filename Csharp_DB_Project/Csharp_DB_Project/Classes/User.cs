@@ -147,6 +147,39 @@ namespace Csharp_DB_Project.Classes
             }
 
         }
+        public string checkuser(string uname, string passwd)
+        {
+
+            try
+            {
+
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+                
+                string sqlQuery = "select *from users where username=@username and password=@password";
+                SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                cmd.Parameters.AddWithValue("@username", uname);
+                cmd.Parameters.AddWithValue("@password", passwd);
+                var result = cmd.ExecuteScalar();// returns 
+
+                if (result == null) // there is no row with the entered username and password
+                {
+                    return "1";
+                    // txt_uname.Text = "Enter Username";
+                    // txt_passwd.Text = "************";
+                }
+                else
+                {
+                    return "2";
+                }
+
+
+            }
+            catch (Exception error)
+            {
+                return error.Message;
+            }
+        }
         public String updateUser(int id, String fname, String lname, String gender, String uname, String password, String phone)
         {
             try

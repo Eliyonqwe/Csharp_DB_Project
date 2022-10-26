@@ -51,6 +51,7 @@
             // 
             // txt_phone
             // 
+            this.txt_phone.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_phone.Location = new System.Drawing.Point(263, 495);
             this.txt_phone.Multiline = true;
             this.txt_phone.Name = "txt_phone";
@@ -60,6 +61,7 @@
             // 
             // txt_uname
             // 
+            this.txt_uname.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_uname.Location = new System.Drawing.Point(263, 395);
             this.txt_uname.Multiline = true;
             this.txt_uname.Name = "txt_uname";
@@ -69,6 +71,7 @@
             // 
             // txt_password
             // 
+            this.txt_password.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.Location = new System.Drawing.Point(263, 445);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
@@ -80,11 +83,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(118, 491);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 31);
+            this.label7.Size = new System.Drawing.Size(82, 31);
             this.label7.TabIndex = 65;
             this.label7.Text = "Phone";
             // 
@@ -92,11 +95,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(118, 441);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 31);
+            this.label6.Size = new System.Drawing.Size(114, 31);
             this.label6.TabIndex = 64;
             this.label6.Text = "Password";
             // 
@@ -104,16 +107,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(118, 391);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 31);
+            this.label5.Size = new System.Drawing.Size(121, 31);
             this.label5.TabIndex = 63;
             this.label5.Text = "Username";
             // 
             // txt_fname
             // 
+            this.txt_fname.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_fname.Location = new System.Drawing.Point(263, 249);
             this.txt_fname.Multiline = true;
             this.txt_fname.Name = "txt_fname";
@@ -125,17 +129,18 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(118, 245);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 31);
+            this.label4.Size = new System.Drawing.Size(130, 31);
             this.label4.TabIndex = 61;
             this.label4.Text = "First Name";
             // 
             // txt_id
             // 
             this.txt_id.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txt_id.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_id.Location = new System.Drawing.Point(263, 199);
             this.txt_id.Multiline = true;
             this.txt_id.Name = "txt_id";
@@ -147,11 +152,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(118, 195);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 31);
+            this.label3.Size = new System.Drawing.Size(86, 31);
             this.label3.TabIndex = 59;
             this.label3.Text = "UserID";
             // 
@@ -168,7 +173,7 @@
             // btn_update
             // 
             this.btn_update.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_update.Location = new System.Drawing.Point(580, 219);
             this.btn_update.Name = "btn_update";
@@ -181,7 +186,7 @@
             // btn_delete
             // 
             this.btn_delete.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_delete.Location = new System.Drawing.Point(580, 294);
             this.btn_delete.Name = "btn_delete";
@@ -194,7 +199,7 @@
             // btn_homepage
             // 
             this.btn_homepage.BackColor = System.Drawing.Color.YellowGreen;
-            this.btn_homepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_homepage.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_homepage.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_homepage.Location = new System.Drawing.Point(580, 369);
             this.btn_homepage.Name = "btn_homepage";
@@ -206,6 +211,7 @@
             // 
             // txt_lname
             // 
+            this.txt_lname.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_lname.Location = new System.Drawing.Point(263, 299);
             this.txt_lname.Multiline = true;
             this.txt_lname.Name = "txt_lname";
@@ -217,11 +223,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(118, 295);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 31);
+            this.label1.Size = new System.Drawing.Size(126, 31);
             this.label1.TabIndex = 73;
             this.label1.Text = "Last Name";
             // 
@@ -229,16 +235,17 @@
             // 
             this.lbl_gender.AutoSize = true;
             this.lbl_gender.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_gender.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_gender.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_gender.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_gender.Location = new System.Drawing.Point(118, 342);
             this.lbl_gender.Name = "lbl_gender";
-            this.lbl_gender.Size = new System.Drawing.Size(89, 31);
+            this.lbl_gender.Size = new System.Drawing.Size(91, 31);
             this.lbl_gender.TabIndex = 75;
             this.lbl_gender.Text = "Gender";
             // 
             // txt_gender
             // 
+            this.txt_gender.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_gender.Location = new System.Drawing.Point(263, 345);
             this.txt_gender.Multiline = true;
             this.txt_gender.Name = "txt_gender";
