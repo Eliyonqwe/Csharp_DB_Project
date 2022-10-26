@@ -59,15 +59,18 @@
             // 
             // txt_orderingPrice
             // 
+            this.txt_orderingPrice.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txt_orderingPrice.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_orderingPrice.Location = new System.Drawing.Point(351, 580);
             this.txt_orderingPrice.Multiline = true;
             this.txt_orderingPrice.Name = "txt_orderingPrice";
+            this.txt_orderingPrice.ReadOnly = true;
             this.txt_orderingPrice.Size = new System.Drawing.Size(233, 28);
             this.txt_orderingPrice.TabIndex = 159;
             // 
             // txt_companyType
             // 
+            this.txt_companyType.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txt_companyType.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_companyType.Location = new System.Drawing.Point(351, 469);
             this.txt_companyType.Multiline = true;
@@ -78,6 +81,7 @@
             // 
             // txt_amount
             // 
+            this.txt_amount.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txt_amount.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_amount.Location = new System.Drawing.Point(351, 519);
             this.txt_amount.Multiline = true;
@@ -88,6 +92,7 @@
             // 
             // txt_companyName
             // 
+            this.txt_companyName.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txt_companyName.Font = new System.Drawing.Font("Cooper Black", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_companyName.Location = new System.Drawing.Point(351, 412);
             this.txt_companyName.Multiline = true;

@@ -57,14 +57,6 @@ namespace Csharp_DB_Project
             txt_orderingPrice.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            /*Order o = new Order();
-            String status = o.cancelOffer((int)dataGridView1.CurrentRow.Cells[0].Value);
-            if (status != "0")
-                MessageBox.Show(status);
-            else
-                MessageBox.Show("canceled");*/
-        }
+   
     }
 }

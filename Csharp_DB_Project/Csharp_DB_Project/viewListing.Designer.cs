@@ -46,8 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.title = new System.Windows.Forms.Label();
-            this.search_txt = new System.Windows.Forms.TextBox();
             this.search_btn = new System.Windows.Forms.PictureBox();
+            this.search_txt = new System.Windows.Forms.TextBox();
             this.displayLsitings1 = new Csharp_DB_Project.displayLsitingsControl();
             this.display_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_btn)).BeginInit();
@@ -109,6 +109,7 @@
             // 
             // txt_price
             // 
+            this.txt_price.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txt_price.Location = new System.Drawing.Point(271, 594);
             this.txt_price.Name = "txt_price";
             this.txt_price.ReadOnly = true;
@@ -117,6 +118,7 @@
             // 
             // txt_amount
             // 
+            this.txt_amount.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txt_amount.Location = new System.Drawing.Point(271, 639);
             this.txt_amount.Name = "txt_amount";
             this.txt_amount.ReadOnly = true;
@@ -125,6 +127,7 @@
             // 
             // txt_ctype
             // 
+            this.txt_ctype.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txt_ctype.Location = new System.Drawing.Point(271, 593);
             this.txt_ctype.Name = "txt_ctype";
             this.txt_ctype.ReadOnly = true;
@@ -133,6 +136,7 @@
             // 
             // txt_cname
             // 
+            this.txt_cname.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txt_cname.Location = new System.Drawing.Point(271, 550);
             this.txt_cname.Name = "txt_cname";
             this.txt_cname.ReadOnly = true;
@@ -141,6 +145,7 @@
             // 
             // txt_stockID
             // 
+            this.txt_stockID.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txt_stockID.Location = new System.Drawing.Point(271, 507);
             this.txt_stockID.Name = "txt_stockID";
             this.txt_stockID.ReadOnly = true;
@@ -149,6 +154,7 @@
             // 
             // txt_userID
             // 
+            this.txt_userID.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txt_userID.Location = new System.Drawing.Point(271, 462);
             this.txt_userID.Name = "txt_userID";
             this.txt_userID.ReadOnly = true;
@@ -239,13 +245,6 @@
             this.title.TabIndex = 20;
             this.title.Text = "Listings you can buy";
             // 
-            // search_txt
-            // 
-            this.search_txt.Location = new System.Drawing.Point(545, 52);
-            this.search_txt.Name = "search_txt";
-            this.search_txt.Size = new System.Drawing.Size(258, 22);
-            this.search_txt.TabIndex = 19;
-            // 
             // search_btn
             // 
             this.search_btn.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -259,20 +258,31 @@
             this.search_btn.TabStop = false;
             this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
+            // search_txt
+            // 
+            this.search_txt.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_txt.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.search_txt.Location = new System.Drawing.Point(560, 49);
+            this.search_txt.Name = "search_txt";
+            this.search_txt.Size = new System.Drawing.Size(258, 25);
+            this.search_txt.TabIndex = 137;
+            this.search_txt.Text = "search keyword";
+            this.search_txt.Click += new System.EventHandler(this.search_txt_Click);
+            // 
             // displayLsitings1
             // 
-            this.displayLsitings1.amount = "                Amount";
+            this.displayLsitings1.amount = "                    Amount";
             this.displayLsitings1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.displayLsitings1.companyname = "                Companyname";
-            this.displayLsitings1.companytype = "                Companytype";
+            this.displayLsitings1.companyname = "                    Companyname";
+            this.displayLsitings1.companytype = "                    Companytype";
             this.displayLsitings1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.displayLsitings1.Location = new System.Drawing.Point(3, 3);
             this.displayLsitings1.Name = "displayLsitings1";
-            this.displayLsitings1.sellingprice = "                Sellingprice";
+            this.displayLsitings1.sellingprice = "                    Sellingprice";
             this.displayLsitings1.Size = new System.Drawing.Size(835, 273);
-            this.displayLsitings1.stockid = "                stockid";
+            this.displayLsitings1.stockid = "                    stockid";
             this.displayLsitings1.TabIndex = 18;
-            this.displayLsitings1.userid = "                userID";
+            this.displayLsitings1.userid = "                    userID";
             this.displayLsitings1.Load += new System.EventHandler(this.displayLsitings1_Load);
             // 
             // viewListing
@@ -333,7 +343,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label title;
-        private System.Windows.Forms.TextBox search_txt;
         private System.Windows.Forms.PictureBox search_btn;
+        private System.Windows.Forms.TextBox search_txt;
     }
 }

@@ -16,7 +16,7 @@ namespace Csharp_DB_Project
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new RegisterPage());
+                Application.Run(new LoginPage());
             }
             catch (Exception ex)
             {

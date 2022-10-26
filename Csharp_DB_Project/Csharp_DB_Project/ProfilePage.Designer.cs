@@ -135,6 +135,7 @@
             // 
             // txt_id
             // 
+            this.txt_id.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txt_id.Location = new System.Drawing.Point(263, 199);
             this.txt_id.Multiline = true;
             this.txt_id.Name = "txt_id";

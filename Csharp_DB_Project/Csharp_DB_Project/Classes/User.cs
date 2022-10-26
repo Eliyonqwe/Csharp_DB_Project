@@ -167,7 +167,7 @@ namespace Csharp_DB_Project.Classes
                     cmd.Parameters.Add("@phone", System.Data.SqlDbType.VarChar).Value = phone;
                     cmd.ExecuteNonQuery();
                 }
-                return "0";
+                return "0";   
             }
             catch (Exception e)
             {

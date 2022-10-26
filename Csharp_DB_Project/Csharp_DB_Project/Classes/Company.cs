@@ -77,7 +77,7 @@ namespace Csharp_DB_Project.Classes
 
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlQuery = "exec updateCompany @compID";
+                    string sqlQuery = "exec deleteCompany @compID";
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
                     cmd.Parameters.Add("@compID", System.Data.SqlDbType.Int).Value = compID;
                     cmd.ExecuteNonQuery();

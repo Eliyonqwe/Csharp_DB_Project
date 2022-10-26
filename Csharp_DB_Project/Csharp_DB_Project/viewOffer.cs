@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,40 +37,36 @@ namespace Csharp_DB_Project
             }
             else
                 MessageBox.Show(status);
+            
+            loadData();
 
         }
 
         private void btn_load_Click(object sender, EventArgs e)
         {
-            try
-            {
-                sqlClass s = new sqlClass();
-                System.Data.SqlClient.SqlConnection con = s.connect();
-
-                if (con.State == System.Data.ConnectionState.Open)
-                {
-                    string sqlQuery = "select *from viewOffers where sellerUserID = '" + userID + "' and offerstatus = 'pending'";
-                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
-                    DataTable dt = new DataTable();
-
-                    sda.Fill(dt);
-                    dataGridView1.DataSource = null;
-                    dataGridView1.DataSource = dt;
-                }
-                MessageBox.Show("Success");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
+        private void loadData()
+        {
+            Offer o = new Offer();
+            String status = o.viewOffer(dataGridView1, userID);
 
-            private void btn_accept_Click(object sender, EventArgs e)
+            if (status != "0")
+                MessageBox.Show(status);
+            else
+            {
+                if (dataGridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("There are no pending offers to show!");
+                }
+            }
+        }
+        private void btn_accept_Click(object sender, EventArgs e)
         {
             Order o = new Order();
             o.selleruserID = sellerUserID;
@@ -78,7 +75,10 @@ namespace Csharp_DB_Project
             o.orderAmount = Convert.ToDouble(txt_offeramount.Text);
             String status = o.addOrder(offerID);
             if (status == "0")
+            {
                 MessageBox.Show(" Offer has been accepeted!");
+                loadData();
+            }
             else
                 MessageBox.Show(status);
         }
@@ -101,7 +101,29 @@ namespace Csharp_DB_Project
 
         private void viewOffer_Load(object sender, EventArgs e)
         {
+          
+        }
 
+        private void search_txt_Click(object sender, EventArgs e)
+        {
+            search_txt.Clear();
+            search_txt.ForeColor = Color.Black;
+        }
+
+        private void search_btn_Click(object sender, EventArgs e)
+        {
+            Offer o = new Offer();
+            string status = o.searchRecievedOffer(dataGridView1, userID, search_txt.Text);
+            if (status != "0")
+                MessageBox.Show(status);
+            else
+            {
+
+                if (dataGridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("No offer found with '" + search_txt.Text + "' Keyword!");
+                }
+            }
         }
     }
 }

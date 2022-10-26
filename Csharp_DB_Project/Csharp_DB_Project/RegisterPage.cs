@@ -74,9 +74,20 @@ namespace Csharp_DB_Project
                 u.profilePic = convert(pictureBox8.Image);
 
                 String conStatus = u.Save();
-                
+
                 if (conStatus == "0")
+                {
                     MessageBox.Show("Account crreated Succesfully!");
+                    txt_firstName.Clear();
+                    txt_lastName.Clear();
+                    radioButton_male.Checked = false;
+                    radioButton_female.Checked = false;
+                    txt_uname.Clear();
+                    txt_phoneno.Clear();
+                    txt_password.Clear();
+                   
+
+                }
                 else
                     MessageBox.Show(conStatus);
 
