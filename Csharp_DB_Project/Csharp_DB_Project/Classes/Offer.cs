@@ -120,10 +120,33 @@ namespace Csharp_DB_Project.Classes
                 return e.Message;
             }
         }
-        
+
+        public string rejectOffer(int orderID)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "update offer set offerStatus = 'Rejected' where offerID = '"+orderID+"'";
+                    SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                    cmd.ExecuteNonQuery();
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
 
 
-        
+
+
         public String viewOffers(MetroGrid d)
         {
 

@@ -125,5 +125,24 @@ namespace Csharp_DB_Project
                 }
             }
         }
+
+        private void btn_reject_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to reject thisoffer?", "Offer", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Offer o = new Offer();
+                string status = o.rejectOffer(offerID);
+                if (status != "0")
+                {
+
+                    MessageBox.Show(status);
+                }
+                else
+                {
+                    MessageBox.Show("Offer Rejected Succesfully!");
+                    loadData();
+                }
+            }
+        }
     }
 }

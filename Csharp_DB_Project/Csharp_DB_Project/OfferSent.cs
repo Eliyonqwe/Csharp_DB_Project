@@ -58,6 +58,11 @@ namespace Csharp_DB_Project
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.CurrentRow.Cells[6].Value.ToString() == "Rejected")
+            {
+                MessageBox.Show("Error: You can't update this offer because it has been already rejected by the owner. \n\nTo send new offer head to view listing!");
+            }
+            
             if (MessageBox.Show("If your offer gets accepted you cannot get a refund! \n\nAre you sure you want to Update?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 if (changeIndicator == 0)
