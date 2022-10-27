@@ -1,6 +1,8 @@
 ﻿using Csharp_DB_Project.Classes;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
+
 
 namespace Csharp_DB_Project
 {
@@ -59,24 +61,85 @@ namespace Csharp_DB_Project
         }
         private void btn_update_Click(object sender, EventArgs e)
         {
-            if (changeIndicator == 0)
+            
+            Regex fName_error = new Regex(@"[a-z A-Z]{" + txt_fname.Text.Length + @"}");
+            Regex Number_error = new Regex(@"[0-9]{" + txt_phone.Text.Length + @"}");
+            Regex lName_error = new Regex(@"[a-z A-Z]{" + txt_lname.Text.Length + @"}");
+
+            if ((txt_fname.Text.Length != 0 && txt_lname.Text.Length != 0 && txt_password.Text.Length != 0 && txt_phone.Text.Length != 0 && txt_uname.Text.Length != 0) && (Number_error.IsMatch(txt_phone.Text) && fName_error.IsMatch(txt_fname.Text) && lName_error.IsMatch(txt_lname.Text)))
+
             {
-                MessageBox.Show("Nothing has been altered/changed!");
+
+                User u = new User();
+                u.firstName = txt_fname.Text;
+                u.lastName = txt_lname.Text;
+                u.username = txt_uname.Text;
+                u.phoneNumber = txt_phone.Text;
+                u.password = txt_password.Text;
+               
+
+                String conStatus = u.Save();
+
+                if (conStatus == "0")
+                    MessageBox.Show("Account updated Succesfully!");
+                else
+                    MessageBox.Show(conStatus);
+
             }
+
             else
             {
 
-                String status = u.updateUser(Convert.ToInt32(txt_id.Text), txt_fname.Text, txt_lname.Text, txt_uname.Text, txt_password.Text, txt_phone.Text);
 
-                if (status == "0")
+                if (string.IsNullOrEmpty(txt_fname.Text))
                 {
-                    MessageBox.Show("Change has been recorded!");
-                    changeIndicator = 0;
+                    errorProvider1.SetError(txt_fname, "please provide a Name ");
+
                 }
-                else
-                    MessageBox.Show(status);
+
+                else if (fName_error.IsMatch(txt_fname.Text) == false)
+                {
+                    errorProvider1.SetError(txt_fname, "please enter a letters only ");
+                }
+
+                if (string.IsNullOrEmpty(txt_lname.Text))
+                {
+                    errorProvider1.SetError(txt_lname, "please provide a Name ");
+
+
+                }
+                else if (lName_error.IsMatch(txt_lname.Text) == false)
+                {
+                    errorProvider1.SetError(txt_lname, "please enter letters only ");
+                }
+
+                if (string.IsNullOrEmpty(txt_phone.Text))
+                {
+                    errorProvider1.SetError(txt_phone, "please provide a phone number ");
+
+
+                }
+                else if (Number_error.IsMatch(txt_phone.Text) == false)
+                {
+                    errorProvider1.SetError(txt_phone, "please enter a number only ");
+                }
+
+                if (string.IsNullOrEmpty(txt_password.Text))
+                {
+                    errorProvider1.SetError(txt_password, "please provide a password ");
+
+
+                }
+                if (string.IsNullOrEmpty(txt_uname.Text))
+                {
+                    errorProvider1.SetError(txt_uname, "please provide a username ");
+
+
+                }
 
             }
+            
+            
         }
 
 
