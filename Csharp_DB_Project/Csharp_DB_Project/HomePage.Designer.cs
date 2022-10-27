@@ -33,6 +33,7 @@
             this.myListingTImer = new System.Windows.Forms.Timer(this.components);
             this.sidebarTImer = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.lb_welcome = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.sidebarContainer = new System.Windows.Forms.FlowLayoutPanel();
@@ -73,7 +74,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.offerTimer = new System.Windows.Forms.Timer(this.components);
             this.orderTimer = new System.Windows.Forms.Timer(this.components);
-            this.btn_logout = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.sidebarContainer.SuspendLayout();
@@ -119,6 +119,19 @@
             this.panel3.Size = new System.Drawing.Size(1069, 702);
             this.panel3.TabIndex = 52;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.ForeColor = System.Drawing.Color.White;
+            this.btn_logout.Location = new System.Drawing.Point(944, 643);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(110, 47);
+            this.btn_logout.TabIndex = 53;
+            this.btn_logout.Text = "Log Out";
+            this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click_1);
             // 
             // lb_welcome
             // 
@@ -219,9 +232,9 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__8_;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 22);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 33);
+            this.pictureBox2.Size = new System.Drawing.Size(75, 29);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 51;
             this.pictureBox2.TabStop = false;
@@ -295,9 +308,9 @@
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__9_;
-            this.pictureBox6.Location = new System.Drawing.Point(15, 20);
+            this.pictureBox6.Location = new System.Drawing.Point(15, 23);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(75, 33);
+            this.pictureBox6.Size = new System.Drawing.Size(75, 26);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 55;
             this.pictureBox6.TabStop = false;
@@ -334,9 +347,9 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__10_;
-            this.pictureBox5.Location = new System.Drawing.Point(15, 20);
+            this.pictureBox5.Location = new System.Drawing.Point(15, 23);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(75, 48);
+            this.pictureBox5.Size = new System.Drawing.Size(85, 41);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 54;
             this.pictureBox5.TabStop = false;
@@ -394,7 +407,7 @@
             this.pictureBox4.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__11_;
             this.pictureBox4.Location = new System.Drawing.Point(15, 20);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(75, 33);
+            this.pictureBox4.Size = new System.Drawing.Size(85, 31);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 53;
             this.pictureBox4.TabStop = false;
@@ -451,7 +464,7 @@
             this.pictureBox3.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__12_;
             this.pictureBox3.Location = new System.Drawing.Point(15, 20);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(75, 33);
+            this.pictureBox3.Size = new System.Drawing.Size(91, 31);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 52;
             this.pictureBox3.TabStop = false;
@@ -524,7 +537,7 @@
             this.pictureBox1.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__12_;
             this.pictureBox1.Location = new System.Drawing.Point(15, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(91, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
@@ -593,7 +606,7 @@
             this.pictureBox7.Image = global::Csharp_DB_Project.Properties.Resources.My_project_1__12_;
             this.pictureBox7.Location = new System.Drawing.Point(15, 20);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(75, 33);
+            this.pictureBox7.Size = new System.Drawing.Size(91, 31);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 56;
             this.pictureBox7.TabStop = false;
@@ -658,19 +671,6 @@
             // 
             this.orderTimer.Interval = 10;
             this.orderTimer.Tick += new System.EventHandler(this.orderTimer_Tick);
-            // 
-            // btn_logout
-            // 
-            this.btn_logout.BackColor = System.Drawing.Color.IndianRed;
-            this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_logout.ForeColor = System.Drawing.Color.White;
-            this.btn_logout.Location = new System.Drawing.Point(944, 643);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(110, 47);
-            this.btn_logout.TabIndex = 53;
-            this.btn_logout.Text = "Log Out";
-            this.btn_logout.UseVisualStyleBackColor = false;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click_1);
             // 
             // HomePage
             // 

@@ -17,7 +17,7 @@ namespace Csharp_DB_Project
         bool myProfileCollapsed;
         bool offerCollapsed;
         bool orderCollapsed;
-        String username = "";
+        public static String username = "";
         public HomePage(String user)
         {
             InitializeComponent();
@@ -220,8 +220,6 @@ namespace Csharp_DB_Project
         {
 
         }
-
-    
 
         private void btn_Home_MouseHover(object sender, EventArgs e)
         {

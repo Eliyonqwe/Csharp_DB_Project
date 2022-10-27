@@ -5,18 +5,24 @@ use Project
 create table admin(
 	adminID int primary key identity(1,1),
 	username varchar(30) UNIQUE,
-	password varchar(30) collate SQL_Latin1_general_cp1_cs_as NOT NULL, -- Makes password column case sensetive
+	password varchar(30) collate SQL_Latin1_general_cp1_cs_as NOT NULL -- Makes password column case sensetive
 );
+
 
 create table users(
 	userID int primary key identity(1,1),
 	firstName varchar(30) NOT NULL,
 	lastName varchar(30) NOT NULL,
+	--age int check(age>=18),
+	gender varchar(10),	
 	username varchar(30) NOT NULL UNIQUE,
 	password varchar(30) collate SQL_Latin1_general_cp1_cs_as NOT NULL, -- Makes password column case sensetive
 	phoneNumber varchar(15),
-	balance money default 0
+	balance money default 0,
+	picName varchar(30),
+	profilepic image
 );
+
 create table company(
 	companyID int primary key identity(1,1),
 	companyName varchar(30) NOT NULL,
@@ -83,10 +89,14 @@ alter view viewOffers as select companyName, companyType, amount, price as askin
 --User Procedures begin
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-create procedure registerUser
-@fname varchar(30), @lname varchar(30), @uname varchar(30), @passwd varchar(30), @phoneno varchar(30), @balance money
+alter procedure registerUser
+@fname varchar(30), @lname varchar(30), @gender varchar(10),@uname varchar(30),@passwd varchar(30), @phoneno varchar(30), @balance money, @imgLocation varchar(30), @img image
 as
-	insert into users values(@fname,@lname,@uname,@passwd, @phoneno, @balance)
+begin
+	--declare @age int = (select dbo.getAge(@date))
+	insert into users values(@fname,@lname, @gender,@uname,@passwd, @phoneno, @balance, @imgLocation , @img)
+end
+
 
 create proc updateBalance
 @uname varchar(30), @balance money
@@ -98,9 +108,10 @@ create proc updateUser
 as
 	update users set firstName = @fname, lastName = @lname, username = @uname, password = @password, phoneNumber = @phone where userID = @id
 
-ALTER procedure viewAllUser
+create procedure viewAllUsers
 as
 	select *from users
+	
 
 create proc viewUser
 @username varchar(30)
@@ -187,8 +198,12 @@ as
 create procedure searchListings -- for user
 @search varchar(30), @userID int
 as
+	declare @result int
+	declare cursor1 READ_ONLY
+	for 
 	select *from viewAllListing where not userID = @userID and (concat(companyName, companyType)) like '%'+@search+'%' and status = 'pending'
-
+	open cursor1
+	fetch next from cursor1 into @result
 create proc updateStock
 @stockID int, @amount money, @price money
 as
@@ -231,16 +246,22 @@ create procedure searchOffersForAdmin
 @search varchar(30)
 as
 	select *from offerData where (concat(offerer,offeree, companyName, companyType, offerStatus)) like '%'+@search+'%' 
+create proc searchofferforuser
+@search varchar(30),@userID int
+as
+	select offerID,companyName, companyType, amount, price, offerAmount, offerStatus from offerList where not offerStatus='accepted' and offeringUserID = @userID and (concat(companyName, companyType)) like '%'+@search+'%' 
 
 alter procedure viewOffersForAdmin
 as
 	select *from offerData
-
+	
 alter proc viewSentOffer
 @userID int
 as
 	select offerID,companyName, companyType, amount, price, offerAmount, offerStatus from offerList where not offerStatus='accepted' and offeringUserID = @userID
 
+	select *from offer
+	select *from users
 alter proc updateOffer
 @offerID int, @userID int, @offerAmount money
 as
@@ -379,6 +400,22 @@ as
 ----------------------------------------------------------------------------------------------------------------------------------
 --Functions
 ----------------------------------------------------------------------------------------------------------------------------------
+alter function getAge ( @dateOfbirth date)
+returns int
+as
+begin
+	declare @age int
+	set @age = DATEDIFF(YEAR, @dateOfBirth, GETDATE()) -
+			  CASE
+				WHEN ( MONTH(@dateOfBirth) > MONTH(GETDATE()) ) OR (MONTH(@dateOfBirth) = MONTH(GETDATE()) AND DAY(@dateOfBirth) > DAY(GETDATE()))
+					THEN 1
+				ELSE 0
+	end
+	return @age
+end
+
+declare @date date = gETDATE()
+print @date
 create function fetchID(@username varchar(30))
 returns int
 as

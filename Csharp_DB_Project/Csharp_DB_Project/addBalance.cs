@@ -77,5 +77,10 @@ namespace Csharp_DB_Project
         {
             this.Hide();
         }
+
+        private void addBalance_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

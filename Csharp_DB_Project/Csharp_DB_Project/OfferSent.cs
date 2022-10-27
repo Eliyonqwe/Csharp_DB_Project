@@ -22,7 +22,6 @@ namespace Csharp_DB_Project
         {
             InitializeComponent();
             username = user;
-
             User u = new User();
             u.username = user;
 
@@ -33,19 +32,13 @@ namespace Csharp_DB_Project
             }
             else
                 MessageBox.Show(status);
-
+         
+            loadData();
         }
 
         private void btn_load_Click(object sender, EventArgs e)
         {
-            Offer o = new Offer();
-            String status = o.viewSentOffer(dataGridView1,userID);
-            if (status != "0")  
-                MessageBox.Show(status);
-            else
-            {
-                changeIndicator = 0; 
-            }
+         
 
         }
 
@@ -65,21 +58,31 @@ namespace Csharp_DB_Project
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
-            if (changeIndicator == 0)
+            if (dataGridView1.CurrentRow.Cells[6].Value.ToString() == "Rejected")
             {
-                MessageBox.Show("Nothing has been altered/changed!");
+                MessageBox.Show("Error: You can't update this offer because it has been already rejected by the owner. \n\nTo send new offer head to view listing!");
             }
             else
             {
-                Offer o = new Offer();
-                String status = o.updateOffer((int)dataGridView1.CurrentRow.Cells[0].Value, userID, Convert.ToDouble(txt_offeramount.Text));
-                if (status != "0")
-                    MessageBox.Show(status);
-                else
+                if (MessageBox.Show("If your offer gets accepted you cannot get a refund! \n\nAre you sure you want to Update?", "Update", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    changeIndicator = 0;
-                    MessageBox.Show("updated");
-                    
+                    if (changeIndicator == 0)
+                    {
+                        MessageBox.Show("Nothing has been altered/changed!");
+                    }
+                    else
+                    {
+                        Offer o = new Offer();
+                        String status = o.updateOffer((int)dataGridView1.CurrentRow.Cells[0].Value, userID, Convert.ToDouble(txt_offeramount.Text));
+                        if (status != "0")
+                            MessageBox.Show(status);
+                        else
+                        {
+                            changeIndicator = 0;
+                            MessageBox.Show("updated");
+                            loadData();
+                        }
+                    }
                 }
             }
         }
@@ -91,23 +94,65 @@ namespace Csharp_DB_Project
             if (status != "0")
                 MessageBox.Show(status);
             else
+            {
                 MessageBox.Show("canceled");
-
+                loadData();
+            }
         }
+        private void loadData()
+        {
+            Offer o = new Offer();
+            String status = o.viewSentOffer(dataGridView1, userID);
 
+
+            if (status != "0")
+                MessageBox.Show(status);
+            else
+            {
+                changeIndicator = 0;
+                if (dataGridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("There are no pending offers to show!");
+                }
+            }
+        }
         private void OfferSent_Load(object sender, EventArgs e)
         {
-
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+    
 
         private void txt_offeramount_TextChanged(object sender, EventArgs e)
         {
             changeIndicator++;
+        }
+
+        private void search_btn_Click(object sender, EventArgs e)
+        {
+            Offer o = new Offer();
+            String status =  o.searchOffers(dataGridView1, search_txt.Text, userID);
+            if(status != "0")
+                MessageBox.Show(status);
+            else
+            {
+              
+                if (dataGridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("No offer found with '" + search_txt.Text+ "' Keyword!");
+                }
+            }
+        }
+
+        private void search_txt_Click(object sender, EventArgs e)
+        {
+            search_txt.Clear();
+            search_txt.ForeColor = Color.Black;
+            
+        }
+
+        private void txt_price_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

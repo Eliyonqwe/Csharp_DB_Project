@@ -32,6 +32,8 @@ namespace Csharp_DB_Project
             }
             else
                 MessageBox.Show(status);
+            
+            loadData();
 
         }
 
@@ -39,13 +41,24 @@ namespace Csharp_DB_Project
         {
             this.Hide();
         }
-
-        private void btn_load_Click(object sender, EventArgs e)
+        private void loadData()
         {
             Order o = new Order();
-           String status=  o.viewMyOrders(dataGridView1, userID);
+            String status = o.viewMyOrders(dataGridView1, userID);
             if (status != "0")
                 MessageBox.Show(status);
+            else
+            {
+                if (dataGridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("There are no orders to show!");
+                }
+            }
+
+        }
+        private void btn_load_Click(object sender, EventArgs e)
+        {
+            
             
         }
 
@@ -57,14 +70,26 @@ namespace Csharp_DB_Project
             txt_orderingPrice.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void search_btn_Click(object sender, EventArgs e)
         {
-            /*Order o = new Order();
-            String status = o.cancelOffer((int)dataGridView1.CurrentRow.Cells[0].Value);
+            Order o = new Order();
+            String status = o.searchOrder(dataGridView1, search_txt.Text, userID);
             if (status != "0")
                 MessageBox.Show(status);
             else
-                MessageBox.Show("canceled");*/
+            {
+
+                if (dataGridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("No offer found with '" + search_txt.Text + "' Keyword!");
+                }
+            }
+        }
+
+        private void search_txt_Click(object sender, EventArgs e)
+        {
+            search_txt.Clear();
+            search_txt.ForeColor = Color.Black;
         }
     }
 }

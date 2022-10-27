@@ -5,6 +5,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Drawing;
 using System.Data;
 using System.Windows.Forms;
+using System.Net.PeerToPeer;
+using System.Security.Cryptography;
 
 namespace Csharp_DB_Project.Classes
 {
@@ -67,7 +69,34 @@ namespace Csharp_DB_Project.Classes
                 return e.Message;
             }
         }
-        
+
+        public String viewListingData(DataGridView d, String username)
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "select stockID, companyName, companyType, amount, price, status from viewListing where username = '" + username + "' and status = 'pending'";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+
+                    sda.Fill(dt);
+                    d.DataSource = dt;
+                }
+                return "0";
+
+            }
+
+
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+    }
+
 
         public String addListing()
         {
@@ -96,6 +125,7 @@ namespace Csharp_DB_Project.Classes
         }
         public String updateListing(int stockID, double amount, double price)
         {
+           
             try
             {
                 sqlClass s = new sqlClass();
@@ -127,7 +157,7 @@ namespace Csharp_DB_Project.Classes
 
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlQuery = "exec updateStock @stockID";
+                    string sqlQuery = "exec deleteStock @stockID";
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
                     cmd.Parameters.Add("@stockID", System.Data.SqlDbType.Int).Value = stockID;
                     cmd.ExecuteNonQuery();

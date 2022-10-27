@@ -34,24 +34,33 @@ namespace Csharp_DB_Project
             else
                 MessageBox.Show(status);
 
+            loadData();
+
         }
         
         private void RecievedOrder_Load(object sender, EventArgs e)
         {
 
         }
+        private void loadData()
+        {
+            Order o = new Order();
+            String status = o.viewRecievedOrders(dataGridView1, userID);
+            if (status != "0")
+            {
+                MessageBox.Show(status);
+            }
+            else
+            {
+                if (dataGridView1.Rows.Count == 0)
+                    MessageBox.Show("There are no orders to show!");
+            }
 
+        }
         private void btn_load_Click(object sender, EventArgs e)
         {
             
-            Order o = new Order();
-            String status = o.viewRecievedOrders(dataGridView1, userID);
-            if (status == "0")
-            {
-                MessageBox.Show("success");
-            }
-            else
-                MessageBox.Show(status);
+          
 
         }
 
@@ -63,26 +72,53 @@ namespace Csharp_DB_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Order o = new Order();
-            String status = o.cancelOrder(orderID, userID,orderingUserID);
-            if (status == "0")
+            if (MessageBox.Show("You can't revert deleting the order! \n\nAre you sure you want to Delete?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                MessageBox.Show("success");
+                MessageBox.Show("Order Deleted!");
             }
             else
-                MessageBox.Show(status);
+            {
+                Order o = new Order();
+                String status = o.cancelOrder(orderID, userID, orderingUserID);
+                if (status == "0")
+                {
+                    loadData();
+                }
+                else
+                    MessageBox.Show(status);
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             orderingUserID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             txt_companyName.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             txt_companyType.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             txt_amount.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             txt_orderingPrice.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-
             orderID = Convert.ToInt32(dataGridView1.CurrentRow.Cells[6].Value.ToString());
+        }
+
+        private void search_btn_Click(object sender, EventArgs e)
+        {
+            Order o = new Order();
+            String status = o.searchrecievedOrder(dataGridView1, search_txt.Text, userID);
+            if (status != "0")
+                MessageBox.Show(status);
+            else
+            {
+
+                if (dataGridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("No offer found with '" + search_txt.Text + "' Keyword!");
+                }
+            }
+        }
+
+        private void search_txt_Click(object sender, EventArgs e)
+        {
+            search_txt.Clear();
+            search_txt.ForeColor = Color.Black;
         }
     }
 }

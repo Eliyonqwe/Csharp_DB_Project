@@ -79,24 +79,28 @@ namespace Csharp_DB_Project
              {
                  MessageBox.Show("Error: Please select a listing before offering!");
              }*/
-            if (String.IsNullOrEmpty(txt_stockID.Text)  || String.IsNullOrEmpty(txt_userID.Text) || String.IsNullOrEmpty(txt_offerPrice.Text))
-            {
-                MessageBox.Show("Error: Please select a listing before offering!");
-            }
-            else
-            {
-                
-                Offer o = new Offer();
-                o.offeringuserID = userID;
-                o.sellerID = Convert.ToInt32(txt_userID.Text);
-                o.stockID = Convert.ToInt32(txt_stockID.Text);
-                o.offerAmount = Convert.ToDouble(txt_offerPrice.Text);
-                string status = o.addOffer();
-                if(status == "0")
-                    MessageBox.Show("Offer has been sent successfuly!");
-                else
-                    MessageBox.Show(status);
+            if (MessageBox.Show("If your offer gets accepted you cannot get a refund! \n\nAre you sure you want to offer?", "Offer", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
 
+            {
+                if (String.IsNullOrEmpty(txt_stockID.Text) || String.IsNullOrEmpty(txt_userID.Text) || String.IsNullOrEmpty(txt_offerPrice.Text))
+                {
+                    MessageBox.Show("Error: Please select a listing before offering!");
+                }
+                else
+                {
+
+                    Offer o = new Offer();
+                    o.offeringuserID = userID;
+                    o.sellerID = Convert.ToInt32(txt_userID.Text);
+                    o.stockID = Convert.ToInt32(txt_stockID.Text);
+                    o.offerAmount = Convert.ToDouble(txt_offerPrice.Text);
+                    string status = o.addOffer();
+                    if (status == "0")
+                        MessageBox.Show("Offer has been sent successfuly!");
+                    else
+                        MessageBox.Show(status);
+
+                }
             }
         }
 
@@ -234,6 +238,11 @@ namespace Csharp_DB_Project
 
         }
 
+        private void search_txt_Click(object sender, EventArgs e)
+        {
+            search_txt.Clear();
+            search_txt.ForeColor = Color.Black;
+        }
     }
  }
 
