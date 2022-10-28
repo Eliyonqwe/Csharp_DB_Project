@@ -55,7 +55,6 @@ namespace Csharp_DB_Project
             Regex number_error = new Regex(@"[0-9]{" + txt_phoneno.Text.Length + @"}");
             Regex lname_error = new Regex(@"[a-z A-Z]{" + txt_lastName.Text.Length + @"}");
 
-            MessageBox.Show(imageLocation);
             if ((txt_firstName.Text.Length != 0 && txt_lastName.Text.Length != 0 && txt_password.Text.Length != 0 && txt_phoneno.Text.Length != 0 && txt_uname.Text.Length != 0) && (number_error.IsMatch(txt_phoneno.Text) && fname_error.IsMatch(txt_firstName.Text) && lname_error.IsMatch(txt_lastName.Text)))
 
             {

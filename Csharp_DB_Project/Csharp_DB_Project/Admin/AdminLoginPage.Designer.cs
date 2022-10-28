@@ -72,6 +72,7 @@
             // 
             this.txt_passwd.Location = new System.Drawing.Point(396, 187);
             this.txt_passwd.Name = "txt_passwd";
+            this.txt_passwd.PasswordChar = '*';
             this.txt_passwd.Size = new System.Drawing.Size(175, 22);
             this.txt_passwd.TabIndex = 3;
             // 
@@ -105,6 +106,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Go Back";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // AdminLoginPage
             // 

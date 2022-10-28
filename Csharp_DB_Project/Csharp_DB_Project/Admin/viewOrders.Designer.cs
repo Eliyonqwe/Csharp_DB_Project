@@ -31,25 +31,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button1 = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new MetroFramework.Controls.MetroGrid();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.search_btn = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_btn)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(726, 367);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 51);
-            this.button1.TabIndex = 76;
-            this.button1.Text = "back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Search
             // 
@@ -131,6 +122,7 @@
             this.txt_search.Size = new System.Drawing.Size(283, 25);
             this.txt_search.TabIndex = 142;
             this.txt_search.Text = "search keyword";
+            this.txt_search.Click += new System.EventHandler(this.txt_search_Click_1);
             // 
             // search_btn
             // 
@@ -145,16 +137,38 @@
             this.search_btn.TabStop = false;
             this.search_btn.Click += new System.EventHandler(this.btn_search_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(726, 438);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(126, 51);
+            this.button3.TabIndex = 76;
+            this.button3.Text = "back";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button4.Location = new System.Drawing.Point(726, 345);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(126, 70);
+            this.button4.TabIndex = 144;
+            this.button4.Text = "Refresh";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // viewOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1071, 625);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.txt_search);
             this.Controls.Add(this.search_btn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.Search);
             this.Movable = false;
             this.Name = "viewOrders";
@@ -168,12 +182,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label Search;
         private System.Windows.Forms.Button button2;
         private MetroFramework.Controls.MetroGrid dataGridView1;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.PictureBox search_btn;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

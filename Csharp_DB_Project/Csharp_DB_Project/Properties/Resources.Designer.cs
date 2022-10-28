@@ -93,6 +93,16 @@ namespace Csharp_DB_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1200px_American_Express_logo__2018__svg {
+            get {
+                object obj = ResourceManager.GetObject("1200px-American_Express_logo_(2018).svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _360_F_234593935_quRUrCKIZRGTOvIK4LGiyRxKScHQyeEe {
             get {
                 object obj = ResourceManager.GetObject("360_F_234593935_quRUrCKIZRGTOvIK4LGiyRxKScHQyeEe", resourceCulture);
@@ -194,6 +204,16 @@ namespace Csharp_DB_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dc5df0dca8cacad31b73b471d32a5c16 {
+            get {
+                object obj = ResourceManager.GetObject("dc5df0dca8cacad31b73b471d32a5c16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Eo_circle_orange_blank_svg {
             get {
                 object obj = ResourceManager.GetObject("Eo_circle_orange_blank.svg", resourceCulture);
@@ -277,6 +297,16 @@ namespace Csharp_DB_Project.Properties {
         internal static System.Drawing.Bitmap loginicon1 {
             get {
                 object obj = ResourceManager.GetObject("loginicon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mastercard_logo {
+            get {
+                object obj = ResourceManager.GetObject("Mastercard_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -729,6 +759,16 @@ namespace Csharp_DB_Project.Properties {
         internal static System.Drawing.Bitmap Untitled {
             get {
                 object obj = ResourceManager.GetObject("Untitled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visa_logo_800x450 {
+            get {
+                object obj = ResourceManager.GetObject("visa-logo-800x450", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

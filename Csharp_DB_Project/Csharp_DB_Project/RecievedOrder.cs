@@ -74,18 +74,20 @@ namespace Csharp_DB_Project
         {
             if (MessageBox.Show("You can't revert deleting the order! \n\nAre you sure you want to Delete?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                MessageBox.Show("Order Deleted!");
-            }
-            else
-            {
                 Order o = new Order();
                 String status = o.cancelOrder(orderID, userID, orderingUserID);
                 if (status == "0")
                 {
+                    MessageBox.Show("Order Deleted!");
                     loadData();
                 }
                 else
                     MessageBox.Show(status);
+            
+            }
+            else
+            {
+                ;
             }
         }
 

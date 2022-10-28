@@ -97,7 +97,7 @@ namespace Csharp_DB_Project.Classes
 
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlQuery = "exec searchUser  '" + search + "'";
+                    string sqlQuery = "select *from searchUser('" + search + "')";
                     SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
@@ -183,7 +183,7 @@ namespace Csharp_DB_Project.Classes
                 return error.Message;
             }
         }
-        public String updateUser(int id, String fname, String lname, String gender, String uname, String password, String phone)
+        public String updateUser(int id, String fname, String lname, String gender, String uname, String password, String phone, int age)
         {
             try
             {
@@ -192,7 +192,7 @@ namespace Csharp_DB_Project.Classes
                 HomePage.username = uname;
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlQuery = "exec updateUser @id, @fname, @lname,@gender, @uname, @password, @phone";
+                    string sqlQuery = "exec updateUser @id, @fname, @lname,@gender, @uname, @password, @phone, @age";
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
                     cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
                     cmd.Parameters.Add("@fname", System.Data.SqlDbType.VarChar).Value = fname;
@@ -201,6 +201,7 @@ namespace Csharp_DB_Project.Classes
                     cmd.Parameters.Add("@uname", System.Data.SqlDbType.VarChar).Value = uname;
                     cmd.Parameters.Add("@password", System.Data.SqlDbType.VarChar).Value = password;
                     cmd.Parameters.Add("@phone", System.Data.SqlDbType.VarChar).Value = phone;
+                    cmd.Parameters.Add("@age", System.Data.SqlDbType.Int).Value = age;
                     cmd.ExecuteNonQuery();
                 }
                 return "0";   

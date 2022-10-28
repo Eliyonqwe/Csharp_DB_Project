@@ -127,6 +127,9 @@
   <data name="1000_F_238139168_W61DfgMLyPvOnj2D6kZrlDYYJ0xhJTVf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1000_F_238139168_W61DfgMLyPvOnj2D6kZrlDYYJ0xhJTVf.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="My project-1 (15)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\My project-1 (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot (18)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\Screenshot (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,11 +190,17 @@
   <data name="loginicon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loginicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="visa-logo-800x450" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\visa-logo-800x450.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot (10)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\Screenshot (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wepik-photo-mode-202291-152451" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wepik-photo-mode-202291-152451.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mastercard_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\Mastercard_logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="My project-1 (13)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\My project-1 (13).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,13 +322,16 @@
   <data name="png-transparent-orange-button-blue-orange-button-blue-text-rectangle3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\png-transparent-orange-button-blue-orange-button-blue-text-rectangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1200px-American_Express_logo_(2018).svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\1200px-American_Express_logo_(2018).svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Screenshot (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\Screenshot (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="469-4691153_png-file-svg-user-id-icon-transparent-png1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\pics\469-4691153_png-file-svg-user-id-icon-transparent-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="My project-1 (15)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\My project-1 (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dc5df0dca8cacad31b73b471d32a5c16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\pics\dc5df0dca8cacad31b73b471d32a5c16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

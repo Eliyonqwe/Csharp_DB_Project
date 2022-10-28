@@ -1,4 +1,5 @@
 ﻿using Csharp_DB_Project.Classes;
+using Csharp_DB_Project.DB;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,8 +19,8 @@ namespace Csharp_DB_Project
             InitializeComponent();
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.ControlBox = false;
-           
-            stockListing s = new stockListing();
+
+            /*stockListing s = new stockListing();
             dataGridView1.DataSource = null;
             String status = s.viewListings(dataGridView1);
             if (status == "0")
@@ -29,6 +30,10 @@ namespace Csharp_DB_Project
             else
             {
                 MessageBox.Show(status);
+            }*/
+            using (var context = new ProjectEntities())
+            {
+                dataGridView1.DataSource = context.viewAllListings1();
             }
         }
 
@@ -45,7 +50,18 @@ namespace Csharp_DB_Project
 
         private void search_btn_Click(object sender, EventArgs e)
         {
-            stockListing s = new stockListing();
+            using (var context = new ProjectEntities())
+            {
+
+                dataGridView1.DataSource = context.searchListing(txt_search.Text);
+
+            }
+
+
+
+
+
+            /*stockListing s = new stockListing();
             dataGridView1.DataSource = null;
             String status = s.searchListing(dataGridView1, txt_search.Text);
             if (status == "0")
@@ -60,7 +76,7 @@ namespace Csharp_DB_Project
             else
             {
                 MessageBox.Show(status);
-            }
+            }*/
         }
 
         private void txt_search_Click(object sender, EventArgs e)
@@ -72,6 +88,20 @@ namespace Csharp_DB_Project
         private void viewListings_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (var context = new ProjectEntities())
+            {
+                dataGridView1.DataSource = context.viewAllListings1();
+                txt_search.Clear();
+            }
         }
     }
 }

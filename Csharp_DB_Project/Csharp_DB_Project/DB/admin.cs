@@ -18,12 +18,11 @@ namespace Csharp_DB_Project.DB
         public int adminID { get; set; }
         public string username { get; set; }
         public string password { get; set; }
-
         public String check(String uname, String passwd)
         {
             try
             {
-                var context = new DatabaseEntities();
+                var context = new ProjectEntities();
                 if (context.admins.Where(r => r.username == uname && r.password == passwd).Count() > 0)
                 {
                     return "0";
@@ -33,13 +32,10 @@ namespace Csharp_DB_Project.DB
                     return "Invalid Credentials";
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 return e.Message;
-
             }
-
         }
-
     }
 }

@@ -53,7 +53,7 @@ namespace Csharp_DB_Project.Classes
 
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlQuery = "exec searchOffersForAdmin  '" + search + "'";
+                    string sqlQuery = "select *from searchOffersForAdmin('" + search + "')";
                     SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);

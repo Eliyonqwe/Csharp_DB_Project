@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4aee1a1bdcd549caaccee84e97013306" Name="Diagram1">
+        <EntityTypeShape EntityType="ProjectModel.admin" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.company" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.offer" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.order" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.stockListing" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.user" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.offerData" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.offerList" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.orderData" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.orderList" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.viewAllListing" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.viewListing" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.viewListing1" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectModel.viewOffer" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="ProjectModel.FK__stockList__compa__30592A6F" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel.FK__offer__offeringU__351DDF8C" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel.FK__offer__sellerUse__361203C5" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel.FK__offer__stockID__370627FE" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel.FK__orders__ordering__3AD6B8E2" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel.FK__orders__sellerus__3BCADD1B" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel.FK__orders__stockID__3CBF0154" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectModel.FK__stockList__userI__314D4EA8" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

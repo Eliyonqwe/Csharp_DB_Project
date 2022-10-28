@@ -256,6 +256,7 @@
             this.txt_gender.Name = "txt_gender";
             this.txt_gender.Size = new System.Drawing.Size(233, 28);
             this.txt_gender.TabIndex = 76;
+            this.txt_gender.TextChanged += new System.EventHandler(this.txt_gender_TextChanged);
             // 
             // errorProvider1
             // 
@@ -269,6 +270,7 @@
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(233, 28);
             this.txt_age.TabIndex = 78;
+            this.txt_age.TextChanged += new System.EventHandler(this.txt_age_TextChanged);
             // 
             // label2
             // 

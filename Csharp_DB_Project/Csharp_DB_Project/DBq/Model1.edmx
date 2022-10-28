@@ -1,0 +1,1918 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="adminID" />
+          </Key>
+          <Property Name="adminID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="30" />
+          <Property Name="password" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="companyID" />
+          </Key>
+          <Property Name="companyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="companyName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="offer">
+          <Key>
+            <PropertyRef Name="offerID" />
+          </Key>
+          <Property Name="offerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="offeringUserID" Type="int" />
+          <Property Name="sellerUserID" Type="int" />
+          <Property Name="stockID" Type="int" />
+          <Property Name="offerAmount" Type="money" Nullable="false" />
+          <Property Name="offerStatus" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="orders">
+          <Key>
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="orderingUserID" Type="int" />
+          <Property Name="selleruserID" Type="int" />
+          <Property Name="stockID" Type="int" />
+          <Property Name="orderAmount" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="stockListing">
+          <Key>
+            <PropertyRef Name="stockID" />
+          </Key>
+          <Property Name="stockID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="companyID" Type="int" />
+          <Property Name="userID" Type="int" />
+          <Property Name="amount" Type="money" Nullable="false" />
+          <Property Name="price" Type="money" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firstName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="lastName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="gender" Type="varchar" MaxLength="10" />
+          <Property Name="username" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="phoneNumber" Type="varchar" MaxLength="15" />
+          <Property Name="balance" Type="money" />
+          <Property Name="picLocation" Type="varchar(max)" />
+          <Property Name="age" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Project.dbo.offerData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="offerData">
+          <Key>
+            <PropertyRef Name="Offerer" />
+            <PropertyRef Name="Offeree" />
+            <PropertyRef Name="offerID" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="offerAmount" />
+          </Key>
+          <Property Name="Offerer" Type="varchar" MaxLength="61" Nullable="false" />
+          <Property Name="Offeree" Type="varchar" MaxLength="61" Nullable="false" />
+          <Property Name="offerID" Type="int" Nullable="false" />
+          <Property Name="offeringUserID" Type="int" />
+          <Property Name="companyName" Type="int" />
+          <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="amount" Type="money" Nullable="false" />
+          <Property Name="price" Type="money" Nullable="false" />
+          <Property Name="offerAmount" Type="money" Nullable="false" />
+          <Property Name="offerStatus" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Project.dbo.offerList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="offerList">
+          <Key>
+            <PropertyRef Name="offerID" />
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="offerAmount" />
+          </Key>
+          <Property Name="offerID" Type="int" Nullable="false" />
+          <Property Name="offeringUserID" Type="int" />
+          <Property Name="companyName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="amount" Type="money" Nullable="false" />
+          <Property Name="price" Type="money" Nullable="false" />
+          <Property Name="offerAmount" Type="money" Nullable="false" />
+          <Property Name="offerStatus" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Project.dbo.orderData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="orderData">
+          <Key>
+            <PropertyRef Name="Orderer" />
+            <PropertyRef Name="Orderee" />
+            <PropertyRef Name="orderID" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="orderAmount" />
+          </Key>
+          <Property Name="Orderer" Type="varchar" MaxLength="61" Nullable="false" />
+          <Property Name="Orderee" Type="varchar" MaxLength="61" Nullable="false" />
+          <Property Name="orderID" Type="int" Nullable="false" />
+          <Property Name="orderingUserID" Type="int" />
+          <Property Name="companyName" Type="int" />
+          <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="amount" Type="money" Nullable="false" />
+          <Property Name="price" Type="money" Nullable="false" />
+          <Property Name="orderAmount" Type="money" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Project.dbo.orderList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="orderList">
+          <Key>
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="stockAmount" />
+            <PropertyRef Name="orderingPrice" />
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderinguserID" Type="int" />
+          <Property Name="sellerUserID" Type="int" />
+          <Property Name="companyName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="stockAmount" Type="money" Nullable="false" />
+          <Property Name="orderingPrice" Type="money" Nullable="false" />
+          <Property Name="orderID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Project.dbo.viewAllListing' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="viewAllListing">
+          <Key>
+            <PropertyRef Name="stockID" />
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+          </Key>
+          <Property Name="userID" Type="int" />
+          <Property Name="stockID" Type="int" Nullable="false" />
+          <Property Name="companyName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="amount" Type="money" Nullable="false" />
+          <Property Name="price" Type="money" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Project.dbo.viewListing' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="viewListing">
+          <Key>
+            <PropertyRef Name="username" />
+            <PropertyRef Name="stockID" />
+            <PropertyRef Name="companyID" />
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+          </Key>
+          <Property Name="username" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="stockID" Type="int" Nullable="false" />
+          <Property Name="companyID" Type="int" Nullable="false" />
+          <Property Name="companyName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="amount" Type="money" Nullable="false" />
+          <Property Name="price" Type="money" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Project.dbo.viewListings' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="viewListings">
+          <Key>
+            <PropertyRef Name="username" />
+            <PropertyRef Name="stockID" />
+            <PropertyRef Name="companyID" />
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+          </Key>
+          <Property Name="username" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="stockID" Type="int" Nullable="false" />
+          <Property Name="companyID" Type="int" Nullable="false" />
+          <Property Name="companyName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="amount" Type="money" Nullable="false" />
+          <Property Name="price" Type="money" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Project.dbo.viewOffers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="viewOffers">
+          <Key>
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="askingPrice" />
+            <PropertyRef Name="offeramount" />
+            <PropertyRef Name="offerID" />
+            <PropertyRef Name="stockID" />
+          </Key>
+          <Property Name="companyName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="amount" Type="money" Nullable="false" />
+          <Property Name="askingPrice" Type="money" Nullable="false" />
+          <Property Name="offeramount" Type="money" Nullable="false" />
+          <Property Name="offerstatus" Type="varchar" MaxLength="30" />
+          <Property Name="offerID" Type="int" Nullable="false" />
+          <Property Name="offeringUserid" Type="int" />
+          <Property Name="selleruserID" Type="int" />
+          <Property Name="stockID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__offer__offeringU__351DDF8C">
+          <End Role="users" Type="Self.users" Multiplicity="0..1" />
+          <End Role="offer" Type="Self.offer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="offer">
+              <PropertyRef Name="offeringUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__offer__sellerUse__361203C5">
+          <End Role="users" Type="Self.users" Multiplicity="0..1" />
+          <End Role="offer" Type="Self.offer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="offer">
+              <PropertyRef Name="sellerUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__offer__stockID__370627FE">
+          <End Role="stockListing" Type="Self.stockListing" Multiplicity="0..1" />
+          <End Role="offer" Type="Self.offer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="stockListing">
+              <PropertyRef Name="stockID" />
+            </Principal>
+            <Dependent Role="offer">
+              <PropertyRef Name="stockID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orders__ordering__3AD6B8E2">
+          <End Role="users" Type="Self.users" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="orderingUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orders__sellerus__3BCADD1B">
+          <End Role="users" Type="Self.users" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="selleruserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orders__stockID__3CBF0154">
+          <End Role="stockListing" Type="Self.stockListing" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="stockListing">
+              <PropertyRef Name="stockID" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="stockID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__stockList__compa__30592A6F">
+          <End Role="company" Type="Self.company" Multiplicity="0..1" />
+          <End Role="stockListing" Type="Self.stockListing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="company">
+              <PropertyRef Name="companyID" />
+            </Principal>
+            <Dependent Role="stockListing">
+              <PropertyRef Name="companyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__stockList__userI__314D4EA8">
+          <End Role="users" Type="Self.users" Multiplicity="0..1" />
+          <End Role="stockListing" Type="Self.stockListing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="stockListing">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="addCompany" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="varchar" Mode="In" />
+          <Parameter Name="type" Type="varchar" Mode="In" />
+          <Parameter Name="companyID" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="addListing" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="compID" Type="int" Mode="In" />
+          <Parameter Name="userID" Type="int" Mode="In" />
+          <Parameter Name="amount" Type="money" Mode="In" />
+          <Parameter Name="price" Type="money" Mode="In" />
+        </Function>
+        <Function Name="addOffer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="offeringID" Type="int" Mode="In" />
+          <Parameter Name="sellerID" Type="int" Mode="In" />
+          <Parameter Name="stockID" Type="int" Mode="In" />
+          <Parameter Name="offerAmount" Type="money" Mode="In" />
+        </Function>
+        <Function Name="addOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="orderingID" Type="int" Mode="In" />
+          <Parameter Name="sellerID" Type="int" Mode="In" />
+          <Parameter Name="stockID" Type="int" Mode="In" />
+          <Parameter Name="orderAmount" Type="money" Mode="In" />
+          <Parameter Name="offerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="cancelOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="orderID" Type="int" Mode="In" />
+          <Parameter Name="sellerID" Type="int" Mode="In" />
+          <Parameter Name="buyerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="deleteCompany" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="companyID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="deleteOffer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="offerID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="deleteStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="stockID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="deleteUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="fetchID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="username" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="getAge" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="dateOfbirth" Type="date" Mode="In" />
+        </Function>
+        <Function Name="registerUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="fname" Type="varchar" Mode="In" />
+          <Parameter Name="lname" Type="varchar" Mode="In" />
+          <Parameter Name="gender" Type="varchar" Mode="In" />
+          <Parameter Name="uname" Type="varchar" Mode="In" />
+          <Parameter Name="passwd" Type="varchar" Mode="In" />
+          <Parameter Name="phoneno" Type="varchar" Mode="In" />
+          <Parameter Name="balance" Type="money" Mode="In" />
+          <Parameter Name="imgLocation" Type="varchar" Mode="In" />
+          <Parameter Name="dateofBirth" Type="date" Mode="In" />
+        </Function>
+        <Function Name="searchListing" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="search" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="username" Type="varchar" MaxLength="30" Nullable="false" />
+                <Property Name="stockID" Type="int" Nullable="false" />
+                <Property Name="companyID" Type="int" Nullable="false" />
+                <Property Name="companyName" Type="varchar" MaxLength="30" Nullable="false" />
+                <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+                <Property Name="amount" Type="money" Nullable="false" />
+                <Property Name="price" Type="money" Nullable="false" />
+                <Property Name="status" Type="varchar" MaxLength="30" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="searchListings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="search" Type="varchar" Mode="In" />
+          <Parameter Name="userID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="searchMyOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userID" Type="int" Mode="In" />
+          <Parameter Name="search" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="searchofferforuser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="search" Type="varchar" Mode="In" />
+          <Parameter Name="userID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="searchOffersForAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="search" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Offerer" Type="varchar" MaxLength="61" Nullable="false" />
+                <Property Name="Offeree" Type="varchar" MaxLength="61" Nullable="false" />
+                <Property Name="offerID" Type="int" Nullable="false" />
+                <Property Name="offeringUserID" Type="int" />
+                <Property Name="companyName" Type="int" />
+                <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+                <Property Name="amount" Type="money" Nullable="false" />
+                <Property Name="price" Type="money" Nullable="false" />
+                <Property Name="offerAmount" Type="money" Nullable="false" />
+                <Property Name="offerStatus" Type="varchar" MaxLength="30" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="searchOrdersForAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="search" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="Orderer" Type="varchar" MaxLength="61" Nullable="false" />
+                <Property Name="Orderee" Type="varchar" MaxLength="61" Nullable="false" />
+                <Property Name="orderID" Type="int" Nullable="false" />
+                <Property Name="orderingUserID" Type="int" />
+                <Property Name="companyName" Type="int" />
+                <Property Name="companyType" Type="varchar" MaxLength="30" Nullable="false" />
+                <Property Name="amount" Type="money" Nullable="false" />
+                <Property Name="price" Type="money" Nullable="false" />
+                <Property Name="orderAmount" Type="money" Nullable="false" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="searchrecievedOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userID" Type="int" Mode="In" />
+          <Parameter Name="search" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="searchUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="search" Type="varchar" Mode="In" />
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="userID" Type="int" Nullable="false" />
+                <Property Name="firstName" Type="varchar" MaxLength="30" Nullable="false" />
+                <Property Name="lastName" Type="varchar" MaxLength="30" Nullable="false" />
+                <Property Name="gender" Type="varchar" MaxLength="10" />
+                <Property Name="username" Type="varchar" MaxLength="30" Nullable="false" />
+                <Property Name="password" Type="varchar" MaxLength="30" Nullable="false" />
+                <Property Name="phoneNumber" Type="varchar" MaxLength="15" />
+                <Property Name="balance" Type="money" />
+                <Property Name="picLocation" Type="varchar(max)" />
+                <Property Name="age" Type="int" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="updateBalance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="uname" Type="varchar" Mode="In" />
+          <Parameter Name="balance" Type="money" Mode="In" />
+        </Function>
+        <Function Name="updateCompany" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="companyID" Type="int" Mode="In" />
+          <Parameter Name="companyName" Type="varchar" Mode="In" />
+          <Parameter Name="companyType" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="updateOffer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="offerID" Type="int" Mode="In" />
+          <Parameter Name="userID" Type="int" Mode="In" />
+          <Parameter Name="offerAmount" Type="money" Mode="In" />
+        </Function>
+        <Function Name="updateStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="stockID" Type="int" Mode="In" />
+          <Parameter Name="amount" Type="money" Mode="In" />
+          <Parameter Name="price" Type="money" Mode="In" />
+        </Function>
+        <Function Name="updateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="fname" Type="varchar" Mode="In" />
+          <Parameter Name="lname" Type="varchar" Mode="In" />
+          <Parameter Name="gender" Type="varchar" Mode="In" />
+          <Parameter Name="uname" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+          <Parameter Name="phone" Type="varchar" Mode="In" />
+          <Parameter Name="age" Type="int" Mode="In" />
+        </Function>
+        <Function Name="viewAllListings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="viewAllUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="viewMyOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="viewOffersForAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="viewOrdersForAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="viewRecievedOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="viewSentOffer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="userID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="viewUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="username" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="ProjectModelStoreContainer">
+          <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="company" EntityType="Self.company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="offer" EntityType="Self.offer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="orders" EntityType="Self.orders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="stockListing" EntityType="Self.stockListing" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="offerData" EntityType="Self.offerData" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [offerData].[Offerer] AS [Offerer], 
+    [offerData].[Offeree] AS [Offeree], 
+    [offerData].[offerID] AS [offerID], 
+    [offerData].[offeringUserID] AS [offeringUserID], 
+    [offerData].[companyName] AS [companyName], 
+    [offerData].[companyType] AS [companyType], 
+    [offerData].[amount] AS [amount], 
+    [offerData].[price] AS [price], 
+    [offerData].[offerAmount] AS [offerAmount], 
+    [offerData].[offerStatus] AS [offerStatus]
+    FROM [dbo].[offerData] AS [offerData]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="offerList" EntityType="Self.offerList" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [offerList].[offerID] AS [offerID], 
+    [offerList].[offeringUserID] AS [offeringUserID], 
+    [offerList].[companyName] AS [companyName], 
+    [offerList].[companyType] AS [companyType], 
+    [offerList].[amount] AS [amount], 
+    [offerList].[price] AS [price], 
+    [offerList].[offerAmount] AS [offerAmount], 
+    [offerList].[offerStatus] AS [offerStatus]
+    FROM [dbo].[offerList] AS [offerList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="orderData" EntityType="Self.orderData" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [orderData].[Orderer] AS [Orderer], 
+    [orderData].[Orderee] AS [Orderee], 
+    [orderData].[orderID] AS [orderID], 
+    [orderData].[orderingUserID] AS [orderingUserID], 
+    [orderData].[companyName] AS [companyName], 
+    [orderData].[companyType] AS [companyType], 
+    [orderData].[amount] AS [amount], 
+    [orderData].[price] AS [price], 
+    [orderData].[orderAmount] AS [orderAmount]
+    FROM [dbo].[orderData] AS [orderData]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="orderList" EntityType="Self.orderList" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [orderList].[orderinguserID] AS [orderinguserID], 
+    [orderList].[sellerUserID] AS [sellerUserID], 
+    [orderList].[companyName] AS [companyName], 
+    [orderList].[companyType] AS [companyType], 
+    [orderList].[stockAmount] AS [stockAmount], 
+    [orderList].[orderingPrice] AS [orderingPrice], 
+    [orderList].[orderID] AS [orderID]
+    FROM [dbo].[orderList] AS [orderList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="viewAllListing" EntityType="Self.viewAllListing" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [viewAllListing].[userID] AS [userID], 
+    [viewAllListing].[stockID] AS [stockID], 
+    [viewAllListing].[companyName] AS [companyName], 
+    [viewAllListing].[companyType] AS [companyType], 
+    [viewAllListing].[amount] AS [amount], 
+    [viewAllListing].[price] AS [price], 
+    [viewAllListing].[status] AS [status]
+    FROM [dbo].[viewAllListing] AS [viewAllListing]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="viewListing" EntityType="Self.viewListing" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [viewListing].[username] AS [username], 
+    [viewListing].[stockID] AS [stockID], 
+    [viewListing].[companyID] AS [companyID], 
+    [viewListing].[companyName] AS [companyName], 
+    [viewListing].[companyType] AS [companyType], 
+    [viewListing].[amount] AS [amount], 
+    [viewListing].[price] AS [price], 
+    [viewListing].[status] AS [status]
+    FROM [dbo].[viewListing] AS [viewListing]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="viewListings" EntityType="Self.viewListings" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [viewListings].[username] AS [username], 
+    [viewListings].[stockID] AS [stockID], 
+    [viewListings].[companyID] AS [companyID], 
+    [viewListings].[companyName] AS [companyName], 
+    [viewListings].[companyType] AS [companyType], 
+    [viewListings].[amount] AS [amount], 
+    [viewListings].[price] AS [price], 
+    [viewListings].[status] AS [status]
+    FROM [dbo].[viewListings] AS [viewListings]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="viewOffers" EntityType="Self.viewOffers" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [viewOffers].[companyName] AS [companyName], 
+    [viewOffers].[companyType] AS [companyType], 
+    [viewOffers].[amount] AS [amount], 
+    [viewOffers].[askingPrice] AS [askingPrice], 
+    [viewOffers].[offeramount] AS [offeramount], 
+    [viewOffers].[offerstatus] AS [offerstatus], 
+    [viewOffers].[offerID] AS [offerID], 
+    [viewOffers].[offeringUserid] AS [offeringUserid], 
+    [viewOffers].[selleruserID] AS [selleruserID], 
+    [viewOffers].[stockID] AS [stockID]
+    FROM [dbo].[viewOffers] AS [viewOffers]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__offer__offeringU__351DDF8C" Association="Self.FK__offer__offeringU__351DDF8C">
+            <End Role="users" EntitySet="users" />
+            <End Role="offer" EntitySet="offer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__offer__sellerUse__361203C5" Association="Self.FK__offer__sellerUse__361203C5">
+            <End Role="users" EntitySet="users" />
+            <End Role="offer" EntitySet="offer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__offer__stockID__370627FE" Association="Self.FK__offer__stockID__370627FE">
+            <End Role="stockListing" EntitySet="stockListing" />
+            <End Role="offer" EntitySet="offer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orders__ordering__3AD6B8E2" Association="Self.FK__orders__ordering__3AD6B8E2">
+            <End Role="users" EntitySet="users" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orders__sellerus__3BCADD1B" Association="Self.FK__orders__sellerus__3BCADD1B">
+            <End Role="users" EntitySet="users" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orders__stockID__3CBF0154" Association="Self.FK__orders__stockID__3CBF0154">
+            <End Role="stockListing" EntitySet="stockListing" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__stockList__compa__30592A6F" Association="Self.FK__stockList__compa__30592A6F">
+            <End Role="company" EntitySet="company" />
+            <End Role="stockListing" EntitySet="stockListing" />
+          </AssociationSet>
+          <AssociationSet Name="FK__stockList__userI__314D4EA8" Association="Self.FK__stockList__userI__314D4EA8">
+            <End Role="users" EntitySet="users" />
+            <End Role="stockListing" EntitySet="stockListing" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="searchListing_Result">
+          <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="stockID" Type="Int32" Nullable="false" />
+          <Property Name="companyID" Type="Int32" Nullable="false" />
+          <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </ComplexType>
+        <ComplexType Name="searchOffersForAdmin_Result">
+          <Property Name="Offerer" Type="String" MaxLength="61" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Offeree" Type="String" MaxLength="61" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="offerID" Type="Int32" Nullable="false" />
+          <Property Name="offeringUserID" Type="Int32" />
+          <Property Name="companyName" Type="Int32" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="offerAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="offerStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </ComplexType>
+        <ComplexType Name="searchOrdersForAdmin_Result">
+          <Property Name="Orderer" Type="String" MaxLength="61" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Orderee" Type="String" MaxLength="61" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="orderID" Type="Int32" Nullable="false" />
+          <Property Name="orderingUserID" Type="Int32" />
+          <Property Name="companyName" Type="Int32" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="orderAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="searchUser_Result">
+          <Property Name="userID" Type="Int32" Nullable="false" />
+          <Property Name="firstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="balance" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="picLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="age" Type="Int32" />
+        </ComplexType>
+        <EntityType Name="admin">
+          <Key>
+            <PropertyRef Name="adminID" />
+          </Key>
+          <Property Name="adminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="company">
+          <Key>
+            <PropertyRef Name="companyID" />
+          </Key>
+          <Property Name="companyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="stockListings" Relationship="Self.FK__stockList__compa__30592A6F" FromRole="company" ToRole="stockListing" />
+        </EntityType>
+        <EntityType Name="offer">
+          <Key>
+            <PropertyRef Name="offerID" />
+          </Key>
+          <Property Name="offerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="offeringUserID" Type="Int32" />
+          <Property Name="sellerUserID" Type="Int32" />
+          <Property Name="stockID" Type="Int32" />
+          <Property Name="offerAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="offerStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="user" Relationship="Self.FK__offer__offeringU__351DDF8C" FromRole="offer" ToRole="users" />
+          <NavigationProperty Name="user1" Relationship="Self.FK__offer__sellerUse__361203C5" FromRole="offer" ToRole="users" />
+          <NavigationProperty Name="stockListing" Relationship="Self.FK__offer__stockID__370627FE" FromRole="offer" ToRole="stockListing" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="orderingUserID" Type="Int32" />
+          <Property Name="selleruserID" Type="Int32" />
+          <Property Name="stockID" Type="Int32" />
+          <Property Name="orderAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="user" Relationship="Self.FK__orders__ordering__3AD6B8E2" FromRole="orders" ToRole="users" />
+          <NavigationProperty Name="user1" Relationship="Self.FK__orders__sellerus__3BCADD1B" FromRole="orders" ToRole="users" />
+          <NavigationProperty Name="stockListing" Relationship="Self.FK__orders__stockID__3CBF0154" FromRole="orders" ToRole="stockListing" />
+        </EntityType>
+        <EntityType Name="stockListing">
+          <Key>
+            <PropertyRef Name="stockID" />
+          </Key>
+          <Property Name="stockID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="companyID" Type="Int32" />
+          <Property Name="userID" Type="Int32" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="company" Relationship="Self.FK__stockList__compa__30592A6F" FromRole="stockListing" ToRole="company" />
+          <NavigationProperty Name="offers" Relationship="Self.FK__offer__stockID__370627FE" FromRole="stockListing" ToRole="offer" />
+          <NavigationProperty Name="orders" Relationship="Self.FK__orders__stockID__3CBF0154" FromRole="stockListing" ToRole="orders" />
+          <NavigationProperty Name="user" Relationship="Self.FK__stockList__userI__314D4EA8" FromRole="stockListing" ToRole="users" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="balance" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="picLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="age" Type="Int32" />
+          <NavigationProperty Name="offers" Relationship="Self.FK__offer__offeringU__351DDF8C" FromRole="users" ToRole="offer" />
+          <NavigationProperty Name="offers1" Relationship="Self.FK__offer__sellerUse__361203C5" FromRole="users" ToRole="offer" />
+          <NavigationProperty Name="orders" Relationship="Self.FK__orders__ordering__3AD6B8E2" FromRole="users" ToRole="orders" />
+          <NavigationProperty Name="orders1" Relationship="Self.FK__orders__sellerus__3BCADD1B" FromRole="users" ToRole="orders" />
+          <NavigationProperty Name="stockListings" Relationship="Self.FK__stockList__userI__314D4EA8" FromRole="users" ToRole="stockListing" />
+        </EntityType>
+        <EntityType Name="offerData">
+          <Key>
+            <PropertyRef Name="Offerer" />
+            <PropertyRef Name="Offeree" />
+            <PropertyRef Name="offerID" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="offerAmount" />
+          </Key>
+          <Property Name="Offerer" Type="String" MaxLength="61" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Offeree" Type="String" MaxLength="61" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="offerID" Type="Int32" Nullable="false" />
+          <Property Name="offeringUserID" Type="Int32" />
+          <Property Name="companyName" Type="Int32" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="offerAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="offerStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="offerList">
+          <Key>
+            <PropertyRef Name="offerID" />
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="offerAmount" />
+          </Key>
+          <Property Name="offerID" Type="Int32" Nullable="false" />
+          <Property Name="offeringUserID" Type="Int32" />
+          <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="offerAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="offerStatus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="orderData">
+          <Key>
+            <PropertyRef Name="Orderer" />
+            <PropertyRef Name="Orderee" />
+            <PropertyRef Name="orderID" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="orderAmount" />
+          </Key>
+          <Property Name="Orderer" Type="String" MaxLength="61" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Orderee" Type="String" MaxLength="61" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="orderID" Type="Int32" Nullable="false" />
+          <Property Name="orderingUserID" Type="Int32" />
+          <Property Name="companyName" Type="Int32" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="orderAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="orderList">
+          <Key>
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="stockAmount" />
+            <PropertyRef Name="orderingPrice" />
+            <PropertyRef Name="orderID" />
+          </Key>
+          <Property Name="orderinguserID" Type="Int32" />
+          <Property Name="sellerUserID" Type="Int32" />
+          <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="stockAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="orderingPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="orderID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="viewAllListing">
+          <Key>
+            <PropertyRef Name="stockID" />
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+          </Key>
+          <Property Name="userID" Type="Int32" />
+          <Property Name="stockID" Type="Int32" Nullable="false" />
+          <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="viewListing">
+          <Key>
+            <PropertyRef Name="username" />
+            <PropertyRef Name="stockID" />
+            <PropertyRef Name="companyID" />
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+          </Key>
+          <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="stockID" Type="Int32" Nullable="false" />
+          <Property Name="companyID" Type="Int32" Nullable="false" />
+          <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="viewListing1">
+          <Key>
+            <PropertyRef Name="username" />
+            <PropertyRef Name="stockID" />
+            <PropertyRef Name="companyID" />
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="price" />
+          </Key>
+          <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="stockID" Type="Int32" Nullable="false" />
+          <Property Name="companyID" Type="Int32" Nullable="false" />
+          <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="viewOffer">
+          <Key>
+            <PropertyRef Name="companyName" />
+            <PropertyRef Name="companyType" />
+            <PropertyRef Name="amount" />
+            <PropertyRef Name="askingPrice" />
+            <PropertyRef Name="offeramount" />
+            <PropertyRef Name="offerID" />
+            <PropertyRef Name="stockID" />
+          </Key>
+          <Property Name="companyName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="companyType" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="amount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="askingPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="offeramount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="offerstatus" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="offerID" Type="Int32" Nullable="false" />
+          <Property Name="offeringUserid" Type="Int32" />
+          <Property Name="selleruserID" Type="Int32" />
+          <Property Name="stockID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__stockList__compa__30592A6F">
+          <End Role="company" Type="Self.company" Multiplicity="0..1" />
+          <End Role="stockListing" Type="Self.stockListing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="company">
+              <PropertyRef Name="companyID" />
+            </Principal>
+            <Dependent Role="stockListing">
+              <PropertyRef Name="companyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__offer__offeringU__351DDF8C">
+          <End Role="users" Type="Self.user" Multiplicity="0..1" />
+          <End Role="offer" Type="Self.offer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="offer">
+              <PropertyRef Name="offeringUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__offer__sellerUse__361203C5">
+          <End Role="users" Type="Self.user" Multiplicity="0..1" />
+          <End Role="offer" Type="Self.offer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="offer">
+              <PropertyRef Name="sellerUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__offer__stockID__370627FE">
+          <End Role="stockListing" Type="Self.stockListing" Multiplicity="0..1" />
+          <End Role="offer" Type="Self.offer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="stockListing">
+              <PropertyRef Name="stockID" />
+            </Principal>
+            <Dependent Role="offer">
+              <PropertyRef Name="stockID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orders__ordering__3AD6B8E2">
+          <End Role="users" Type="Self.user" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="orderingUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orders__sellerus__3BCADD1B">
+          <End Role="users" Type="Self.user" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="selleruserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__orders__stockID__3CBF0154">
+          <End Role="stockListing" Type="Self.stockListing" Multiplicity="0..1" />
+          <End Role="orders" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="stockListing">
+              <PropertyRef Name="stockID" />
+            </Principal>
+            <Dependent Role="orders">
+              <PropertyRef Name="stockID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__stockList__userI__314D4EA8">
+          <End Role="users" Type="Self.user" Multiplicity="0..1" />
+          <End Role="stockListing" Type="Self.stockListing" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="userID" />
+            </Principal>
+            <Dependent Role="stockListing">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ProjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="admins" EntityType="Self.admin" />
+          <EntitySet Name="companies" EntityType="Self.company" />
+          <EntitySet Name="offers" EntityType="Self.offer" />
+          <EntitySet Name="orders" EntityType="Self.order" />
+          <EntitySet Name="stockListings" EntityType="Self.stockListing" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <EntitySet Name="offerDatas" EntityType="Self.offerData" />
+          <EntitySet Name="offerLists" EntityType="Self.offerList" />
+          <EntitySet Name="orderDatas" EntityType="Self.orderData" />
+          <EntitySet Name="orderLists" EntityType="Self.orderList" />
+          <EntitySet Name="viewAllListings" EntityType="Self.viewAllListing" />
+          <EntitySet Name="viewListings" EntityType="Self.viewListing" />
+          <EntitySet Name="viewListings1" EntityType="Self.viewListing1" />
+          <EntitySet Name="viewOffers" EntityType="Self.viewOffer" />
+          <AssociationSet Name="FK__stockList__compa__30592A6F" Association="Self.FK__stockList__compa__30592A6F">
+            <End Role="company" EntitySet="companies" />
+            <End Role="stockListing" EntitySet="stockListings" />
+          </AssociationSet>
+          <AssociationSet Name="FK__offer__offeringU__351DDF8C" Association="Self.FK__offer__offeringU__351DDF8C">
+            <End Role="users" EntitySet="users" />
+            <End Role="offer" EntitySet="offers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__offer__sellerUse__361203C5" Association="Self.FK__offer__sellerUse__361203C5">
+            <End Role="users" EntitySet="users" />
+            <End Role="offer" EntitySet="offers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__offer__stockID__370627FE" Association="Self.FK__offer__stockID__370627FE">
+            <End Role="stockListing" EntitySet="stockListings" />
+            <End Role="offer" EntitySet="offers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orders__ordering__3AD6B8E2" Association="Self.FK__orders__ordering__3AD6B8E2">
+            <End Role="users" EntitySet="users" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orders__sellerus__3BCADD1B" Association="Self.FK__orders__sellerus__3BCADD1B">
+            <End Role="users" EntitySet="users" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__orders__stockID__3CBF0154" Association="Self.FK__orders__stockID__3CBF0154">
+            <End Role="stockListing" EntitySet="stockListings" />
+            <End Role="orders" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__stockList__userI__314D4EA8" Association="Self.FK__stockList__userI__314D4EA8">
+            <End Role="users" EntitySet="users" />
+            <End Role="stockListing" EntitySet="stockListings" />
+          </AssociationSet>
+          <FunctionImport Name="searchListing" IsComposable="true" ReturnType="Collection(ProjectModel.searchListing_Result)">
+            <Parameter Name="search" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="searchOffersForAdmin" IsComposable="true" ReturnType="Collection(ProjectModel.searchOffersForAdmin_Result)">
+            <Parameter Name="search" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="searchOrdersForAdmin" IsComposable="true" ReturnType="Collection(ProjectModel.searchOrdersForAdmin_Result)">
+            <Parameter Name="search" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="searchUser" IsComposable="true" ReturnType="Collection(ProjectModel.searchUser_Result)">
+            <Parameter Name="search" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="addCompany">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="type" Mode="In" Type="String" />
+            <Parameter Name="companyID" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="addListing">
+            <Parameter Name="compID" Mode="In" Type="Int32" />
+            <Parameter Name="userID" Mode="In" Type="Int32" />
+            <Parameter Name="amount" Mode="In" Type="Decimal" />
+            <Parameter Name="price" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="addOffer">
+            <Parameter Name="offeringID" Mode="In" Type="Int32" />
+            <Parameter Name="sellerID" Mode="In" Type="Int32" />
+            <Parameter Name="stockID" Mode="In" Type="Int32" />
+            <Parameter Name="offerAmount" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="addOrder">
+            <Parameter Name="orderingID" Mode="In" Type="Int32" />
+            <Parameter Name="sellerID" Mode="In" Type="Int32" />
+            <Parameter Name="stockID" Mode="In" Type="Int32" />
+            <Parameter Name="orderAmount" Mode="In" Type="Decimal" />
+            <Parameter Name="offerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="cancelOrder">
+            <Parameter Name="orderID" Mode="In" Type="Int32" />
+            <Parameter Name="sellerID" Mode="In" Type="Int32" />
+            <Parameter Name="buyerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="deleteCompany">
+            <Parameter Name="companyID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="deleteOffer">
+            <Parameter Name="offerID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="deleteStock">
+            <Parameter Name="stockID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="deleteUser">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="registerUser">
+            <Parameter Name="fname" Mode="In" Type="String" />
+            <Parameter Name="lname" Mode="In" Type="String" />
+            <Parameter Name="gender" Mode="In" Type="String" />
+            <Parameter Name="uname" Mode="In" Type="String" />
+            <Parameter Name="passwd" Mode="In" Type="String" />
+            <Parameter Name="phoneno" Mode="In" Type="String" />
+            <Parameter Name="balance" Mode="In" Type="Decimal" />
+            <Parameter Name="imgLocation" Mode="In" Type="String" />
+            <Parameter Name="dateofBirth" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="searchListings" ReturnType="Collection(ProjectModel.searchListings_Result)">
+            <Parameter Name="search" Mode="In" Type="String" />
+            <Parameter Name="userID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="searchMyOrder" ReturnType="Collection(ProjectModel.searchMyOrder_Result)">
+            <Parameter Name="userID" Mode="In" Type="Int32" />
+            <Parameter Name="search" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="searchofferforuser" ReturnType="Collection(ProjectModel.searchofferforuser_Result)">
+            <Parameter Name="search" Mode="In" Type="String" />
+            <Parameter Name="userID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="searchrecievedOrder" ReturnType="Collection(ProjectModel.searchrecievedOrder_Result)">
+            <Parameter Name="userID" Mode="In" Type="Int32" />
+            <Parameter Name="search" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ProjectModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ProjectModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="updateBalance">
+            <Parameter Name="uname" Mode="In" Type="String" />
+            <Parameter Name="balance" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="updateCompany">
+            <Parameter Name="companyID" Mode="In" Type="Int32" />
+            <Parameter Name="companyName" Mode="In" Type="String" />
+            <Parameter Name="companyType" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="updateOffer">
+            <Parameter Name="offerID" Mode="In" Type="Int32" />
+            <Parameter Name="userID" Mode="In" Type="Int32" />
+            <Parameter Name="offerAmount" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="updateStock">
+            <Parameter Name="stockID" Mode="In" Type="Int32" />
+            <Parameter Name="amount" Mode="In" Type="Decimal" />
+            <Parameter Name="price" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="updateUser">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="fname" Mode="In" Type="String" />
+            <Parameter Name="lname" Mode="In" Type="String" />
+            <Parameter Name="gender" Mode="In" Type="String" />
+            <Parameter Name="uname" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+            <Parameter Name="phone" Mode="In" Type="String" />
+            <Parameter Name="age" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="viewAllListings1" ReturnType="Collection(ProjectModel.viewAllListings1_Result)" />
+          <FunctionImport Name="viewAllUsers" ReturnType="Collection(ProjectModel.viewAllUsers_Result)" />
+          <FunctionImport Name="viewMyOrder" ReturnType="Collection(ProjectModel.viewMyOrder_Result)">
+            <Parameter Name="userID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="viewOffersForAdmin" ReturnType="Collection(ProjectModel.viewOffersForAdmin_Result)" />
+          <FunctionImport Name="viewOrdersForAdmin" ReturnType="Collection(ProjectModel.viewOrdersForAdmin_Result)" />
+          <FunctionImport Name="viewRecievedOrder" ReturnType="Collection(ProjectModel.viewRecievedOrder_Result)">
+            <Parameter Name="userID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="viewSentOffer" ReturnType="Collection(ProjectModel.viewSentOffer_Result)">
+            <Parameter Name="userID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="viewUser" ReturnType="Collection(ProjectModel.viewUser_Result)">
+            <Parameter Name="username" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="searchListings_Result">
+          <Property Type="Int32" Name="userID" Nullable="true" />
+          <Property Type="Int32" Name="stockID" Nullable="false" />
+          <Property Type="String" Name="companyName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="companyType" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="amount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="price" Nullable="false" Precision="19" />
+          <Property Type="String" Name="status" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="searchMyOrder_Result">
+          <Property Type="Int32" Name="orderinguserID" Nullable="true" />
+          <Property Type="Int32" Name="sellerUserID" Nullable="true" />
+          <Property Type="String" Name="companyName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="companyType" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="stockAmount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="orderingPrice" Nullable="false" Precision="19" />
+          <Property Type="Int32" Name="orderID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="searchofferforuser_Result">
+          <Property Type="Int32" Name="offerID" Nullable="false" />
+          <Property Type="String" Name="companyName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="companyType" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="amount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="price" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="offerAmount" Nullable="false" Precision="19" />
+          <Property Type="String" Name="offerStatus" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="searchrecievedOrder_Result">
+          <Property Type="Int32" Name="orderinguserID" Nullable="true" />
+          <Property Type="Int32" Name="sellerUserID" Nullable="true" />
+          <Property Type="String" Name="companyName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="companyType" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="stockAmount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="orderingPrice" Nullable="false" Precision="19" />
+          <Property Type="Int32" Name="orderID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="viewAllListings1_Result">
+          <Property Type="String" Name="username" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="stockID" Nullable="false" />
+          <Property Type="Int32" Name="companyID" Nullable="false" />
+          <Property Type="String" Name="companyName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="companyType" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="amount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="price" Nullable="false" Precision="19" />
+          <Property Type="String" Name="status" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="viewAllUsers_Result">
+          <Property Type="Int32" Name="userID" Nullable="false" />
+          <Property Type="String" Name="firstName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="lastName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="gender" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="username" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="password" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="phoneNumber" Nullable="true" MaxLength="15" />
+          <Property Type="Decimal" Name="balance" Nullable="true" Precision="19" />
+          <Property Type="String" Name="picLocation" Nullable="true" />
+          <Property Type="Int32" Name="age" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="viewMyOrder_Result">
+          <Property Type="Int32" Name="orderinguserID" Nullable="true" />
+          <Property Type="Int32" Name="sellerUserID" Nullable="true" />
+          <Property Type="String" Name="companyName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="companyType" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="stockAmount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="orderingPrice" Nullable="false" Precision="19" />
+          <Property Type="Int32" Name="orderID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="viewOffersForAdmin_Result">
+          <Property Type="String" Name="Offerer" Nullable="false" MaxLength="61" />
+          <Property Type="String" Name="Offeree" Nullable="false" MaxLength="61" />
+          <Property Type="Int32" Name="offerID" Nullable="false" />
+          <Property Type="Int32" Name="offeringUserID" Nullable="true" />
+          <Property Type="Int32" Name="companyName" Nullable="true" />
+          <Property Type="String" Name="companyType" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="amount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="price" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="offerAmount" Nullable="false" Precision="19" />
+          <Property Type="String" Name="offerStatus" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="viewOrdersForAdmin_Result">
+          <Property Type="String" Name="Orderer" Nullable="false" MaxLength="61" />
+          <Property Type="String" Name="Orderee" Nullable="false" MaxLength="61" />
+          <Property Type="Int32" Name="orderID" Nullable="false" />
+          <Property Type="Int32" Name="orderingUserID" Nullable="true" />
+          <Property Type="Int32" Name="companyName" Nullable="true" />
+          <Property Type="String" Name="companyType" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="amount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="price" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="orderAmount" Nullable="false" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="viewRecievedOrder_Result">
+          <Property Type="Int32" Name="orderinguserID" Nullable="true" />
+          <Property Type="Int32" Name="sellerUserID" Nullable="true" />
+          <Property Type="String" Name="companyName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="companyType" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="stockAmount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="orderingPrice" Nullable="false" Precision="19" />
+          <Property Type="Int32" Name="orderID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="viewSentOffer_Result">
+          <Property Type="Int32" Name="offerID" Nullable="false" />
+          <Property Type="String" Name="companyName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="companyType" Nullable="false" MaxLength="30" />
+          <Property Type="Decimal" Name="amount" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="price" Nullable="false" Precision="19" />
+          <Property Type="Decimal" Name="offerAmount" Nullable="false" Precision="19" />
+          <Property Type="String" Name="offerStatus" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="viewUser_Result">
+          <Property Type="Int32" Name="userID" Nullable="false" />
+          <Property Type="String" Name="firstName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="lastName" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="gender" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="username" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="password" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="phoneNumber" Nullable="true" MaxLength="15" />
+          <Property Type="Decimal" Name="balance" Nullable="true" Precision="19" />
+          <Property Type="String" Name="picLocation" Nullable="true" />
+          <Property Type="Int32" Name="age" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProjectModelStoreContainer" CdmEntityContainer="ProjectEntities">
+          <EntitySetMapping Name="admins">
+            <EntityTypeMapping TypeName="ProjectModel.admin">
+              <MappingFragment StoreEntitySet="admin">
+                <ScalarProperty Name="adminID" ColumnName="adminID" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="companies">
+            <EntityTypeMapping TypeName="ProjectModel.company">
+              <MappingFragment StoreEntitySet="company">
+                <ScalarProperty Name="companyID" ColumnName="companyID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="offers">
+            <EntityTypeMapping TypeName="ProjectModel.offer">
+              <MappingFragment StoreEntitySet="offer">
+                <ScalarProperty Name="offerID" ColumnName="offerID" />
+                <ScalarProperty Name="offeringUserID" ColumnName="offeringUserID" />
+                <ScalarProperty Name="sellerUserID" ColumnName="sellerUserID" />
+                <ScalarProperty Name="stockID" ColumnName="stockID" />
+                <ScalarProperty Name="offerAmount" ColumnName="offerAmount" />
+                <ScalarProperty Name="offerStatus" ColumnName="offerStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orders">
+            <EntityTypeMapping TypeName="ProjectModel.order">
+              <MappingFragment StoreEntitySet="orders">
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+                <ScalarProperty Name="orderingUserID" ColumnName="orderingUserID" />
+                <ScalarProperty Name="selleruserID" ColumnName="selleruserID" />
+                <ScalarProperty Name="stockID" ColumnName="stockID" />
+                <ScalarProperty Name="orderAmount" ColumnName="orderAmount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="stockListings">
+            <EntityTypeMapping TypeName="ProjectModel.stockListing">
+              <MappingFragment StoreEntitySet="stockListing">
+                <ScalarProperty Name="stockID" ColumnName="stockID" />
+                <ScalarProperty Name="companyID" ColumnName="companyID" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ProjectModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="ProjectModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+                <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="picLocation" ColumnName="picLocation" />
+                <ScalarProperty Name="age" ColumnName="age" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="offerDatas">
+            <EntityTypeMapping TypeName="ProjectModel.offerData">
+              <MappingFragment StoreEntitySet="offerData">
+                <ScalarProperty Name="Offerer" ColumnName="Offerer" />
+                <ScalarProperty Name="Offeree" ColumnName="Offeree" />
+                <ScalarProperty Name="offerID" ColumnName="offerID" />
+                <ScalarProperty Name="offeringUserID" ColumnName="offeringUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="offerAmount" ColumnName="offerAmount" />
+                <ScalarProperty Name="offerStatus" ColumnName="offerStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="offerLists">
+            <EntityTypeMapping TypeName="ProjectModel.offerList">
+              <MappingFragment StoreEntitySet="offerList">
+                <ScalarProperty Name="offerID" ColumnName="offerID" />
+                <ScalarProperty Name="offeringUserID" ColumnName="offeringUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="offerAmount" ColumnName="offerAmount" />
+                <ScalarProperty Name="offerStatus" ColumnName="offerStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orderDatas">
+            <EntityTypeMapping TypeName="ProjectModel.orderData">
+              <MappingFragment StoreEntitySet="orderData">
+                <ScalarProperty Name="Orderer" ColumnName="Orderer" />
+                <ScalarProperty Name="Orderee" ColumnName="Orderee" />
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+                <ScalarProperty Name="orderingUserID" ColumnName="orderingUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="orderAmount" ColumnName="orderAmount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orderLists">
+            <EntityTypeMapping TypeName="ProjectModel.orderList">
+              <MappingFragment StoreEntitySet="orderList">
+                <ScalarProperty Name="orderinguserID" ColumnName="orderinguserID" />
+                <ScalarProperty Name="sellerUserID" ColumnName="sellerUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="stockAmount" ColumnName="stockAmount" />
+                <ScalarProperty Name="orderingPrice" ColumnName="orderingPrice" />
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="viewAllListings">
+            <EntityTypeMapping TypeName="ProjectModel.viewAllListing">
+              <MappingFragment StoreEntitySet="viewAllListing">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="stockID" ColumnName="stockID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="viewListings">
+            <EntityTypeMapping TypeName="ProjectModel.viewListing">
+              <MappingFragment StoreEntitySet="viewListing">
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="stockID" ColumnName="stockID" />
+                <ScalarProperty Name="companyID" ColumnName="companyID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="viewListings1">
+            <EntityTypeMapping TypeName="ProjectModel.viewListing1">
+              <MappingFragment StoreEntitySet="viewListings">
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="stockID" ColumnName="stockID" />
+                <ScalarProperty Name="companyID" ColumnName="companyID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="viewOffers">
+            <EntityTypeMapping TypeName="ProjectModel.viewOffer">
+              <MappingFragment StoreEntitySet="viewOffers">
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="askingPrice" ColumnName="askingPrice" />
+                <ScalarProperty Name="offeramount" ColumnName="offeramount" />
+                <ScalarProperty Name="offerstatus" ColumnName="offerstatus" />
+                <ScalarProperty Name="offerID" ColumnName="offerID" />
+                <ScalarProperty Name="offeringUserid" ColumnName="offeringUserid" />
+                <ScalarProperty Name="selleruserID" ColumnName="selleruserID" />
+                <ScalarProperty Name="stockID" ColumnName="stockID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionName="ProjectModel.Store.searchListing" FunctionImportName="searchListing">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.searchListing_Result">
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="stockID" ColumnName="stockID" />
+                <ScalarProperty Name="companyID" ColumnName="companyID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="ProjectModel.Store.searchOffersForAdmin" FunctionImportName="searchOffersForAdmin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.searchOffersForAdmin_Result">
+                <ScalarProperty Name="Offerer" ColumnName="Offerer" />
+                <ScalarProperty Name="Offeree" ColumnName="Offeree" />
+                <ScalarProperty Name="offerID" ColumnName="offerID" />
+                <ScalarProperty Name="offeringUserID" ColumnName="offeringUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="offerAmount" ColumnName="offerAmount" />
+                <ScalarProperty Name="offerStatus" ColumnName="offerStatus" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="ProjectModel.Store.searchOrdersForAdmin" FunctionImportName="searchOrdersForAdmin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.searchOrdersForAdmin_Result">
+                <ScalarProperty Name="Orderer" ColumnName="Orderer" />
+                <ScalarProperty Name="Orderee" ColumnName="Orderee" />
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+                <ScalarProperty Name="orderingUserID" ColumnName="orderingUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="orderAmount" ColumnName="orderAmount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionName="ProjectModel.Store.searchUser" FunctionImportName="searchUser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.searchUser_Result">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+                <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="picLocation" ColumnName="picLocation" />
+                <ScalarProperty Name="age" ColumnName="age" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="addCompany" FunctionName="ProjectModel.Store.addCompany" />
+          <FunctionImportMapping FunctionImportName="addListing" FunctionName="ProjectModel.Store.addListing" />
+          <FunctionImportMapping FunctionImportName="addOffer" FunctionName="ProjectModel.Store.addOffer" />
+          <FunctionImportMapping FunctionImportName="addOrder" FunctionName="ProjectModel.Store.addOrder" />
+          <FunctionImportMapping FunctionImportName="cancelOrder" FunctionName="ProjectModel.Store.cancelOrder" />
+          <FunctionImportMapping FunctionImportName="deleteCompany" FunctionName="ProjectModel.Store.deleteCompany" />
+          <FunctionImportMapping FunctionImportName="deleteOffer" FunctionName="ProjectModel.Store.deleteOffer" />
+          <FunctionImportMapping FunctionImportName="deleteStock" FunctionName="ProjectModel.Store.deleteStock" />
+          <FunctionImportMapping FunctionImportName="deleteUser" FunctionName="ProjectModel.Store.deleteUser" />
+          <FunctionImportMapping FunctionImportName="registerUser" FunctionName="ProjectModel.Store.registerUser" />
+          <FunctionImportMapping FunctionImportName="searchListings" FunctionName="ProjectModel.Store.searchListings">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.searchListings_Result">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="stockID" ColumnName="stockID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="searchMyOrder" FunctionName="ProjectModel.Store.searchMyOrder">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.searchMyOrder_Result">
+                <ScalarProperty Name="orderinguserID" ColumnName="orderinguserID" />
+                <ScalarProperty Name="sellerUserID" ColumnName="sellerUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="stockAmount" ColumnName="stockAmount" />
+                <ScalarProperty Name="orderingPrice" ColumnName="orderingPrice" />
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="searchofferforuser" FunctionName="ProjectModel.Store.searchofferforuser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.searchofferforuser_Result">
+                <ScalarProperty Name="offerID" ColumnName="offerID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="offerAmount" ColumnName="offerAmount" />
+                <ScalarProperty Name="offerStatus" ColumnName="offerStatus" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="searchrecievedOrder" FunctionName="ProjectModel.Store.searchrecievedOrder">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.searchrecievedOrder_Result">
+                <ScalarProperty Name="orderinguserID" ColumnName="orderinguserID" />
+                <ScalarProperty Name="sellerUserID" ColumnName="sellerUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="stockAmount" ColumnName="stockAmount" />
+                <ScalarProperty Name="orderingPrice" ColumnName="orderingPrice" />
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="ProjectModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="ProjectModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="ProjectModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="ProjectModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="ProjectModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="ProjectModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="ProjectModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="updateBalance" FunctionName="ProjectModel.Store.updateBalance" />
+          <FunctionImportMapping FunctionImportName="updateCompany" FunctionName="ProjectModel.Store.updateCompany" />
+          <FunctionImportMapping FunctionImportName="updateOffer" FunctionName="ProjectModel.Store.updateOffer" />
+          <FunctionImportMapping FunctionImportName="updateStock" FunctionName="ProjectModel.Store.updateStock" />
+          <FunctionImportMapping FunctionImportName="updateUser" FunctionName="ProjectModel.Store.updateUser" />
+          <FunctionImportMapping FunctionImportName="viewAllListings1" FunctionName="ProjectModel.Store.viewAllListings">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.viewAllListings1_Result">
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="stockID" ColumnName="stockID" />
+                <ScalarProperty Name="companyID" ColumnName="companyID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="viewAllUsers" FunctionName="ProjectModel.Store.viewAllUsers">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.viewAllUsers_Result">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+                <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="picLocation" ColumnName="picLocation" />
+                <ScalarProperty Name="age" ColumnName="age" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="viewMyOrder" FunctionName="ProjectModel.Store.viewMyOrder">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.viewMyOrder_Result">
+                <ScalarProperty Name="orderinguserID" ColumnName="orderinguserID" />
+                <ScalarProperty Name="sellerUserID" ColumnName="sellerUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="stockAmount" ColumnName="stockAmount" />
+                <ScalarProperty Name="orderingPrice" ColumnName="orderingPrice" />
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="viewOffersForAdmin" FunctionName="ProjectModel.Store.viewOffersForAdmin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.viewOffersForAdmin_Result">
+                <ScalarProperty Name="Offerer" ColumnName="Offerer" />
+                <ScalarProperty Name="Offeree" ColumnName="Offeree" />
+                <ScalarProperty Name="offerID" ColumnName="offerID" />
+                <ScalarProperty Name="offeringUserID" ColumnName="offeringUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="offerAmount" ColumnName="offerAmount" />
+                <ScalarProperty Name="offerStatus" ColumnName="offerStatus" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="viewOrdersForAdmin" FunctionName="ProjectModel.Store.viewOrdersForAdmin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.viewOrdersForAdmin_Result">
+                <ScalarProperty Name="Orderer" ColumnName="Orderer" />
+                <ScalarProperty Name="Orderee" ColumnName="Orderee" />
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+                <ScalarProperty Name="orderingUserID" ColumnName="orderingUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="orderAmount" ColumnName="orderAmount" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="viewRecievedOrder" FunctionName="ProjectModel.Store.viewRecievedOrder">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.viewRecievedOrder_Result">
+                <ScalarProperty Name="orderinguserID" ColumnName="orderinguserID" />
+                <ScalarProperty Name="sellerUserID" ColumnName="sellerUserID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="stockAmount" ColumnName="stockAmount" />
+                <ScalarProperty Name="orderingPrice" ColumnName="orderingPrice" />
+                <ScalarProperty Name="orderID" ColumnName="orderID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="viewSentOffer" FunctionName="ProjectModel.Store.viewSentOffer">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.viewSentOffer_Result">
+                <ScalarProperty Name="offerID" ColumnName="offerID" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="companyType" ColumnName="companyType" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="offerAmount" ColumnName="offerAmount" />
+                <ScalarProperty Name="offerStatus" ColumnName="offerStatus" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="viewUser" FunctionName="ProjectModel.Store.viewUser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProjectModel.viewUser_Result">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+                <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="picLocation" ColumnName="picLocation" />
+                <ScalarProperty Name="age" ColumnName="age" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

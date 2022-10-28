@@ -76,10 +76,9 @@ namespace Csharp_DB_Project
                 MessageBox.Show("Nothing has been altered/changed!");
             }
 
-            else if ((txt_fname.Text.Length != 0 && txt_lname.Text.Length != 0 && txt_password.Text.Length != 0 && txt_phone.Text.Length != 0 && txt_uname.Text.Length != 0) && (number_error.IsMatch(txt_phone.Text) && fname_error.IsMatch(txt_fname.Text) && lname_error.IsMatch(txt_lname.Text)))
-
+            else if ((txt_fname.Text.Length != 0 && txt_lname.Text.Length != 0 && txt_password.Text.Length != 0 && txt_gender.Text.Length != 0 && txt_age.Text.Length != 0 && txt_phone.Text.Length != 0 && txt_uname.Text.Length != 0) && (number_error.IsMatch(txt_phone.Text) && fname_error.IsMatch(txt_fname.Text) && lname_error.IsMatch(txt_lname.Text)))
             {
-                 String status = u.updateUser(Convert.ToInt32(txt_id.Text), txt_fname.Text, txt_lname.Text, txt_gender.Text, txt_uname.Text, txt_password.Text, txt_phone.Text);
+                String status = u.updateUser(Convert.ToInt32(txt_id.Text), txt_fname.Text, txt_lname.Text, txt_gender.Text, txt_uname.Text, txt_password.Text, txt_phone.Text, Convert.ToInt32(txt_age.Text));
 
                 if (status == "0")
                 {
@@ -176,6 +175,16 @@ namespace Csharp_DB_Project
         private void ProfilePage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_age_TextChanged(object sender, EventArgs e)
+        {
+            changeIndicator++;
+        }
+
+        private void txt_gender_TextChanged(object sender, EventArgs e)
+        {
+            changeIndicator++;
         }
     }
 }

@@ -54,7 +54,7 @@ namespace Csharp_DB_Project.Classes
 
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlQuery = "exec searchListing  '" + search + "'";
+                    string sqlQuery = "select *from searchListing('" + search + "')";
                     SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);

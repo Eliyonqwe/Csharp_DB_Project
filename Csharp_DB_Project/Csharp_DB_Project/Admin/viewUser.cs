@@ -15,6 +15,7 @@ namespace Csharp_DB_Project
     public partial class viewUser : MetroFramework.Forms.MetroForm
     {
         int userid;
+        
         public viewUser()
         {
             InitializeComponent();
@@ -51,10 +52,10 @@ namespace Csharp_DB_Project
 
         private void viewUser_Load(object sender, EventArgs e)
         {
-            using (var context = new DatabaseEntities())
+            using (var context = new ProjectEntities())
             {
 
-                var users = context.ViewAllUsers();
+                var users = context.viewAllUsers();
                 dataGridView1.DataSource = users;
 
 
@@ -73,9 +74,11 @@ namespace Csharp_DB_Project
             txt_id.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             txt_fname.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txt_lname.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            txt_uname.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txt_password.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            txt_phone.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txt_gender.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txt_uname.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txt_password.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            txt_phone.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            txt_Age.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
 
 
         }
@@ -86,14 +89,16 @@ namespace Csharp_DB_Project
             if (dialogResult == DialogResult.Yes)
             {
                 //do something
-                using (var context = new DatabaseEntities())
+                using (var context = new ProjectEntities())
                 {
                     context.deleteUser(userid);
-                    dataGridView1.DataSource = context.ViewAllUsers();
+                    dataGridView1.DataSource = context.viewAllUsers();
                     txt_id.Clear();
                     txt_fname.Clear();
                     txt_lname.Clear();
                     txt_uname.Clear();
+                    txt_gender.Clear();
+                    txt_Age.Clear();
                     txt_password.Clear();
                     txt_phone.Clear();
 
@@ -110,13 +115,15 @@ namespace Csharp_DB_Project
 
         private void save_btn_Click(object sender, EventArgs e)
         {
-            using (var context = new DatabaseEntities())
+            using (var context = new ProjectEntities())
             {
-                context.updateUser(Convert.ToInt32(txt_id.Text), txt_fname.Text, txt_lname.Text, txt_uname.Text, txt_password.Text, txt_phone.Text);
-                dataGridView1.DataSource = context.ViewAllUsers();
+                context.updateUser(Convert.ToInt32(txt_id.Text), txt_fname.Text, txt_lname.Text, txt_gender.Text, txt_uname.Text, txt_password.Text, txt_phone.Text, Convert.ToInt32(txt_Age.Text));
+                dataGridView1.DataSource = context.viewAllUsers();
                 txt_id.Clear();
                 txt_fname.Clear();
                 txt_lname.Clear();
+                txt_gender.Clear();
+                txt_Age.Clear();
                 txt_uname.Clear();
                 txt_password.Clear();
                 txt_phone.Clear();
