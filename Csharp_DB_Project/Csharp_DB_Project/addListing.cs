@@ -46,6 +46,11 @@ namespace Csharp_DB_Project
             if (companyStatus == "0" && stockStatus == "0")
             {
                 MessageBox.Show("Listing has been added");
+ txt_amount.Clear();
+                txt_companyName.Clear();
+                txt_companyType.Clear();
+                txt_price.Clear();
+
             }
             else
             {
@@ -63,9 +68,7 @@ namespace Csharp_DB_Project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            HomePage h = new HomePage(username);
             this.Hide();
-            h.Show();
         }
 
     }

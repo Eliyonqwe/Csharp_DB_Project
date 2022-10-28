@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Csharp_DB_Project.DB;
+using MetroFramework.Controls;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -42,6 +44,135 @@ namespace Csharp_DB_Project.Classes
             }
         }
 
+        public String searchOffer(DataGridView d, String search)
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec searchOffersForAdmin  '" + search + "'";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    d.DataSource = dt;
+                }
+                return "0";
+            }
+
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+
+        }
+        public String searchOffers(DataGridView d, String search, int userID)
+        {
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+                
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec searchOfferForUser  '" + search + "','" + userID + "' ";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    d.DataSource = dt;
+                }
+                return "0";
+            }
+
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+
+        }
+        public string searchRecievedOffer(DataGridView d, int userID,String search)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "select *from viewOffers where sellerUserID = '" + userID + "' and offerstatus = 'pending' and (concat(companyName, companyType)) like '%'+ '"+search+"' + '%'";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+
+                    sda.Fill(dt);
+                    d.DataSource = null;
+                    d.DataSource = dt;
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+
+        public string rejectOffer(int orderID)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "update offer set offerStatus = 'Rejected' where offerID = '"+orderID+"'";
+                    SqlCommand cmd = new SqlCommand(sqlQuery, con);
+                    cmd.ExecuteNonQuery();
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+
+
+
+
+        public String viewOffers(MetroGrid d)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "exec viewOffersForAdmin";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+
+                    sda.Fill(dt);
+                    d.DataSource = null;
+                    d.DataSource = dt;
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
         public String viewSentOffer(DataGridView d,int userID)
         {
 
@@ -53,6 +184,32 @@ namespace Csharp_DB_Project.Classes
                 if (con.State == System.Data.ConnectionState.Open)
                 {
                     string sqlQuery = "exec viewSentOffer '"+userID+"'";
+                    SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
+                    DataTable dt = new DataTable();
+
+                    sda.Fill(dt);
+                    d.DataSource = null;
+                    d.DataSource = dt;
+                }
+
+                return "0";
+            }
+            catch (Exception e)
+            {
+                return e.Message;
+            }
+        }
+        public String viewOffer(DataGridView d, int userID)
+        {
+
+            try
+            {
+                sqlClass s = new sqlClass();
+                System.Data.SqlClient.SqlConnection con = s.connect();
+
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    string sqlQuery = "select *from viewOffers where sellerUserID = '" + userID + "' and offerstatus = 'pending'";
                     SqlDataAdapter sda = new SqlDataAdapter(sqlQuery, con);
                     DataTable dt = new DataTable();
 

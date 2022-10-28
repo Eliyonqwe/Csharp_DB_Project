@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Csharp_DB_Project.Admin;
+using System;
 using System.Windows.Forms;
 
 namespace Csharp_DB_Project

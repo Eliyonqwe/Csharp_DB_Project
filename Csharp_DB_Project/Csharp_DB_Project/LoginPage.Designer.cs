@@ -34,8 +34,10 @@
             this.txt_uname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbl_adminPage = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -45,9 +47,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_adminPage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -96,6 +98,7 @@
             this.txt_passwd.TabIndex = 27;
             this.txt_passwd.Text = "type your password";
             this.txt_passwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_passwd.Click += new System.EventHandler(this.pswdclick);
             // 
             // txt_uname
             // 
@@ -110,6 +113,7 @@
             this.txt_uname.TabIndex = 26;
             this.txt_uname.Text = "username";
             this.txt_uname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_uname.Click += new System.EventHandler(this.uname_click);
             // 
             // label2
             // 
@@ -135,6 +139,17 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "The Stock";
             // 
+            // lbl_adminPage
+            // 
+            this.lbl_adminPage.AutoSize = true;
+            this.lbl_adminPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_adminPage.Location = new System.Drawing.Point(977, 9);
+            this.lbl_adminPage.Name = "lbl_adminPage";
+            this.lbl_adminPage.Size = new System.Drawing.Size(50, 16);
+            this.lbl_adminPage.TabIndex = 38;
+            this.lbl_adminPage.Text = "Admin";
+            this.lbl_adminPage.Click += new System.EventHandler(this.lbl_adminPage_Click);
+            // 
             // pictureBox11
             // 
             this.pictureBox11.Image = global::Csharp_DB_Project.Properties.Resources.loginicon1;
@@ -154,11 +169,22 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 36;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::Csharp_DB_Project.Properties.Resources.fantom1;
+            this.pictureBox10.Location = new System.Drawing.Point(732, 196);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(82, 79);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 35;
+            this.pictureBox10.TabStop = false;
             // 
             // pictureBox9
             // 
             this.pictureBox9.Image = global::Csharp_DB_Project.Properties.Resources.f;
-            this.pictureBox9.Location = new System.Drawing.Point(689, 73);
+            this.pictureBox9.Location = new System.Drawing.Point(688, 0);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(163, 156);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -254,17 +280,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // lbl_adminPage
-            // 
-            this.lbl_adminPage.AutoSize = true;
-            this.lbl_adminPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_adminPage.Location = new System.Drawing.Point(977, 9);
-            this.lbl_adminPage.Name = "lbl_adminPage";
-            this.lbl_adminPage.Size = new System.Drawing.Size(50, 16);
-            this.lbl_adminPage.TabIndex = 38;
-            this.lbl_adminPage.Text = "Admin";
-            this.lbl_adminPage.Click += new System.EventHandler(this.lbl_adminPage_Click);
-            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -274,6 +289,7 @@
             this.Controls.Add(this.lbl_adminPage);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -293,8 +309,10 @@
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginPag";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -311,6 +329,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

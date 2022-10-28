@@ -15,13 +15,21 @@ namespace Csharp_DB_Project
         bool sidebarExpand;
         bool myListingCollapsed;
         bool myProfileCollapsed;
-        String username = "";
+        bool offerCollapsed;
+        bool orderCollapsed;
+        public static String username = "";
         public HomePage(String user)
         {
             InitializeComponent();
             username = user;
             lb_welcome.Text += user;
-
+            sidebarContainer.HorizontalScroll.Maximum = 0;
+            sidebarContainer.AutoScroll = false;
+            sidebarContainer.VerticalScroll.Visible = false;
+            sidebarContainer.AutoScroll = true;
+            sidebarContainer.VerticalScroll.Maximum = 113;
+            panel3.Controls.Add(btn_logout);
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -35,7 +43,32 @@ namespace Csharp_DB_Project
         {
             sidebarTImer.Start();
         }
+        private void btn_orders_Click(object sender, EventArgs e)
+        {
+            orderTimer.Start();
+        }
 
+        private void orderTimer_Tick(object sender, EventArgs e)
+        {
+            if (orderCollapsed)
+            {
+                orderContainer.Height -= 10;
+                if (orderContainer.Height == orderContainer.MinimumSize.Height)
+                {
+                    orderCollapsed = false;
+                    orderTimer.Stop();
+                }
+            }
+            else
+            {
+                orderContainer.Height += 10;
+                if (orderContainer.Height == orderContainer.MaximumSize.Height)
+                {
+                    orderCollapsed = true;
+                    orderTimer.Stop();
+                }
+            }
+        }
         private void myListingTImer_Tick(object sender, EventArgs e)
         {
             if (myListingCollapsed)
@@ -73,7 +106,7 @@ namespace Csharp_DB_Project
 
             if (myProfileCollapsed)
             {
-                myProfileContainer.Height -= 27;
+                myProfileContainer.Height -= 10;
                 if (myProfileContainer.Height == myProfileContainer.MinimumSize.Height)
                 {
                     myProfileCollapsed = false;
@@ -82,7 +115,7 @@ namespace Csharp_DB_Project
             }
             else
             {
-                myProfileContainer.Height += 27;
+                myProfileContainer.Height += 10;
                 if (myProfileContainer.Height == myProfileContainer.MaximumSize.Height)
                 {
                     myProfileCollapsed = true;
@@ -111,10 +144,36 @@ namespace Csharp_DB_Project
                 }
             }
         }
+        private void offerTimer_Tick(object sender, EventArgs e)
+        {
+            if (offerCollapsed)
+            {
+                offerContainer.Height -= 10;
+                if (offerContainer.Height == offerContainer.MinimumSize.Height)
+                {
+                    offerCollapsed = false;
+                    offerTimer.Stop();
+                }
+            }
+            else
+            {
+                offerContainer.Height += 10;
+                if (offerContainer.Height == offerContainer.MaximumSize.Height)
+                {
+                    offerCollapsed = true;
+                    offerTimer.Stop();
+                }
+            }
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            offerTimer.Start();
+        }
         private void btn_editProfile_Click(object sender, EventArgs e)
         {
             ProfilePage p = new ProfilePage(username);
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -130,6 +189,7 @@ namespace Csharp_DB_Project
         {
             addBalance b = new addBalance(username);
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -145,6 +205,7 @@ namespace Csharp_DB_Project
         {
             addListing l = new addListing(username);
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -159,8 +220,6 @@ namespace Csharp_DB_Project
         {
 
         }
-
-    
 
         private void btn_Home_MouseHover(object sender, EventArgs e)
         {
@@ -214,18 +273,19 @@ namespace Csharp_DB_Project
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            button1.ForeColor = Color.DarkRed;
+            btn_orderSent.ForeColor = Color.DarkRed;
         }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.ForeColor = Color.Transparent;
+            btn_orderSent.ForeColor = Color.Transparent;
         }
        
 
         private void btn_editlising_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -252,14 +312,16 @@ namespace Csharp_DB_Project
 
         private void btn_viewAllListing_Click(object sender, EventArgs e)
         {
-           /* viewListing v = new viewListing(username);
-            this.Hide();
-            v.Show();
-*/          
-           panel3.Controls.Clear();
-            label3.Visible = false;
-            label4.Visible = false;
-            lb_welcome.Visible = false;
+            /* viewListing v = new viewListing(username);
+             this.Hide();
+             v.Show();
+ */
+            panel3.Controls.Clear();
+            btn_logout.Hide();
+            pictureBox8.Hide();
+            label3.Hide();
+            label4.Hide();
+            lb_welcome.Hide();
             viewListing v = new viewListing(username);
             v.TopLevel = false;
             v.AutoScroll = true;
@@ -273,6 +335,7 @@ namespace Csharp_DB_Project
         {
             viewOffer v = new viewOffer(username);
             panel3.Controls.Clear();
+            btn_logout.Visible = false;
             label3.Visible = false;
             label4.Visible = false;
             lb_welcome.Visible = false;
@@ -287,9 +350,11 @@ namespace Csharp_DB_Project
         private void btn_Home_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
+            btn_logout.Visible = true;
             label3.Visible=true;
             label4.Visible=true;
-           lb_welcome.Visible=true;
+            lb_welcome.Visible=false;
+            panel3.Controls.Add(btn_logout);
         }
 
         private void panel3_Paint_1(object sender, PaintEventArgs e)
@@ -304,9 +369,7 @@ namespace Csharp_DB_Project
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-            LoginPage l = new LoginPage();
-            this.Hide();
-            l.Show();
+           
         }
 
         private void myListingContainer_Paint(object sender, PaintEventArgs e)
@@ -317,8 +380,58 @@ namespace Csharp_DB_Project
         private void button5_Click(object sender, EventArgs e)
         {
             OfferSent o = new OfferSent(username);
-            this.Hide();
+            panel3.Controls.Clear();
+            btn_logout.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
+            o.TopLevel = false;
+            o.AutoScroll = true;
+            o.Dock = DockStyle.Fill;
             o.Show();
+            panel3.Controls.Add(o);
+        }
+
+        private void btn_order_Click(object sender, EventArgs e)
+        {
+            OrderPage o = new OrderPage(username);
+            panel3.Controls.Clear();
+            btn_logout.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
+            o.TopLevel = false;
+            o.AutoScroll = true;
+            o.Dock = DockStyle.Fill;
+            o.Show();
+            panel3.Controls.Add(o);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RecievedOrder o = new RecievedOrder(username);
+            panel3.Controls.Clear();
+            btn_logout.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            lb_welcome.Visible = false;
+            o.TopLevel = false;
+            o.AutoScroll = true;
+            o.Dock = DockStyle.Fill;
+            o.Show();
+            panel3.Controls.Add(o);
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_logout_Click_1(object sender, EventArgs e)
+        {
+            LoginPage l = new LoginPage();
+            this.Hide();
+            l.Show();
         }
     }
 }

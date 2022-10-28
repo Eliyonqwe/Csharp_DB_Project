@@ -31,18 +31,12 @@ namespace Csharp_DB_Project
 
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void pswdclick(object sender, MouseEventArgs e)
+        private void pswdclick(object sender, EventArgs e)
         {
             txt_passwd.Clear();
         }
 
-        private void unameclick(object sender, MouseEventArgs e)
+        private void uname_click(object sender, EventArgs e)
         {
             txt_uname.Clear();
         }
@@ -74,40 +68,24 @@ namespace Csharp_DB_Project
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            try
+            User u = new User();
+            string status = u.checkuser(txt_uname.Text, txt_passwd.Text);
+            
+            if(status == "1")
             {
-
-                sqlClass s = new sqlClass();
-                System.Data.SqlClient.SqlConnection con = s.connect();
-
-                if (con.State == System.Data.ConnectionState.Open)
-                {
-                    string sqlQuery = "select *from users where username=@username and password=@password";
-                    SqlCommand cmd = new SqlCommand(sqlQuery, con);
-                    cmd.Parameters.AddWithValue("@username", txt_uname.Text);
-                    cmd.Parameters.AddWithValue("@password", txt_passwd.Text);
-                    var result = cmd.ExecuteScalar();// returns 
-
-                    if (result == null) // there is no row with the entered username and password
-                    {
-                        MessageBox.Show("Invalid Credentials!");
-                        //   txt_uname.Text = "Enter Username";
-                        // txt_passwd.Text = "************";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Login Succesfull!");
-                        HomePage p = new HomePage(txt_uname.Text);
-                        this.Hide();
-                        p.Show();
-                    }
-
-                }
+                MessageBox.Show("Invalid Credentials");
+            }
+            else if(status == "2")
+            {
+                MessageBox.Show("Welcome Back!");
+                HomePage h = new HomePage(txt_uname.Text);
+                this.Hide();
+                h.Show();
 
             }
-            catch (Exception error)
+            else
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show(status);
             }
 
         }
@@ -124,6 +102,11 @@ namespace Csharp_DB_Project
             a.Show();
              
              
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

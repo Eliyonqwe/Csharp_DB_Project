@@ -34,14 +34,17 @@
             this.btn_plus = new System.Windows.Forms.PictureBox();
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_HomePage = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btn_minus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_plus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_balance
             // 
+            this.txt_balance.BackColor = System.Drawing.Color.Black;
+            this.txt_balance.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_balance.ForeColor = System.Drawing.Color.White;
             this.txt_balance.Location = new System.Drawing.Point(372, 224);
             this.txt_balance.Multiline = true;
             this.txt_balance.Name = "txt_balance";
@@ -53,11 +56,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(133, 226);
+            this.label4.Location = new System.Drawing.Point(161, 222);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(202, 26);
+            this.label4.Size = new System.Drawing.Size(184, 31);
             this.label4.TabIndex = 63;
             this.label4.Text = "Current Balance";
             // 
@@ -86,9 +89,9 @@
             // btn_update
             // 
             this.btn_update.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_update.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_update.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_update.Location = new System.Drawing.Point(307, 355);
+            this.btn_update.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_update.ForeColor = System.Drawing.Color.Black;
+            this.btn_update.Location = new System.Drawing.Point(240, 340);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(141, 60);
             this.btn_update.TabIndex = 71;
@@ -99,9 +102,9 @@
             // btn_HomePage
             // 
             this.btn_HomePage.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_HomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_HomePage.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_HomePage.Location = new System.Drawing.Point(520, 355);
+            this.btn_HomePage.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_HomePage.ForeColor = System.Drawing.Color.Black;
+            this.btn_HomePage.Location = new System.Drawing.Point(453, 340);
             this.btn_HomePage.Name = "btn_HomePage";
             this.btn_HomePage.Size = new System.Drawing.Size(141, 60);
             this.btn_HomePage.TabIndex = 72;
@@ -109,15 +112,15 @@
             this.btn_HomePage.UseVisualStyleBackColor = false;
             this.btn_HomePage.Click += new System.EventHandler(this.btn_HomePage_Click);
             // 
-            // pictureBox1
+            // pictureBox9
             // 
-            this.pictureBox1.Image = global::Csharp_DB_Project.Properties.Resources.f;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(139, 101);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 86;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox9.Image = global::Csharp_DB_Project.Properties.Resources.f;
+            this.pictureBox9.Location = new System.Drawing.Point(355, 26);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(145, 128);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 73;
+            this.pictureBox9.TabStop = false;
             // 
             // addBalance
             // 
@@ -125,7 +128,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Csharp_DB_Project.Properties.Resources.blue;
             this.ClientSize = new System.Drawing.Size(974, 536);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.btn_HomePage);
             this.Controls.Add(this.btn_update);
             this.Controls.Add(this.btn_minus);
@@ -135,9 +138,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addBalance";
             this.Text = "addBalancecs";
+            this.Load += new System.EventHandler(this.addBalance_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btn_minus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_plus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,6 +155,6 @@
         private System.Windows.Forms.PictureBox btn_minus;
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Button btn_HomePage;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }
