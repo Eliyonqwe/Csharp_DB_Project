@@ -70,5 +70,16 @@ namespace Csharp_DB_Project.Admin
             else
                 MessageBox.Show("Offer Removed");
         }
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_search_Click(object sender, EventArgs e)
+        {
+            txt_search.Clear();
+            txt_search.ForeColor = Color.Black;
+        }
     }
 }

@@ -18,12 +18,13 @@ namespace Csharp_DB_Project
             InitializeComponent();
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.ControlBox = false;
+           
             stockListing s = new stockListing();
             dataGridView1.DataSource = null;
             String status = s.viewListings(dataGridView1);
             if (status == "0")
             {
-                MessageBox.Show("user data loaded!");
+                ;
             }
             else
             {
@@ -32,6 +33,17 @@ namespace Csharp_DB_Project
         }
 
         private void btn_search_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            
+        }
+
+        private void search_btn_Click(object sender, EventArgs e)
         {
             stockListing s = new stockListing();
             dataGridView1.DataSource = null;
@@ -51,10 +63,15 @@ namespace Csharp_DB_Project
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void txt_search_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            
+            txt_search.Clear();
+            txt_search.ForeColor = Color.Black;
+        }
+
+        private void viewListings_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -135,5 +135,11 @@ namespace Csharp_DB_Project
         {
 
         }
+
+        private void txt_search_Click(object sender, EventArgs e)
+        {
+            txt_search.Clear();
+            txt_search.ForeColor = Color.Black;
+        }
     }
 }
