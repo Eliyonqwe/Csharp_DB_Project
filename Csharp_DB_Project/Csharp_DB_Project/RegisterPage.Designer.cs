@@ -449,7 +449,6 @@
             // metroDateTime1
             // 
             this.metroDateTime1.CustomFormat = "yyyy-MM-dd";
-            this.metroDateTime1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.metroDateTime1.Location = new System.Drawing.Point(721, 347);
             this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 30);
             this.metroDateTime1.Name = "metroDateTime1";

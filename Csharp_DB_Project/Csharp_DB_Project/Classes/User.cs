@@ -1,5 +1,6 @@
 ﻿using MetroFramework.Controls;
 using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -16,7 +17,8 @@ namespace Csharp_DB_Project.Classes
         public int userid { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
-        //public MetroDateTime date { get; set; }
+        public DateTime date { get; set; }
+        public int age { get; set; }
         public string gender { get; set; }
 
         public string username { get; set; }
@@ -25,7 +27,6 @@ namespace Csharp_DB_Project.Classes
         public double balance { get; set; }
         public String picLocation { get; set; }
 
-        public byte[] profilePic{ get; set; }
 
 
         public DataTable dt;
@@ -39,7 +40,7 @@ namespace Csharp_DB_Project.Classes
 
                 if (con.State == System.Data.ConnectionState.Open)
                 {
-                    string sqlQuery = "exec registerUser @fname, @lname,@gender, @uname, @pswd, @phone, @balance, @picLocation, @profilePic";
+                    string sqlQuery = "exec registerUser @fname, @lname,@gender, @uname, @pswd, @phone, @balance, @picLocation, '"+ this.date+"'";
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
                     cmd.Parameters.AddWithValue("@fname", this.firstName);
                     cmd.Parameters.AddWithValue("@lname", this.lastName);
@@ -50,7 +51,8 @@ namespace Csharp_DB_Project.Classes
                     cmd.Parameters.AddWithValue("@phone", this.phoneNumber);
                     cmd.Parameters.AddWithValue("@balance", this.balance);
                     cmd.Parameters.AddWithValue("@picLocation", this.picLocation);
-                    cmd.Parameters.Add("@profilePic", SqlDbType.Image).Value = this.profilePic;
+                 
+
                     cmd.ExecuteNonQuery();
                 }
                 return "0";
@@ -131,12 +133,13 @@ namespace Csharp_DB_Project.Classes
                         this.firstName = result[1].ToString();
                         this.lastName = result[2].ToString();
                         this.gender = result[3].ToString();
+                        this.age = (int)result[9];
                         this.username = result[4].ToString();
                         this.password = result[5].ToString();
                         this.phoneNumber = result[6].ToString();
                         this.balance = Convert.ToDouble(result[7]);
                         this.picLocation = result[8].ToString();
-                     //   this.profilePic = Encoding.UTF8.GetBytes(result[9].ToString());
+                     
                     }
                 }
                 return "0";

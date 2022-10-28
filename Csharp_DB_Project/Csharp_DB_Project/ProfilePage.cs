@@ -24,10 +24,11 @@ namespace Csharp_DB_Project
                 txt_fname.Text = u.firstName;
                 txt_lname.Text = u.lastName;
                 txt_gender.Text = u.gender;
+                txt_age.Text = u.age.ToString();
                 txt_uname.Text = u.username;
                 txt_password.Text = u.password;
                 txt_phone.Text = u.phoneNumber;
-                //pictureBox1.Image = ConvertToImage(u.profilePic);
+                pictureBox1.ImageLocation = u.picLocation;
 
                 changeIndicator = 0;
             }
@@ -36,13 +37,7 @@ namespace Csharp_DB_Project
                 MessageBox.Show(status);
             }
         }
-        Image ConvertToImage(byte[] img)
-        {
-            using (MemoryStream ms = new MemoryStream())
-            {
-                return Image.FromStream(ms);
-            }
-        }
+       
         private void btn_delete_click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to delete your account?", "Delete Account", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
